@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rynek biurowy · Showroom Biur</title>
+<meta name="description" content="Kto się przeprowadza, kto zostaje i kto otwiera nowe biuro. Krótkie informacje z polskiego rynku biurowego, co tydzień.">
+<link rel="canonical" href="https://showroombiur.pl/rynek-biurowy.html">
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEAE2;--bg2:#E5DFD3;--bone:#F3EFE6;--ink:#0F0F0E;--ink2:#2A2A28;--muted:#7A6E5C;--accent:#5E1A26;--line:#D9D2C2;--paper:#FBF8F2}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:auto}
+.skip{position:absolute;top:-200px;left:16px;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:1000}.skip:focus{top:16px}
+.nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:rgba(239,234,226,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500}.nav-brand em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300}
+.nav-links{display:flex;gap:26px}.nav-links a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.nav-links a:hover,.nav-links a.active{color:var(--accent-text,#5E1A26)}
+@media(max-width:820px){.nav-links{display:none}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.crumbs{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:40px 0 0}
+.crumbs a{border-bottom:1px solid var(--line)}.crumbs a:hover{color:var(--accent-text,#5E1A26)}
+.head{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end;padding:36px 0 40px;border-bottom:1px solid var(--ink)}
+.head h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
+.head .meta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.head .tag{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.45;color:var(--ink2)}
+.facts{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line)}.facts div{padding:16px 28px 16px 0;margin-right:28px;border-right:1px solid var(--line)}.facts div:last-child{border-right:0}.facts dt{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.facts dd{font-family:'Cormorant Garamond',serif;font-size:20px;margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.stat{padding:22px 20px 22px 0;border-right:1px solid var(--line)}.stat:last-child{border-right:0}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1}.stat .l{font-size:12px;color:var(--muted);margin-top:4px}
+.photo{margin:40px 0 0;aspect-ratio:21/9;overflow:hidden;background:var(--bg2)}.photo img{width:100%;height:100%;object-fit:cover}
+.photo-cap{font-size:12px;color:var(--muted);margin-top:8px}
+.type{margin:40px 0 0;aspect-ratio:21/6;background:var(--bg2);color:var(--ink);border:1px solid var(--line);display:flex;align-items:flex-end;justify-content:space-between;padding:28px 32px}
+.type .big{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(56px,8vw,96px);line-height:.85;color:var(--muted)}
+.type .small{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;text-align:right}
+.story{display:grid;grid-template-columns:1fr 2fr;gap:56px;padding:56px 0;border-bottom:1px solid var(--line)}
+.story aside h4{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.story aside .grp{margin-bottom:28px}
+.person{font-family:'Cormorant Garamond',serif;font-size:17px}.person span{display:block;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin-bottom:10px}
+.chip{display:inline-block;font-size:12px;border:1px solid var(--line);padding:4px 10px;margin:0 6px 6px 0;background:var(--paper)}
+.src{font-size:12px;color:var(--muted);line-height:1.5}
+.story .text p{font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.6;color:var(--ink2);margin-bottom:18px}
+.story .text p.lead{font-size:22px;color:var(--ink)}
+.pending{border-left:3px solid var(--accent);padding:14px 18px;background:var(--paper);font-size:14px;color:var(--ink2);margin-top:8px}
+.sec{padding:52px 0;border-bottom:1px solid var(--line)}
+.sec h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s}
+.card:hover{border-color:var(--ink)}
+.card .im{aspect-ratio:4/3;background:var(--bg2);overflow:hidden}.card .im img{width:100%;height:100%;object-fit:cover}
+.card .im.t{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--muted)}
+.card .bd{padding:18px 18px 20px}.card h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink2)}.card .go{font-size:12px;color:var(--accent-text,#5E1A26);margin-top:12px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal a{display:block}.gal .im{aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}.gal img{width:100%;height:100%;object-fit:cover}
+.gal .cap{font-size:13px;margin-top:8px}.gal .cap b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;display:block}
+.gal .cap span{color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:52px 0 72px}
+.contact h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px}
+.contact dl{font-size:15px}.contact dt{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.btn{display:inline-block;margin-top:22px;padding:14px 22px;background:var(--ink);color:var(--paper);font-size:13px;letter-spacing:.04em}
+.btn:hover{background:var(--accent)}
+.footer{background:var(--ink);color:#B9B2A6;padding:40px 32px}
+.footer-wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:32px;font-size:12px;line-height:1.5}
+.footer a{color:var(--paper)}
+/* category list */
+.intro{padding:40px 0 48px;border-bottom:1px solid var(--ink);display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}
+.intro h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
+.intro p{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.5;color:var(--ink2)}
+.row{display:grid;grid-template-columns:60px 1.1fr 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
+.row:hover .rn{color:var(--accent-text,#5E1A26)}
+.rn{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--muted);transition:color .2s}
+.row h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:36px;line-height:1.05}
+.row .loc{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:8px 0 14px}
+.row p{font-size:15px;color:var(--ink2);max-width:520px}
+.row .more{display:inline-block;margin-top:14px;font-size:13px;border-bottom:1px solid var(--ink)}
+.row .im{aspect-ratio:16/10;background:var(--bg2);overflow:hidden}.row .im img{width:100%;height:100%;object-fit:cover}
+.row .im.t{background:var(--bg2);border:1px solid var(--line);display:flex;align-items:flex-end;padding:18px}
+.row .im.t span{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:56px;line-height:.8;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);padding:28px 0 64px;max-width:720px}
+@media(max-width:900px){.head,.story,.contact,.intro{grid-template-columns:1fr;gap:24px}.stats{grid-template-columns:repeat(2,1fr)}.cards,.gal{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr}.footer-wrap{grid-template-columns:1fr}}
+@media(max-width:560px){.cards,.gal{grid-template-columns:1fr}}
+
+.rb-filters{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 36px}
+.rb-chip{font-family:'Inter',sans-serif;font-size:13px;padding:7px 14px;border:1px solid var(--line);background:transparent;color:var(--ink2);cursor:pointer}
+.rb-chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.rb-month{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:44px 0 8px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.rb-item{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.rb-date{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);line-height:1.5}
+.rb-date b{display:block;color:var(--ink);font-weight:500}
+.rb-type{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:8px}
+.rb-item h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;line-height:1.15;margin:0 0 10px}
+.rb-item p{font-size:16px;line-height:1.65;color:var(--ink2);max-width:760px;margin:0 0 12px}
+.rb-meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:'Inter',sans-serif;font-size:13px;color:var(--muted)}
+.rb-meta span b{color:var(--ink2);font-weight:500}
+.rb-meta a{color:var(--muted);border-bottom:1px solid var(--line)}
+.rb-meta a:hover{color:var(--accent-text,#5E1A26)}
+.rb-note{font-size:14px;color:var(--muted);max-width:760px;margin:48px 0 80px;line-height:1.6}
+@media(max-width:700px){.rb-item{grid-template-columns:1fr;gap:6px}.rb-item h2{font-size:23px}}
+</style>
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.footer,
+.rb-chip.on,
+[data-dark="1"],
+.article-footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+<style id="tpl-override">/* generated by _tools/apply_templates.py - szablon A */
+/* Nagłówki bez pomarańczowej kursywy - akcent tylko w logo */
+html body.tpl-a h1 em, html body.tpl-a h2 em, html body.tpl-a h3 em,
+html body.tpl-a .ah-title em, html body.tpl-a .faq-h2 em, html body.tpl-a .af-author-info h3 em,
+html body.tpl-a .byline-name em {font-style:inherit;color:inherit;font-weight:inherit}
+html body.tpl-a h1 .dot, html body.tpl-a h2 .dot {color:inherit}
+
+html body.tpl-a h1{font-size:clamp(40px,5.4vw,68px)!important;line-height:1.02!important;font-weight:400!important;letter-spacing:-.02em!important}
+html body.tpl-a [class*="lede"], html body.tpl-a [class*="lead"], html body.tpl-a [class*="deck"], html body.tpl-a .hero-sub, html body.tpl-a [class*="hero"] p{font-style:normal}
+html body.tpl-a .progress-bar{display:none}
+/* jasny nagłówek zamiast ciemnego „cinematic” */
+html body.tpl-a .hero{background:var(--bg);color:var(--ink);border-bottom:1px solid var(--line);padding-top:72px;padding-bottom:56px}
+html body.tpl-a .hero::before, html body.tpl-a .hero::after{display:none}
+html body.tpl-a .hero h1{color:var(--ink)}
+html body.tpl-a .hero-eyebrow{color:var(--muted);letter-spacing:.16em}
+html body.tpl-a .hero-eyebrow .rule{background:var(--line)}
+html body.tpl-a .hero-lede{color:var(--ink-soft);font-style:normal}
+html body.tpl-a .hero-stats{border-top-color:var(--line);margin-top:40px}
+html body.tpl-a .hero-stat .num{color:var(--ink);font-size:36px}
+html body.tpl-a .hero-stat .lab{color:var(--muted)}
+</style>
+</head>
+<body class="tpl-a">
+<a href="#main" class="skip">Przejdź do treści</a>
+<nav class="nav" id="nav">
+  <a href="biurofilia.html" class="nav-brand">Showroom <em>Biur</em></a>
+  <div class="nav-links">
+    <a href="biurofilia.html">Biura</a>
+    <a href="workplace.html">Workplace</a>
+    <a href="rynek-biurowy.html" class="active">Rynek biurowy</a>
+    <a href="wyposazenie.html">Wyposażenie</a>
+    <a href="czytelnia.html">Czytelnia</a>
+    <a href="biuro-roku-2026.html">Biuro Roku</a>
+    <a href="o-magazynie.html">O magazynie</a>
+  </div>
+</nav>
+<main id="main" class="wrap">
+  <div class="crumbs"><a href="index.html">Showroom Biur</a> / Rynek biurowy</div>
+  <header class="head">
+    <div><h1>Rynek biurowy</h1><div class="meta">Aktualizacja: 26 października 2026</div></div>
+    <p class="tag">Kto podpisał umowę najmu, kto się przeprowadza, kto zostaje na dłużej. Co tydzień zbieramy takie informacje z prasy branżowej i komunikatów firm i piszemy je po swojemu, krótko.</p>
+  </header>
+  <div class="rb-filters" id="rbFilters"><button class="rb-chip on" data-c="">Wszystkie</button><button class="rb-chip" data-c="Warszawa">Warszawa</button><button class="rb-chip" data-c="Gdańsk">Gdańsk</button><button class="rb-chip" data-c="Katowice">Katowice</button><button class="rb-chip" data-c="Kraków">Kraków</button><button class="rb-chip" data-c="Wrocław">Wrocław</button><button class="rb-chip" data-c="Łódź">Łódź</button></div>
+  <div id="rbList">
+<div class="rb-month">Październik 2026</div>
+<article class="rb-item" data-city="Gdańsk">
+  <div class="rb-date"><b>26 października</b>Gdańsk</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>SK hynix przenosi gdańskie biuro do Olivia Centre</h2>
+    <p>SK hynix memory solutions Poland wynajęła blisko 2800 m² w Olivia Centre przy al. Grunwaldzkiej w Gdańsku. Oprócz biurek w nowej siedzibie zmieszczą się laboratorium do testowania produktów, serwerownia oraz strefy odpoczynku i sportu. Wnętrza zaprojektowało Abundo Space razem z pracownią Design Anatomy, a najemcę przy wyborze miejsca i negocjacjach reprezentował Knight Frank.</p>
+    <div class="rb-meta"><span><b>Najemca</b> SK hynix memory solutions Poland</span> <span><b>Budynek</b> Olivia Centre</span> <span><b>Powierzchnia</b> 2 800 m²</span> <span><b>Doradca</b> Knight Frank</span> <span><b>Projekt</b> Abundo Space, Design Anatomy</span> <span>Źródło: <a href="https://www.propertynews.pl/biura/olivia-centre-z-nowym-najemca-w-biurze-beda-testowac-technologie-pamieci,202625.html" target="_blank" rel="noopener nofollow">PropertyNews.pl</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>22 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">ekspansja</span>
+    <h2>Mindspace otworzy trzecie warszawskie biuro w Skyliner II</h2>
+    <p>Operator elastycznych biur Mindspace wynajmie 4500 m² na czterech piętrach wieżowca Skyliner II przy Rondzie Daszyńskiego. Powstanie tam ponad 650 stanowisk, a otwarcie zaplanowano na połowę 2027 roku. To trzeci adres marki w Warszawie, po Hali Koszyki i sąsiednim Skylinerze.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Mindspace</span> <span><b>Budynek</b> Skyliner II</span> <span><b>Powierzchnia</b> 4 500 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64168-mindspace-otworzy-nowe-biura-w-skyliner-ii-w-warszawie" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>22 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">rynek</span>
+    <h2>Popyt na warszawskie biura rośnie, pustostany spadają do 7,9 proc.</h2>
+    <p>Po trzech kwartałach 2026 roku najemcy podpisali w Warszawie umowy na blisko 592 tys. m², o 22 proc. więcej niż rok wcześniej. Wskaźnik pustostanów spadł do 7,9 proc., a do grona najchętniej wybieranych lokalizacji wrócił Służewiec. Dane pochodzą od Colliers.</p>
+    <div class="rb-meta"><span><b>Doradca</b> Colliers</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64171-warszawski-rynek-biurowy-przyspiesza" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Katowice">
+  <div class="rb-date"><b>20 października</b>Katowice</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>RMF FM będzie nadawać z DL Tower w Katowicach</h2>
+    <p>Grupa RMF, właściciel stacji RMF FM i RMF MAXX, podpisała długoterminową umowę najmu w katowickim DL Tower przy al. Korfantego. Obie rozgłośnie zajmą 11. piętro budynku na co najmniej dziesięć lat. Umowę zawarto 15 lipca, a informację podano w październiku.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Grupa RMF</span> <span><b>Budynek</b> DL Tower</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64148-grupa-rmf-wynajmuje-powierzchnie-w-dl-tower" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Kraków">
+  <div class="rb-date"><b>15 października</b>Kraków</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>Tesco Technology zajmie pięć pięter w Unity Square Two</h2>
+    <p>Tesco Technology Services Europe, technologiczna spółka Grupy Tesco, wynajęła ponad 3700 m² w krakowskim Unity Square Two. Biuro na pięciu piętrach przygotowano dla około 400 osób, z 26 salami spotkań, strefami cichej pracy i miejscem na 30 budek telefonicznych. Przy transakcji doradzał JLL, aranżację prowadzi Tétris, a projekt wnętrz przygotowała pracownia Abundo Space.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Tesco Technology Services Europe</span> <span><b>Budynek</b> Unity Square Two</span> <span><b>Powierzchnia</b> 3 700 m²</span> <span><b>Doradca</b> JLL</span> <span><b>Projekt</b> Abundo Space (dla Tétris)</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64130-tesco-technology-wybiera-unity-square-two-w-krakowie" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>15 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">nowa siedziba</span>
+    <h2>Yareal Polska przenosi siedzibę do LIXA C</h2>
+    <p>Deweloper Yareal Polska przeniósł warszawską siedzibę do budynku LIXA C. Nowe biuro ma 750 m², a jego wnętrza zaprojektowała pracownia The Design Group.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Yareal Polska</span> <span><b>Budynek</b> LIXA C</span> <span><b>Powierzchnia</b> 750 m²</span> <span><b>Projekt</b> The Design Group</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64129-yareal-polska-przenosi-biuro-do-budynku-lixa-c" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>14 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">ekspansja</span>
+    <h2>Capgemini podwaja biuro w Business Garden Warszawa</h2>
+    <p>Capgemini dobiera 1700 m² w kampusie Business Garden przy ul. Żwirki i Wigury i będzie zajmować tam łącznie 3400 m² Warszawski zespół firmy liczy ponad 300 osób. Kompleks zbudował i zarządza nim Vastint, z którego budynków Capgemini korzysta także we Wrocławiu i Poznaniu.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Capgemini</span> <span><b>Budynek</b> Business Garden Warszawa</span> <span><b>Powierzchnia</b> 3 400 m²</span> <span>Źródło: <a href="https://news.poland.vastint.eu/archiwum/878375/capgemini-rozwija-skrzydla-w-business-garden-warszawa1" target="_blank" rel="noopener nofollow">Biuro prasowe Vastint Poland</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>6 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>eService pierwszym najemcą Drucianka Campus</h2>
+    <p>Operator płatności bezgotówkowych eService wynajął 7500 m² w budynku B1B powstającego Drucianka Campus przy ul. Kijowskiej na Pradze-Północ. Kompleks rośnie na terenie dawnej Warszawskiej Fabryki Drutu, Sztyftów i Gwoździ, a jego historyczne hale zostaną odnowione. Budowa ma się zakończyć latem 2028 roku.</p>
+    <div class="rb-meta"><span><b>Najemca</b> eService</span> <span><b>Budynek</b> Drucianka Campus</span> <span><b>Powierzchnia</b> 7 500 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64072-eservice-wynajmuje-7500-mkw-w-drucianka-campus" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>5 października</b>Warszawa</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>Defence24 wprowadza się do Warsaw Corporate Center</h2>
+    <p>Grupa medialno-analityczna Defence24 podpisała długoterminową umowę na 1150 m² w Warsaw Corporate Center przy ul. Emilii Plater. Redakcja zajmie całe siódme piętro i część ósmego.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Defence24</span> <span><b>Budynek</b> Warsaw Corporate Center</span> <span><b>Powierzchnia</b> 1 150 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64060-defence24-wynajmuje-1150-mkw" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<div class="rb-month">Wrzesień 2026</div>
+<article class="rb-item" data-city="Warszawa">
+  <div class="rb-date"><b>29 września</b>Warszawa</div>
+  <div>
+    <span class="rb-type">nowa lokalizacja</span>
+    <h2>Mieszko wynajmuje biuro w Jerozolimskie Business Park</h2>
+    <p>Producent słodyczy Mieszko zajmie około 700 m² w warszawskim Jerozolimskie Business Park. Długoterminową umowę podpisał z właścicielem kompleksu, NASA Capital, który po tej transakcji ma wynajęte 95 proc. powierzchni.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Mieszko</span> <span><b>Budynek</b> Jerozolimskie Business Park</span> <span><b>Powierzchnia</b> 700 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64036-mieszko-wynajmuje-biuro-w-jerozolimskie-business-park" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Wrocław">
+  <div class="rb-date"><b>28 września</b>Wrocław</div>
+  <div>
+    <span class="rb-type">nowa siedziba</span>
+    <h2>Aliaxis Polska ma własne biuro w Sky Tower</h2>
+    <p>Aliaxis Polska wybrała wrocławski Sky Tower na swoją siedzibę. Firma wyprowadziła się z biura serwisowanego do własnej, wydzielonej przestrzeni.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Aliaxis Polska</span> <span><b>Budynek</b> Sky Tower</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64029-aliaxis-polska-wybiera-sky-tower-we-wroclawiu" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Kraków">
+  <div class="rb-date"><b>23 września</b>Kraków</div>
+  <div>
+    <span class="rb-type">przedłużenie</span>
+    <h2>BNP Paribas zostaje w krakowskim Avatarze na większej powierzchni</h2>
+    <p>BNP Paribas przedłużył najem w krakowskim biurowcu Avatar i dobrał powierzchnię. Łącznie zajmie 9534 m² na pięciu z sześciu pięter, więc budynek pozostaje w pełni wynajęty. Negocjacje trwały blisko trzy lata, a najemcy doradzało BNP Paribas Real Estate Poland.</p>
+    <div class="rb-meta"><span><b>Najemca</b> BNP Paribas</span> <span><b>Budynek</b> Avatar</span> <span><b>Powierzchnia</b> 9 534 m²</span> <span><b>Doradca</b> BNP Paribas Real Estate Poland</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64007-bnp-paribas-przedluza-najem-w-krakowskim-avatarze" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Łódź">
+  <div class="rb-date"><b>21 września</b>Łódź</div>
+  <div>
+    <span class="rb-type">nowa siedziba</span>
+    <h2>Łódzki magistrat przeprowadzi się do University Business Park</h2>
+    <p>Urząd Miasta Łodzi wynajął 23 tys. m² w University Business Park przy ul. Wólczańskiej 178-180. Na przełomie 2027 i 2028 roku trafią tam 34 miejskie biura i wydziały, w sumie około 1,5 tys. urzędników. Większość jednostek zajmie budynek A, a w budynku B znajdzie się Urząd Stanu Cywilnego z salą ślubów.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Urząd Miasta Łodzi</span> <span><b>Budynek</b> University Business Park</span> <span><b>Powierzchnia</b> 23 000 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/63985-lodzki-magistrat-przeniesie-sie-do-university-business-park" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Łódź">
+  <div class="rb-date"><b>14 września</b>Łódź</div>
+  <div>
+    <span class="rb-type">przedłużenie</span>
+    <h2>Flint Group zostaje w biurowcu Łódź 1</h2>
+    <p>Flint Group Packaging Solutions przedłużył umowę w biurowcu Łódź 1 przy al. Piłsudskiego 22 i nadal będzie zajmować tam 3328 m² Decyzję podjęto po przejrzeniu biur dostępnych w Łodzi.</p>
+    <div class="rb-meta"><span><b>Najemca</b> Flint Group Packaging Solutions</span> <span><b>Budynek</b> Łódź 1</span> <span><b>Powierzchnia</b> 3 328 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/63949-flint-group-packaging-solutions-zostaje-w-lodzi-1" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
+  </div>
+</article>
+<article class="rb-item" data-city="Wrocław">
+  <div class="rb-date"><b>3 września</b>Wrocław</div>
+  <div>
+    <span class="rb-type">przedłużenie</span>
+    <h2>Ceneo zostaje w Business Garden Wrocław</h2>
+    <p>Vastint podpisał lub przedłużył w ostatnich miesiącach umowy na ponad 8600 m² we wrocławskim Business Garden. Największa z nich to przedłużenie najmu przez Ceneo, które zajmuje 2800 m² Do kampusu weszli m.in. COWI Polska (990 m²), MJ Group (790 m²) i Europejski Fundusz Leasingowy z nowym oddziałem (410 m²), a VSB Energie Odnawialne Polska zostaje i powiększa biuro do 1060 m²</p>
+    <div class="rb-meta"><span><b>Najemca</b> Ceneo</span> <span><b>Budynek</b> Business Garden Wrocław</span> <span><b>Powierzchnia</b> 2 800 m²</span> <span>Źródło: <a href="https://news.poland.vastint.eu/archiwum/876242/vastint-z-umowami-na-8-6-tys-m2-biur-we-wroclawiu" target="_blank" rel="noopener nofollow">Biuro prasowe Vastint Poland</a></span></div>
+  </div>
+</article>
+  </div>
+  <p class="rb-note">Przy każdej informacji podajemy, skąd ją mamy. Jeśli coś się nie zgadza albo chcecie dać nam znać o swojej przeprowadzce, napiszcie na <a href="mailto:redakcja@showroombiur.pl">redakcja@showroombiur.pl</a>.</p>
+</main>
+<footer class="footer">
+  <div class="footer-wrap">
+    <span>© 2026 Showroom Biur · <a href="polityka-prywatnosci.html">Polityka prywatności</a></span>
+    <span><a href="mailto:redakcja@showroombiur.pl">redakcja@showroombiur.pl</a></span>
+    <span><a href="biurofilia.html">← Biura</a></span>
+  </div>
+</footer>
+<script>
+(function(){
+  var chips=document.querySelectorAll('.rb-chip'), items=document.querySelectorAll('.rb-item'), months=document.querySelectorAll('.rb-month');
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('on')}); ch.classList.add('on');
+    var c=ch.getAttribute('data-c');
+    items.forEach(function(it){it.style.display=(!c||it.getAttribute('data-city')===c)?'':'none'});
+    months.forEach(function(m){var n=m.nextElementSibling,vis=false;while(n&&!n.classList.contains('rb-month')){if(n.style.display!=='none')vis=true;n=n.nextElementSibling}m.style.display=vis?'':'none'});
+  })});
+})();
+</script>
+<script src="mobile-nav.js" defer></script>
+</body>
+</html>
