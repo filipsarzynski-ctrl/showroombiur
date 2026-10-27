@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anatomia polskiego workplace 2026 - Showroom Biur</title>
+<meta name="description" content="Co tak naprawdę powiedział nam zbiór 272 polskich realizacji biurowych? Esej redakcyjny." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #EFEAE2; --bg-deep: #E5DFD3; --bone: #F3EFE6;
+  --ink: #0F0F0E; --ink-soft: #2A2A28;
+  --muted: #8B7E6A; --muted-soft: #B6AC99;
+  --accent: #5E1A26; --accent-deep: #7A2433;
+  --line: #D9D2C2; --paper: #FBF8F2;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--bg); scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: var(--accent); color: var(--paper); }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 32px;
+  background: rgba(239, 234, 226, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled { border-bottom-color: var(--line); }
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 500; letter-spacing: -0.01em;
+}
+.nav-brand em { font-style: italic; color:var(--accent-text,#5E1A26); font-weight: 300; }
+.nav-back {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.nav-back:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* PROGRESS BAR */
+.progress-bar {
+  position: fixed; top: 64px; left: 0; height: 2px;
+  background: var(--accent);
+  z-index: 999;
+  transform-origin: left;
+  transform: scaleX(var(--p, 0));
+}
+
+/* ARTICLE HEADER */
+.article-hero {
+  margin-top: 64px;
+  padding: 100px 32px 80px;
+  background: var(--ink);
+  color: var(--paper);
+}
+.ah-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.ah-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--muted-soft); margin-bottom: 36px;
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.ah-meta .accent { color:var(--accent-text,#5E1A26); }
+.ah-meta .pipe { color: var(--muted); }
+.ah-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 28px;
+}
+.ah-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 0.9;
+  font-weight:500;
+  letter-spacing: -0.03em;
+  margin-bottom: 36px;
+  
+}
+.ah-title em { font-style: italic; color:var(--accent-text,#5E1A26); font-weight: 300; }
+.ah-deck {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.4;
+  font-weight:500;
+  font-style: italic;
+  color: var(--muted-soft);
+  max-width: 800px;
+}
+
+/* BODY */
+.article-body {
+  max-width: 760px;
+  margin: 80px auto 120px;
+  padding: 0 32px;
+}
+.article-body p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 1.4em;
+}
+.article-body p strong { color: var(--ink); font-weight: 500; }
+.article-body p em { color:var(--accent-text,#5E1A26); font-style: italic; }
+.article-body p > a {
+  color:var(--accent-text,#5E1A26);
+  border-bottom: 1px solid var(--accent);
+}
+.article-body p > a:hover { background: var(--accent); color: var(--paper); }
+.article-body .dropcap {
+  font-family: 'Cormorant Garamond', serif;
+  float: left;
+  font-size: 64px;
+  line-height: 0.85;
+  font-weight:500;
+  font-style: italic;
+  color:var(--accent-text,#5E1A26);
+  padding: 8px 14px 0 0;
+  
+}
+.article-body h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight:500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 80px 0 32px;
+  
+}
+.article-body h2 em { font-style: italic; color:var(--accent-text,#5E1A26); font-weight: 300; }
+.article-body h2::before {
+  content: attr(data-num);
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+.article-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight:500;
+  line-height: 1.2;
+  margin: 50px 0 20px;
+  letter-spacing: -0.01em;
+}
+.article-body h3 em { font-style: italic; color:var(--accent-text,#5E1A26); }
+.pullquote {
+  margin: 60px -40px;
+  padding: 36px 40px;
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight:500;
+  font-style: italic;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.pullquote::before {
+  content: '"';
+  display: block;
+  color:var(--accent-text,#5E1A26);
+  font-size: 1.4em;
+  line-height: 0.5;
+  margin-bottom: 8px;
+}
+.pullquote .attr {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+  margin-top: 24px;
+}
+.stat-callout {
+  background: var(--paper);
+  border-left: 4px solid var(--accent);
+  padding: 28px 32px;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.stat-callout-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 84px;
+  line-height: 0.9;
+  font-weight:500;
+  color:var(--accent-text,#5E1A26);
+  letter-spacing: -0.02em;
+  
+}
+.stat-callout-num .unit {
+  font-size: 0.35em;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.stat-callout-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.stat-callout-label strong { color: var(--ink); font-weight: 500; }
+.figure {
+  margin: 60px -100px;
+  background: var(--bg-deep);
+  padding: 40px;
+  border: 1px solid var(--line);
+}
+.figure h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 20px;
+}
+.figure-bars {
+  display: flex; align-items: flex-end;
+  gap: 8px;
+  height: 240px;
+  margin: 16px 0;
+}
+.figure-bar {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  position: relative;
+}
+.figure-bar .bar {
+  width: 100%;
+  background: var(--ink-soft);
+  position: relative;
+  transition: background .2s;
+}
+.figure-bar .bar.recent { background: var(--accent); }
+.figure-bar .bar:hover { background: var(--accent-deep); }
+.figure-bar .yr {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.figure-bar .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  position: absolute;
+  top: -22px;
+  color: var(--ink);
+}
+.figure-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.figure-caption strong { color: var(--ink-soft); }
+.aside {
+  margin: 50px -20px;
+  padding: 28px 32px;
+  background: var(--bone);
+  border-left: 1px solid var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.aside strong { color: var(--ink); }
+.aside .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+  margin-bottom: 14px;
+}
+.tag-list {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 30px 0;
+}
+.tag-list .tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.15em;
+  padding: 6px 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-radius: 999px;
+}
+
+/* FOOTER */
+.article-footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 80px 32px;
+}
+.af-wrap {
+  max-width: 1080px; margin: 0 auto;
+}
+.af-cta {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-style: italic;
+  font-weight:500;
+  color: var(--paper);
+  display: inline-block;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 6px;
+}
+.af-cta:hover { color:var(--accent-text,#5E1A26); }
+.af-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--muted-soft);
+  padding-top: 40px;
+  border-top: 1px solid rgba(251,248,242,0.1);
+}
+.af-meta h5 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+  margin-bottom: 12px;
+}
+.af-meta a { color: var(--paper); border-bottom: 1px solid transparent; }
+.af-meta a:hover { border-bottom-color: var(--accent); }
+
+@media (max-width: 900px) {
+  .article-hero { padding: 60px 20px; }
+  .article-body { padding: 0 20px; margin: 50px auto 80px; }
+  .article-body p { font-size: 18px; }
+  .pullquote { font-size: 24px; margin: 40px 0; padding: 24px 0; }
+  .figure { margin: 40px 0; padding: 24px; }
+  .stat-callout { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
+  .stat-callout-num { font-size: 60px; }
+  .article-body h2 { font-size: 32px; margin: 50px 0 24px; }
+  .af-meta { grid-template-columns: 1fr; }
+}
+
+/* TL;DR & FAQ injected styles */
+.tldr-box{max-width:760px;margin:50px auto 0;padding:32px 40px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);}
+.tldr-box .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
+.tldr-box p{font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;color:var(--ink);}
+.tldr-box p strong{color:var(--ink);font-weight:600;background:rgba(94,26,38,0.1);padding:0 3px;}
+.faq-section{background:var(--bone);padding:80px 32px;border-top:1px solid var(--line);}
+.faq-wrap{max-width:900px;margin:0 auto;}
+.faq-head{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:16px;}
+.faq-h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;letter-spacing:-0.02em;margin-bottom:50px;line-height:1.05;}
+.faq-h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item:last-child{border-bottom:0;}
+.faq-q{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);padding:24px 0 12px;letter-spacing:-0.01em;margin:0;}
+.faq-a{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.65;color:var(--ink-soft);padding:0 0 24px;max-width:760px;margin:0;}
+@media (max-width:900px){.faq-section{padding:50px 20px;}.faq-h2{font-size:32px;}.tldr-box{margin:30px 20px 0;padding:24px;}.faq-q{font-size:18px;}.faq-a{font-size:15px;}}
+
+/* Editorial hero photo for articles */
+.article-hero-photo{margin:60px auto 40px;max-width:1100px;padding:0 32px;}
+.article-hero-photo figure{margin:0;}
+.article-hero-photo .ahp-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink-soft, #1a1a18);}
+.article-hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.article-hero-photo figcaption{margin-top:14px;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted, #6b6b67);line-height:1.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.article-hero-photo figcaption .ahp-credit{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-text,#5E1A26);}
+.article-hero-photo figcaption .ahp-illu{opacity:0.8;}
+@media (max-width:700px){.article-hero-photo{padding:0 20px;margin:40px auto 28px;}}
+
+
+/* ============ A11Y + PERFORMANCE LAYER ============ */
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; }
+  .h1-split .word { transform: none !important; opacity: 1 !important; }
+  .reveal, .reveal-stagger > *, .reveal-stagger { opacity: 1 !important; transform: none !important; }
+  .anim-stroke { stroke-dashoffset: 0 !important; }
+  .pulse-dot { animation: none !important; }
+  .aurora-drift, .orb-drift { animation: none !important; }
+}
+
+/* Focus-visible accent ring */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent, #5E1A26) !important;
+  outline-offset: 3px !important;
+  border-radius: 2px;
+}
+.contact-btn:focus-visible,
+.cta:focus-visible,
+.so-search-trigger:focus-visible,
+.back-top:focus-visible {
+  outline-offset: 4px !important;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink, #0F0F0E);
+  color: var(--paper, #FBF8F2);
+  padding: 12px 20px;
+  z-index: 9999;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid var(--accent, #5E1A26);
+  transition: top 0.2s;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline-offset: 0 !important;
+}
+
+/* sr-only utility for screen-reader-only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Article share section */
+.art-share{margin:48px auto;max-width:920px;padding:24px 28px;background:var(--paper, #FBF8F2);border-left:3px solid var(--accent, #5E1A26);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
+.art-share-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-text,#5E1A26);font-weight:600;}
+.art-share-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.art-share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bone, #F3EFE6);border:1px solid var(--line, #D9D2C2);color:var(--ink, #0F0F0E);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.art-share-btn:hover{background:var(--ink, #0F0F0E);color:var(--paper, #FBF8F2);border-color:var(--ink, #0F0F0E);transform:translateY(-2px);}
+.art-share-btn svg{width:14px;height:14px;}
+.art-share-btn.copy.done{background:#2A6F4D;color:#FBF8F2;border-color:#2A6F4D;}
+@media (max-width:600px){.art-share{flex-direction:column;align-items:flex-start;}}
+
+</style>
+
+<!-- === SEO / AEO START === -->
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="canonical" href="https://showroombiur.pl/artykul-anatomia-workplace-2026.html" />
+<meta name="author" content="Filip Sarzyński, Showroom Biur" />
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="generator" content="Showroom Biur Editorial System" />
+<meta name="keywords" content="polski workplace 2026, statystyki rynku biurowego Polska, anatomia rynku biur, Showroom Biur analiza, polskie biura dane" />
+
+<!-- Open Graph + Twitter Cards -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Anatomia polskiego workplace 2026" />
+<meta property="og:description" content="Zebraliśmy 272 polskie realizacje biurowe z lat 2012-2026. Razem to 981 740 m² zaprojektowanej przestrzeni, 80 pracowni, 16 miast. Co tak naprawdę powiedział nam ten zbiór?" />
+<meta property="og:url" content="https://showroombiur.pl/artykul-anatomia-workplace-2026.html" />
+<meta property="og:image" content="https://showroombiur.pl/og-anatomia-workplace-2026.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Anatomia polskiego workplace 2026" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Showroom Biur" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Anatomia polskiego workplace 2026" />
+<meta name="twitter:description" content="Zebraliśmy 272 polskie realizacje biurowe z lat 2012-2026. Razem to 981 740 m² zaprojektowanej przestrzeni, 80 pracowni, 16 miast. Co tak naprawdę powiedział nam ten zbiór?" />
+<meta name="twitter:image" content="https://showroombiur.pl/og-anatomia-workplace-2026.jpg" />
+<meta name="twitter:image:alt" content="Anatomia polskiego workplace 2026" />
+<meta property="article:published_time" content="2026-04-15" />
+<meta property="article:modified_time" content="2026-05-31" />
+<meta property="article:author" content="Filip Sarzyński" />
+<meta property="article:section" content="Dane i interpretacja" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://showroombiur.pl/#organization",
+      "name": "Showroom Biur",
+      "alternateName": "Showroom Biur Magazine",
+      "url": "https://showroombiur.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://showroombiur.pl/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Magazyn o polskich biurach. Baza 272 polskich realizacji biurowych, 80 pracowni, statystyki rynku.",
+      "publisher": {"@type": "Organization", "name": "Showroom Biur", "url": "https://showroombiur.pl"},
+      "foundingDate": "2026-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Filip Sarzyński",
+        "jobTitle": "Wydawca i redaktor naczelny",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Brookfield Partners"
+        }
+      },
+      "sameAs": [
+        "https://brookfield.pl",
+        "https://www.linkedin.com/company/brookfield-partners"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior design",
+        "Polski rynek biurowy",
+        "Polskie pracownie architektoniczne",
+        "Fit-out biurowy"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://showroombiur.pl/#filip-sarzynski",
+      "name": "Filip Sarzyński",
+      "jobTitle": "Wydawca, Redaktor naczelny Showroom Biur",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Brookfield Partners",
+        "url": "https://brookfield.pl"
+      },
+      "email": "filip.sarzynski@brookfield.pl",
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior",
+        "Polski rynek biurowy",
+        "Workplace strategy"
+      ],
+      "url": "https://showroombiur.pl/o-magazynie.html#zespol"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://showroombiur.pl/artykul-anatomia-workplace-2026.html#article",
+      "headline": "Anatomia polskiego workplace 2026",
+      "alternativeHeadline": "Anatomia polskiego workplace 2026",
+      "description": "Zebraliśmy 272 polskie realizacje biurowe z lat 2012-2026. Razem to 981 740 m² zaprojektowanej przestrzeni, 80 pracowni, 16 miast. Co tak naprawdę powiedział nam ten zbiór?",
+      "url": "https://showroombiur.pl/artykul-anatomia-workplace-2026.html",
+      "mainEntityOfPage": "https://showroombiur.pl/artykul-anatomia-workplace-2026.html",
+      "image": [
+        "https://showroombiur.pl/og-anatomia-workplace-2026.jpg",
+        "https://showroombiur.pl/og-default.jpg"
+      ],
+      "datePublished": "2026-04-15",
+      "dateModified": "2026-05-31",
+      "author": {
+        "@id": "https://showroombiur.pl/#filip-sarzynski"
+      },
+      "publisher": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "inLanguage": "pl-PL",
+      "articleSection": "Dane i interpretacja",
+      "wordCount": 2800,
+      "timeRequired": "PT14M",
+      "keywords": "polski workplace 2026, statystyki rynku biurowego Polska, anatomia rynku biur, Showroom Biur analiza, polskie biura dane",
+      "isPartOf": {
+        "@id": "https://showroombiur.pl/#website"
+      },
+      "isAccessibleForFree": true,
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Polski rynek biurowy"
+        },
+        {
+          "@type": "Thing",
+          "name": "Workplace design"
+        },
+        {
+          "@type": "Thing",
+          "name": "Statystyki branżowe"
+        }
+      ],
+      "citation": {
+        "@id": "https://showroombiur.pl/biurofilia.html#dataset"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://showroombiur.pl/artykul-anatomia-workplace-2026.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://showroombiur.pl/biurofilia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Czytelnia",
+          "item": "https://showroombiur.pl/czytelnia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Anatomia polskiego workplace 2026",
+          "item": "https://showroombiur.pl/artykul-anatomia-workplace-2026.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- === SEO / AEO END === -->
+
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.article-footer,
+.article-hero-photo .ahp-img-wrap,
+[data-dark="1"],
+.footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+<style id="tpl-override">/* generated by _tools/apply_templates.py - szablon C */
+/* Nagłówki bez pomarańczowej kursywy - akcent tylko w logo */
+html body.tpl-c h1 em, html body.tpl-c h2 em, html body.tpl-c h3 em,
+html body.tpl-c .ah-title em, html body.tpl-c .faq-h2 em, html body.tpl-c .af-author-info h3 em,
+html body.tpl-c .byline-name em {font-style:inherit;color:inherit;font-weight:inherit}
+html body.tpl-c h1 .dot, html body.tpl-c h2 .dot {color:inherit}
+
+html body.tpl-c .progress-bar{display:none}
+html body.tpl-c .article-hero{background:var(--paper);color:var(--ink);padding:72px 32px 44px;border-bottom:1px solid var(--line)}
+html body.tpl-c .ah-wrap{max-width:760px}
+html body.tpl-c .ah-meta{color:var(--muted);letter-spacing:.14em;margin-bottom:22px}
+html body.tpl-c .ah-meta .accent{color:var(--ink)}
+html body.tpl-c .ah-eyebrow{color:var(--muted);letter-spacing:.16em;margin-bottom:18px}
+html body.tpl-c .ah-title{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em;margin-bottom:22px}
+html body.tpl-c .ah-deck{font-style:normal;font-size:20px;line-height:1.5;color:var(--ink-soft)}
+html body.tpl-c .byline{border-top-color:var(--line);margin-top:32px;padding-top:22px}
+html body.tpl-c .byline-name{color:var(--ink)}
+html body.tpl-c .byline-role{color:var(--muted)}
+html body.tpl-c .ah-updated{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+html body.tpl-c .article-body .dropcap{float:none;font-size:inherit;line-height:inherit;font-style:normal;font-weight:inherit;color:inherit;padding:0}
+html body.tpl-c .article-body h2{font-size:30px;line-height:1.15;margin:56px 0 18px}
+html body.tpl-c .article-body h2::before{color:var(--muted)}
+html body.tpl-c .article-body p em{color:inherit}
+html body.tpl-c .pullquote{margin:44px 0;padding:2px 0 2px 22px;border:0;border-left:3px solid var(--ink);font-size:24px;line-height:1.35;font-style:normal;font-weight:400}
+html body.tpl-c .pullquote::before{display:none}
+html body.tpl-c .tldr-box, html body.tpl-c .tldr{border-left-color:var(--ink)}
+html body.tpl-c .tldr-label, html body.tpl-c .faq-head, html body.tpl-c .aside .label, html body.tpl-c .art-share-label{color:var(--muted)}
+html body.tpl-c .art-share{border-left-color:var(--line)}
+html body.tpl-c .tldr-box p strong{background:none}
+html body.tpl-c .faq-h2{font-size:32px}
+html body.tpl-c .af-cta{font-style:normal;font-size:24px}
+html body.tpl-c .stat-callout-num{font-style:normal}
+/* metodologia */
+html body.tpl-c .hero{padding:72px 32px 36px}
+html body.tpl-c .hero h1{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em}
+html body.tpl-c .hero-lede{font-style:normal;font-size:20px}
+html body.tpl-c .body h2{font-size:30px}
+@media(max-width:900px){html body.tpl-c .article-hero{padding:48px 20px 32px}}
+</style>
+</head>
+<body class="tpl-c">
+<a href="#main" class="skip-link">Pomiń do treści</a>
+
+<nav class="nav" role="navigation" aria-label="Główna nawigacja" id="nav">
+  <a class="nav-brand" href="biurofilia.html">Showroom <em>Biur</em></a>
+  <a class="nav-back" href="czytelnia.html">← Wszystkie eseje</a>
+</nav>
+<a id="main" tabindex="-1" class="sr-only">Główna treść strony</a>
+<div class="progress-bar" id="progress"></div>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="ah-wrap">
+    <div class="ah-meta">
+      <span>Esej</span>
+      <span class="pipe">·</span>
+      <span class="accent">2026</span>
+      <span class="pipe">·</span>
+      <span>14 min czytania</span>
+      <span class="pipe">·</span>
+      <span>Redakcja Showroom Biur</span>
+    </div>
+    <div class="ah-eyebrow">Nr 01 · Dane i interpretacja</div>
+    <h1 class="ah-title">Anatomia polskiego<br><em>workplace</em> 2026.</h1>
+    <p class="ah-deck">
+      Zebraliśmy 272 polskie realizacje biurowe z lat 2012-2026. Razem to 980 000 m² zaprojektowanej przestrzeni, 80 pracowni, 16 miast. Co tak naprawdę powiedział nam ten zbiór?
+    </p>
+    <div class="ah-updated">Ostatnia aktualizacja: 26.10.2026</div>
+  </div>
+</section>
+<aside class="art-share">
+  <div class="art-share-label">Udostępnij artykuł</div>
+  <div class="art-share-btns">
+    <a class="art-share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//showroombiur.pl/artykul-anatomia-workplace-2026.html" target="_blank" rel="noopener" aria-label="Udostępnij na LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.27 18.5H5.5V9.5h2.77v9zM6.88 8.25c-.89 0-1.61-.72-1.61-1.61s.72-1.61 1.61-1.61 1.61.72 1.61 1.61-.72 1.61-1.61 1.61zm11.62 10.25h-2.77V14c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H9.75V9.5h2.66v1.22h.04c.37-.7 1.28-1.43 2.63-1.43 2.81 0 3.33 1.85 3.33 4.26v4.95z"/></svg>
+      LinkedIn
+    </a>
+    <a class="art-share-btn" href="https://twitter.com/intent/tweet?text=Anatomia%20polskiegoworkplace%202026.&url=https%3A//showroombiur.pl/artykul-anatomia-workplace-2026.html" target="_blank" rel="noopener" aria-label="Udostępnij na X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X
+    </a>
+    <button class="art-share-btn copy" data-url="https://showroombiur.pl/artykul-anatomia-workplace-2026.html" type="button" aria-label="Skopiuj link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Kopiuj link</span></button>
+  </div>
+</aside>
+
+<!-- editorial hero photo -->
+<div class="article-hero-photo">
+  <figure>
+    <div class="ahp-img-wrap">
+      <img src="https://d5mag.com/wp-content/uploads/2025/11/MA449_W9_press-12.jpg" loading="lazy" decoding="async" alt="Vercom S.A. &amp; cyber_Folks - projekt Flamaster (Agata Plackowska), Kraków 2025">
+    </div>
+    <figcaption>
+      <span class="ahp-illu">Realizacja referencyjna: <a href="projekt.html?slug=vercom-s-a-and-cyber-folks-krakow-2025"><strong>Vercom S.A. &amp; cyber_Folks</strong></a> - proj. Flamaster (Agata Plackowska), Kraków 2025.</span>
+      <span class="ahp-credit">Fot. materiały pracowni</span>
+    </figcaption>
+  </figure>
+</div>
+
+
+<aside class="tldr-box">
+  <div class="label">W skrócie</div>
+  <p>W bazie Showroom Biur jest <strong>272 polskie realizacje biurowe</strong> z lat 2012-2026, razem <strong>981 740 m²</strong> zaprojektowanej powierzchni. Era 2024-2026 to <strong>94 nowe projekty</strong> (więcej niż w całej poprzedniej dekadzie). Warszawa odpowiada za <strong>61% rynku</strong>, sześć największych pracowni - za 53% realizacji. Tech / IT to dominująca branża najemców (11%), a Varso Tower jest najbardziej skoncentrowanym adresem premium-fit-outów w Polsce.</p>
+</aside>
+
+
+<!-- BODY -->
+<article class="article-body">
+
+<p><span class="dropcap">P</span>olski workplace ma problem percepcyjny. Z zewnątrz wygląda jak peryferia - między Berlinem a Wiedniem, więcej fit-outu niż architektury, więcej Skanski niż Rema Koolhaasa. Z wewnątrz - kompletny ekosystem, w którym co tydzień pojawia się nowa realizacja, średnio 50 rocznie, z budżetami liczonymi w setkach milionów złotych. Showroom Biur zaczął się od próby pogodzenia tych dwóch perspektyw. Po dziewięciu miesiącach zbierania danych mamy jeden wniosek: <strong>nie wiedzieliśmy, jak duży jest ten rynek</strong>.</p>
+
+<div class="stat-callout">
+  <div class="stat-callout-num">980&thinsp;000<span class="unit">m²</span></div>
+  <div class="stat-callout-label">
+    <strong>Łączna powierzchnia zaprojektowanych biur</strong> w 272 realizacjach od 2012 roku. Z czego ponad połowa - w samej Warszawie. Średnia projektu: 7 610 m². Mediana - znacznie niższa: ok. 1 200 m².
+  </div>
+</div>
+
+<h2 data-num="Część 01">Era <em>2024-2026</em>.</h2>
+
+<p>Najbardziej uderzającym odkryciem nie był rozmiar rynku, ale jego dynamika. Pomiędzy 2013 a 2023 rokiem powstało w Polsce 178 udokumentowanych projektów workplace. <strong>Pomiędzy 2024 a 2026 - 94 nowe.</strong> To znaczy: w trzy lata zaprojektowano więcej biur, niż w całej poprzedniej dekadzie razem wziętej.</p>
+
+<div class="figure">
+  <h4>Liczba nowych realizacji rocznie</h4>
+  <div class="figure-bars">
+    <div class="figure-bar"><span class="num">1</span><div class="bar" style="height:3%"></div><span class="yr">'12</span></div>
+    <div class="figure-bar"><span class="num">3</span><div class="bar" style="height:7%"></div><span class="yr">'13</span></div>
+    <div class="figure-bar"><span class="num">1</span><div class="bar" style="height:3%"></div><span class="yr">'14</span></div>
+    <div class="figure-bar"><span class="num">2</span><div class="bar" style="height:5%"></div><span class="yr">'15</span></div>
+    <div class="figure-bar"><span class="num">9</span><div class="bar" style="height:18%"></div><span class="yr">'16</span></div>
+    <div class="figure-bar"><span class="num">10</span><div class="bar" style="height:20%"></div><span class="yr">'17</span></div>
+    <div class="figure-bar"><span class="num">21</span><div class="bar" style="height:43%"></div><span class="yr">'18</span></div>
+    <div class="figure-bar"><span class="num">17</span><div class="bar" style="height:35%"></div><span class="yr">'19</span></div>
+    <div class="figure-bar"><span class="num">19</span><div class="bar" style="height:39%"></div><span class="yr">'20</span></div>
+    <div class="figure-bar"><span class="num">19</span><div class="bar" style="height:39%"></div><span class="yr">'21</span></div>
+    <div class="figure-bar"><span class="num">28</span><div class="bar" style="height:57%"></div><span class="yr">'22</span></div>
+    <div class="figure-bar"><span class="num">46</span><div class="bar" style="height:94%"></div><span class="yr">'23</span></div>
+    <div class="figure-bar"><span class="num">49</span><div class="bar recent" style="height:100%"></div><span class="yr">'24</span></div>
+    <div class="figure-bar"><span class="num">35</span><div class="bar recent" style="height:71%"></div><span class="yr">'25</span></div>
+    <div class="figure-bar"><span class="num">10</span><div class="bar recent" style="height:20%"></div><span class="yr">'26</span></div>
+  </div>
+  <div class="figure-caption">
+    <strong>Źródło:</strong> Showroom Biur, baza 272 realizacji workplace 2012-2026. 2026 niepełny (dane do maja). Pomarańczowe słupki: lata 2024-2026.
+  </div>
+</div>
+
+<p>Czy to rzeczywisty skok inwestycji, czy efekt obserwatora? Częściowo i jedno, i drugie. Pomiędzy 2020 a 2023 rokiem na polski rynek weszły setki firm IT i SSC szukających biur klasy A. Pandemia COVID-19 spowodowała opóźnienia - zaprojektowane wówczas projekty zaczęły być realizowane dopiero w 2023-2024. Równolegle - co istotne - zwiększyła się dokumentacja: Office Snapshots, Officelovin i polskie portale dopiero w 2022-2023 zaczęły regularnie publikować polskie realizacje.</p>
+
+<p>Ale wszystkie ścieżki wskazują na to samo: <strong>polski workplace przeżywa post-pandemiczny renesans</strong>, którego skala umyka percepcji nawet branży.</p>
+
+<div class="pullquote">
+  W trzy lata zaprojektowano więcej polskich biur, niż w całej poprzedniej dekadzie razem wziętej.
+  <span class="attr">Showroom Biur, 2026</span>
+</div>
+
+<h2 data-num="Część 02">Warszawa jako <em>monopolista</em>.</h2>
+
+<p>Z 272 udokumentowanych realizacji <strong>165 powstało w Warszawie</strong> - to 61% rynku. Drugi w kolejności Wrocław - 24 projekty. Kraków, Poznań, Trójmiasto i Katowice razem dają mniej niż połowę warszawskiego dorobku.</p>
+
+<p>To nieuniknione w gospodarce o tak silnej koncentracji korporacyjnej. Stolica skupia HQ większości firm konsultingowych, prawniczych, finansowych. Ale nawet z poprawką na strukturę zatrudnienia, koncentracja w Warszawie jest niezdrowa.</p>
+
+<h3>Trzy <em>peryferyjne</em> trendy</h3>
+
+<p><strong>Po pierwsze:</strong> Wrocław jako stolica IT. Spośród 24 realizacji w Wrocławiu, połowa to fit-outy dla firm technologicznych - Opera Software, KRUK, Helio S.A., 3M GSC, Shift4. Wrocław zaczyna funkcjonować jako „polskie Reading" - miasto, w którym lokują się drugorzędne biura globalnych korporacji IT, ale z budżetami fit-out na poziomie HQ.</p>
+
+<p><strong>Po drugie:</strong> Katowice jako polski Manchester. .KTW II (Medusa Group) zgromadziło już co najmniej pięciu wymagających najemców (PwC, Fujitsu, EY, mBank, Vaillant, Lipton Teas & Infusions). To anomalia - w żadnym innym mieście poza Warszawą jeden budynek nie generuje takiej koncentracji prestiżowych fit-outów.</p>
+
+<p><strong>Po trzecie:</strong> Trójmiasto rośnie cicho. Gdynia, Gdańsk i Sopot razem - 14 realizacji. Mało, ale charakterystycznych: ATC CARGO, MSC Poland, Medlog, Bayer w Olivia Centre. Dominuje branża logistyczna i shipping - w naturalny sposób związana z portem.</p>
+
+<div class="aside">
+  <div class="label">Pojedyncza obserwacja</div>
+  <p>Łódź miała 5 realizacji w bazie. W 2026 roku - pierwszy raz w historii - pojawia się w niej projekt klasy światowej: <strong>Tate &amp; Lyle</strong> (Colliers Define) w nowym biurowcu w centrum miasta. Czy to początek nowego cyklu, czy pojedynczy wybryk? Następne dwa lata pokażą.</p>
+</div>
+
+<h2 data-num="Część 03">Sześć pracowni <em>i cała reszta</em>.</h2>
+
+<p>Rynek pracowni jest skoncentrowany niemal w tym samym stopniu, co rynek miast. <strong>Sześć największych studiów zaprojektowało 53% wszystkich realizacji</strong> w bazie:</p>
+
+<div class="tag-list">
+  <span class="tag">Trzop Architekci · 40</span>
+  <span class="tag">Massive Design · 24</span>
+  <span class="tag">The Design Group · 20</span>
+  <span class="tag">mode:lina · 19</span>
+  <span class="tag">BIT Creative · 19</span>
+  <span class="tag">Workplace · 18</span>
+</div>
+
+<p>Z drugiej strony - w bazie figuruje 80 unikalnych pracowni. Większość ma 1-2 udokumentowane projekty. To nie jest „long tail" w klasycznym sensie - to skutek tego, że duże pracownie publikują systematycznie, a małe - rzadziej i mniej widocznie.</p>
+
+<p>Tu właśnie zaczyna się problem percepcyjny rynku. Jeśli zaglądasz tylko na Office Snapshots, widzisz głównie Trzop, Massive i mode:lina. Jeśli czytasz polskie portale - widzisz The Design Group, BIT Creative, Workplace. Każde źródło ma swój krąg ulubionych - a pomiędzy nimi gubią się dziesiątki ważnych realizacji od mniej eksponowanych studiów.</p>
+
+<div class="pullquote">
+  Z 80 pracowni, sześć największych zaprojektowało ponad połowę wszystkich realizacji. Pozostałe 74 - drugą połowę.
+  <span class="attr">Analiza Showroom Biur</span>
+</div>
+
+<h2 data-num="Część 04">Branża najemcy <em>jest argumentem</em>.</h2>
+
+<p>Co projektują polskie pracownie? <strong>Tech / IT to 11% rynku</strong> - najsilniejsza branża najemców. Drugi blok to FMCG / Retail (9,5%) - Lipton, Beiersdorf, Coca-Cola, Sephora, L'Oréal. Trzeci - Real estate (9,5%): biura samych deweloperów, agentów i firm doradczych nieruchomości (Skanska, Echo, Colliers, Cushman & Wakefield, JLL).</p>
+
+<p>Klasyczne corporate workplace - konsulting, finanse, prawo - stanowi razem ok. 11% projektów. To liczba zaskakująco niska, biorąc pod uwagę, jak duży udział tej branży mają w stolicowej powierzchni biurowej. Tłumaczenie: firmy konsultingowe zmieniają biura rzadziej niż tech-y i każda zmiana ma większą skalę.</p>
+
+<h3>Co projektuje <em>kogo</em></h3>
+
+<p>Branża najemcy częściowo determinuje wybór pracowni:</p>
+
+<p>• <strong>Logistyka i FMCG</strong> najczęściej trafiają do <strong>BIT Creative</strong> i <strong>HUKK.studio</strong> - pracowni z portfolio MSC, EWL, Hoogwegt, ATC CARGO.</p>
+
+<p>• <strong>Tech / IT</strong> dzieli się głównie między <strong>Trzop</strong>, <strong>Massive Design</strong> i mniejsze studia z mocnym narracyjnym podejściem (mode:lina dla Sennheiser i Volkswagena, BIT Creative dla Lingaro).</p>
+
+<p>• <strong>Konsulting i prawo</strong> grawituje ku <strong>Trzop Architekci</strong> i <strong>Massive Design</strong> - pracowniom, które potrafią obsłużyć projekt w skali kilku tysięcy metrów w prestiżowych wieżach (Varso, Q22, Warsaw Spire).</p>
+
+<p>• <strong>FMCG / Beauty</strong> coraz częściej trafia do <strong>The Design Group</strong> (BAT DBS, Fujifilm) i <strong>mode:lina</strong> (Wyborowa, Sennheiser, Volkswagen).</p>
+
+<h2 data-num="Część 05">Co <em>nas dziwi</em>.</h2>
+
+<p>Po roku zbierania danych zaskoczyły nas trzy obserwacje.</p>
+
+<p><strong>Pierwsza:</strong> wykonawcy fit-outu są niewidoczni. Spośród 272 realizacji, w zaledwie kilkunastu udało nam się ustalić wykonawcę. Reesco, Forbis Group, Neo Świat i Tétris (design &amp; build) - ci pojawiają się od czasu do czasu. Reszta - Skanska, Cushman, JLL, Colliers - działa anonimowo. To dziwne, biorąc pod uwagę, że budżet wykonawstwa fit-outu to często ponad 70% kosztu projektu.</p>
+
+<p><strong>Druga:</strong> meble i wyposażenie są jeszcze mniej widoczne. W całej bazie pojawiły się raz Bejot, Noti, MDD i - w opisie jednego projektu mode:lina - Kohler. Brakuje informacji o producentach. Czy to z powodu polityki PR pracowni, czy braku zainteresowania portali?</p>
+
+<p><strong>Trzecia:</strong> Dezeen i ArchDaily pisały o polskich biurach tylko 22 razy w całej historii ich istnienia. Officelovin - 43 razy. To znaczy, że jeśli Twój projekt nie został opublikowany na Office Snapshots, polskim PropertyDesign albo nie znajduje się w portfolio pracowni - <strong>z perspektywy zagranicznego czytelnika nie istnieje</strong>.</p>
+
+<div class="aside">
+  <div class="label">Punkt zapalny</div>
+  <p>Większość polskich pracowni nie publikuje samodzielnie na Dezeen i ArchDaily. Bariera nie jest finansowa (zgłoszenia są darmowe) - jest językowa i organizacyjna. Showroom Biur chce to częściowo nadrobić: <strong>nasze archiwum działa jak indeks dla zagranicznej publiki</strong>, ale z polskim głosem redakcyjnym.</p>
+</div>
+
+<h2 data-num="Konkluzja">Co dalej.</h2>
+
+<p>Polski workplace 2026 to <strong>kompletny ekosystem</strong> - bardziej dojrzały, niż większość branży się spodziewała, ale wciąż słabo udokumentowany. Nasza baza 272 realizacji jest pierwszą próbą zmierzenia tego rynku - i jednocześnie pierwszym dowodem na to, ile zostaje niezarchiwizowane. Realnie, mówimy o może 60% wszystkich projektów wykonanych w tym okresie.</p>
+
+<p>Co jest do zrobienia? Po pierwsze - kontynuować archiwizację, miesiąc po miesiącu. Po drugie - rozszerzyć ją na wykonawców i producentów mebli, którzy obecnie są niemal niewidzialni. Po trzecie - zacząć systematyczną dokumentację polskich pracowni, które publikują rzadko, ale projektują regularnie.</p>
+
+<p>Tym zajmiemy się w kolejnych tekstach. Tymczasem - zachęcamy do <em>zgłaszania projektów</em>, których nam brakuje. Każda nowa realizacja w bazie to mniej peryferyjny polski workplace.</p>
+
+</article>
+
+<!-- FOOTER -->
+<section class="faq-section">
+  <div class="faq-wrap">
+    <div class="faq-head">Najczęściej zadawane pytania</div>
+    <h2 class="faq-h2">Pytania i <em>odpowiedzi</em>.</h2>
+    <div class="faq-item">
+      <h3 class="faq-q">Ile polskich projektów biurowych dokumentuje Showroom Biur?</h3>
+      <p class="faq-a">Na maj 2026 baza zawiera 272 polskie realizacje workplace z lat 2012-2026, łącznie 981 740 m² zaprojektowanej powierzchni biurowej. Dane pochodzą z 5 źródeł: Office Snapshots, Officelovin, Dezeen, ArchDaily, polskich portali branżowych oraz portfoli pracowni.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Które polskie pracownie projektują najwięcej biur?</h3>
+      <p class="faq-a">Sześć największych pracowni zaprojektowało razem 53% projektów w bazie: Trzop Architekci (40 realizacji), Massive Design (24), The Design Group (20), Workplace (18), mode:lina (19), BIT Creative (19). Razem zaprojektowali 53% polskiego workplace lat 2012-2026.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Dlaczego Warszawa dominuje polski rynek workplace?</h3>
+      <p class="faq-a">Warszawa odpowiada za 165 z 272 realizacji (61%). To naturalny skutek koncentracji HQ firm konsultingowych, prawniczych i finansowych. Drugi w kolejności Wrocław ma 24 projekty. Razem Kraków, Poznań, Gdańsk, Gdynia i Katowice dają mniej niż połowę warszawskiego dorobku.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Jaka jest średnia powierzchnia polskiego projektu biurowego?</h3>
+      <p class="faq-a">Średnia powierzchnia projektu w bazie Showroom Biur to 7 610 m². Mediana jest znacznie niższa - ok. 1 200 m². Największy projekt to The Park Warsaw (130 000 m²), najmniejszy - Kryminatorium (42 m², studio podcastowe true crime mode:liny).</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Dlaczego era 2024-2026 jest rekordowa dla polskiego workplace?</h3>
+      <p class="faq-a">94 nowe projekty z lat 2024-2026 to więcej, niż w całej dekadzie 2013-2023 razem wziętej. Powód: post-pandemiczny boom inwestycji workplace, opóźnione projekty z lat 2020-2022 ruszające dopiero teraz, plus rozszerzona dokumentacja w portalach branżowych.</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ile polskich projektów biurowych dokumentuje Showroom Biur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na maj 2026 baza zawiera 272 polskie realizacje workplace z lat 2012-2026, łącznie 981 740 m² zaprojektowanej powierzchni biurowej. Dane pochodzą z 5 źródeł: Office Snapshots, Officelovin, Dezeen, ArchDaily, polskich portali branżowych oraz portfoli pracowni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Które polskie pracownie projektują najwięcej biur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sześć największych pracowni zaprojektowało razem 53% projektów w bazie: Trzop Architekci (40 realizacji), Massive Design (24), The Design Group (20), Workplace (18), mode:lina (19), BIT Creative (19). Razem zaprojektowali 53% polskiego workplace lat 2012-2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego Warszawa dominuje polski rynek workplace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Warszawa odpowiada za 165 z 272 realizacji (61%). To naturalny skutek koncentracji HQ firm konsultingowych, prawniczych i finansowych. Drugi w kolejności Wrocław ma 24 projekty. Razem Kraków, Poznań, Gdańsk, Gdynia i Katowice dają mniej niż połowę warszawskiego dorobku."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jaka jest średnia powierzchnia polskiego projektu biurowego?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Średnia powierzchnia projektu w bazie Showroom Biur to 7 610 m². Mediana jest znacznie niższa - ok. 1 200 m². Największy projekt to The Park Warsaw (130 000 m²), najmniejszy - Kryminatorium (42 m², studio podcastowe true crime mode:liny)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego era 2024-2026 jest rekordowa dla polskiego workplace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "94 nowe projekty z lat 2024-2026 to więcej, niż w całej dekadzie 2013-2023 razem wziętej. Powód: post-pandemiczny boom inwestycji workplace, opóźnione projekty z lat 2020-2022 ruszające dopiero teraz, plus rozszerzona dokumentacja w portalach branżowych."
+      }
+    }
+  ]
+}
+</script>
+
+<section class="article-footer">
+  <div class="af-wrap">
+    <a href="czytelnia.html" class="af-cta">Czytaj kolejne eseje →</a>
+    <div class="af-meta">
+      <div>
+        <h5>Esej</h5>
+        <p>Anatomia polskiego workplace 2026<br>14 min czytania · 2026</p>
+      </div>
+      <div>
+        <h5>Redakcja</h5>
+        <p>Showroom Biur<br><a href="o-magazynie.html">O magazynie →</a></p>
+      </div>
+      <div>
+        <h5>Powiązane</h5>
+        <p><a href="sektor-w-liczbach.html">Sektor w liczbach</a><br><a href="biurofilia.html#archive">Archiwum 272 projektów</a><br><a href="biurofilia.html#studios">Pracownie</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const progress = document.getElementById('progress');
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.setProperty('--p', (window.scrollY / h).toFixed(3));
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+</script>
+
+  <script src="mobile-nav.js" defer></script>
+  <script src="search-index.js" defer></script>
+  <script src="search.js" defer></script>
+<script>
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.art-share-btn.copy');
+  if (!btn) return;
+  navigator.clipboard.writeText(btn.dataset.url).then(() => {
+    btn.classList.add('done');
+    btn.querySelector('span').textContent = 'Skopiowano ✓';
+    setTimeout(() => {
+      btn.classList.remove('done');
+      btn.querySelector('span').textContent = 'Kopiuj link';
+    }, 1800);
+  });
+});
+</script>
+</body>
+</html>

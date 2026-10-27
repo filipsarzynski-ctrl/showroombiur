@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 · Nie znaleziono - Showroom Biur</title>
+<meta name="description" content="Strona nie istnieje. Wróć do archiwum 257 polskich realizacji biurowych lub przejdź do jednej z głównych sekcji magazynu." />
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#EFEAE2; --bone:#F3EFE6;
+  --ink:#0F0F0E; --ink-soft:#2A2A28;
+  --muted:#8B7E6A; --muted-soft:#B6AC99;
+  --accent:#5E1A26; --line:#D9D2C2; --paper:#FBF8F2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{background:var(--bg);}
+body{
+  min-height:100vh;
+  background:var(--bg); color:var(--ink);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  display:flex; flex-direction:column;
+  padding:32px 48px 60px;
+  position:relative;
+}
+
+.brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px; font-weight:500;
+  color:var(--ink); margin-bottom:80px;
+  letter-spacing:-0.01em;
+}
+.brand em{font-style:italic; color:var(--accent-text,#5E1A26); font-weight:300;}
+.brand a{color:inherit; text-decoration:none;}
+
+.wrap{
+  flex:1; max-width:1280px; margin:0 auto; width:100%;
+  display:grid; grid-template-columns: 1.2fr 1fr; gap:80px; align-items:center;
+}
+
+.left{}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; letter-spacing:0.32em; text-transform:uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom:30px;
+}
+h1{
+  font-family:'Cormorant Garamond',serif;
+  
+  font-size:clamp(120px, 16vw, 280px); line-height:0.82;
+  font-weight:500; letter-spacing:-0.05em;
+  color:var(--ink); margin-bottom:32px;
+}
+h1 em{font-style:italic; color:var(--accent-text,#5E1A26); font-weight:200;}
+.tagline{
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500;
+  font-size:clamp(22px, 2vw, 30px); line-height:1.4;
+  color:var(--ink-soft); margin-bottom:36px;
+  max-width:540px;
+}
+.tagline em{color:var(--accent-text,#5E1A26);}
+.body-text{
+  font-family:'Inter',sans-serif;
+  font-size:15px; line-height:1.65;
+  color:var(--ink-soft); max-width:480px; margin-bottom:36px;
+}
+
+.search-hint{
+  display:inline-flex; align-items:center; gap:12px;
+  padding:14px 22px;
+  background:var(--ink); color:var(--paper);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; letter-spacing:0.18em; text-transform:uppercase;
+  font-weight:500;
+  cursor:pointer; border:none;
+  transition: transform 0.3s, background 0.3s;
+}
+.search-hint:hover{transform:translateY(-2px); background:var(--accent);}
+.search-hint kbd{
+  background:rgba(94,26,38,0.25); color:var(--accent-text,#5E1A26);
+  padding:3px 7px; font-family:inherit; font-size:10px;
+  letter-spacing:0.06em;
+}
+
+.right{
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+}
+.card{
+  display:flex; flex-direction:column;
+  padding:28px 24px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  text-decoration:none; color:inherit;
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+  min-height:160px;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(15,15,14,0.08);
+}
+.card .num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom:14px;
+}
+.card h3{
+  font-family:'Cormorant Garamond',serif; font-weight:500; font-style:italic;
+  font-size:20px; line-height:1.1; letter-spacing:-0.01em;
+  color:var(--ink); margin-bottom:8px;
+}
+.card p{
+  font-family:'Inter',sans-serif;
+  font-size:12px; line-height:1.5; color:var(--muted);
+  margin-top:auto;
+}
+
+.foot{
+  margin-top:auto; padding-top:60px;
+  display:flex; justify-content:space-between; align-items:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--muted);
+}
+
+@media (max-width:900px){
+  body{padding:24px;}
+  .brand{margin-bottom:48px;}
+  .wrap{grid-template-columns:1fr; gap:48px;}
+  .right{grid-template-columns:1fr;}
+  .foot{flex-direction:column; gap:14px; text-align:center;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition: none !important;}
+}
+</style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.search-hint,
+[data-dark="1"],
+.footer,
+.article-footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+</head>
+<body>
+
+<div class="brand"><a href="index.html">Showroom <em>Biur</em></a></div>
+
+<div class="wrap">
+  <div class="left">
+    <div class="eyebrow">Błąd 404 · Strona nie istnieje</div>
+    <h1>Nie ma<br>tej <em>strony</em>.</h1>
+    <p class="tagline">
+      Adres, który próbujesz otworzyć, nie&nbsp;istnieje w&nbsp;archiwum magazynu - a&nbsp;<em>powinien</em>.
+    </p>
+    <p class="body-text">
+      Może projekt został przeniesiony, link miał literówkę, albo nie&nbsp;ma takiej realizacji w&nbsp;naszej bazie 257 polskich biur. Skorzystaj z&nbsp;wyszukiwania albo wybierz jedną z&nbsp;głównych sekcji magazynu po&nbsp;prawej.
+    </p>
+    <button class="search-hint" onclick="if(window.SO_SEARCH_INDEX){document.querySelector('.so-search-trigger')?.click();}else{location.href='biurofilia.html';}">
+      Otwórz wyszukiwarkę <kbd>⌘ K</kbd>
+    </button>
+  </div>
+
+  <div class="right">
+    <a class="card" href="biurofilia.html">
+      <div class="num">Nr 01 · Archiwum</div>
+      <h3>257 polskie realizacje biurowe</h3>
+      <p>2012-2026 · 80 pracowni · 14 miast</p>
+    </a>
+    <a class="card" href="workplace.html">
+      <div class="num">Nr 02 · Workplace</div>
+      <h3>Metoda Marioli Bitner</h3>
+      <p>3 dyscypliny · 25 deliverables · spaceplan</p>
+    </a>
+    <a class="card" href="wyposazenie.html">
+      <div class="num">Nr 03 · Wyposażenie</div>
+      <h3>Katalog dostawców</h3>
+      <p>33 marki · meble · oświetlenie · akustyka</p>
+    </a>
+    <a class="card" href="czytelnia.html">
+      <div class="num">Nr 04 · Czytelnia</div>
+      <h3>Eseje redakcyjne</h3>
+      <p>5 esejów + dashboard sektora</p>
+    </a>
+  </div>
+</div>
+
+<div class="foot">
+  <span>© 2026 Showroom Biur</span>
+  <span>Aktualizowane na bieżąco</span>
+</div>
+
+<script src="search-index.js" defer></script>
+<script src="search.js" defer></script>
+</body>
+</html>

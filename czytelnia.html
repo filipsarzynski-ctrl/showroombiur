@@ -1,0 +1,1771 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Czytelnia - eseje redakcyjne · Showroom Biur</title>
+<meta name="description" content="Pięć esejów redakcyjnych. Trzydzieści krótkich tekstów o workplace. Cztery zasady redakcyjne. Showroom Biur - magazyn workplace designu." />
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="canonical" href="https://showroombiur.pl/czytelnia.html" />
+<meta name="author" content="Showroom Biur" />
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="keywords" content="czytelnia, eseje redakcyjne, workplace solutions, mariola bitner, filip sarzyński, polski workplace, magazyn workplace designu" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Czytelnia - eseje redakcyjne · Showroom Biur" />
+<meta property="og:description" content="5 esejów + 30 artykułów Workplace Solutions. Polski głos w workplace designie." />
+<meta property="og:url" content="https://showroombiur.pl/czytelnia.html" />
+<meta property="og:image" content="https://showroombiur.pl/og-default.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Showroom Biur" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Czytelnia - Showroom Biur" />
+<meta name="twitter:description" content="Eseje redakcyjne + 30 artykułów workplace." />
+<meta name="twitter:image" content="https://showroombiur.pl/og-default.jpg" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Czytelnia - Showroom Biur",
+  "description":"Eseje redakcyjne i artykuły Workplace Solutions",
+  "url":"https://showroombiur.pl/czytelnia.html",
+  "publisher": {"@type": "Organization", "name": "Showroom Biur", "url": "https://showroombiur.pl"},
+  "inLanguage":"pl-PL",
+  "mainEntity":{
+    "@type":"ItemList",
+    "numberOfItems": 34,
+    "itemListElement": []
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EFEAE2; --bg-deep:#E5DFD3; --bone:#F3EFE6;
+  --ink:#0F0F0E; --ink-soft:#2A2A28;
+  --muted:#8B7E6A; --muted-soft:#B6AC99;
+  --accent:#5E1A26; --accent-deep:#7A2433;
+  --line:#D9D2C2; --paper:#FBF8F2;
+  --navy:#0B1018; --black:#050505;
+  --shadow: 0 12px 40px rgba(15,15,14,0.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{background:var(--bg); scroll-behavior:smooth;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'Inter', sans-serif;
+  font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x: hidden;
+}
+a{color:inherit; text-decoration:none;}
+::selection{background:var(--accent); color:var(--paper);}
+img{display:block; max-width:100%; height:auto;}
+
+/* Skip link for a11y */
+.skip-link{
+  position: absolute; top: -40px; left: 16px;
+  background: var(--ink); color: var(--paper);
+  padding: 10px 16px; z-index: 1000;
+  font-family:'JetBrains Mono', monospace; font-size:11px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+}
+.skip-link:focus{ top: 16px; }
+
+/* Preloader */
+.preloader{
+  position:fixed; inset:0; z-index:9999;
+  background: var(--black);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 0.8s, visibility 0.8s;
+}
+.preloader.hidden{ opacity:0; visibility:hidden; pointer-events:none; }
+.preloader-brand{
+  font-family:'Cormorant Garamond', serif;
+  font-size:14px; letter-spacing: 0.4em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 28px;
+}
+.preloader-num{
+  font-family:'Cormorant Garamond', serif;
+  font-style:italic; font-weight:500;
+  
+  font-size: clamp(40px, 5.5vw, 72px);
+  color: var(--paper); line-height: 0.9;
+  margin-bottom: 28px;
+}
+.preloader-bar{
+  width: 220px; height: 1px;
+  background: rgba(251,248,242,0.1);
+  position: relative; overflow: hidden;
+}
+.preloader-bar::after{
+  content:''; position:absolute; inset:0;
+  background: var(--accent);
+  transform-origin: left;
+  animation: pre-fill 1.6s cubic-bezier(0.2,0,0.2,1) forwards;
+}
+@keyframes pre-fill{ from{transform:scaleX(0);} to{transform:scaleX(1);} }
+.preloader-label{
+  margin-top: 22px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(251,248,242,0.55);
+}
+
+/* Nav */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 32px;
+  background:rgba(239,234,226,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom:1px solid transparent;
+  transition: border-color 0.3s, background 0.4s;
+}
+.nav.scrolled{ border-bottom-color: var(--line); }
+.nav.is-dark{ background: rgba(11,16,24,0.92); }
+.nav.is-dark .nav-brand{ color: var(--paper); }
+.nav.is-dark .nav-links a{ color: rgba(251,248,242,0.75); }
+.nav.is-dark .nav-links a:hover, .nav.is-dark .nav-links a.active{ color:var(--accent-text,#5E1A26); }
+.nav-brand{
+  font-family:'Cormorant Garamond', serif;
+  font-size:22px; font-weight:500;
+  letter-spacing:-0.01em;
+  color: var(--ink);
+  transition: color 0.4s;
+}
+.nav-brand em{ font-style:italic; color:var(--accent-text,#5E1A26); font-weight:300;}
+.nav-links{ display:flex; gap:28px; }
+.nav-links a{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px; letter-spacing:0.2em; text-transform: uppercase;
+  color: var(--ink-soft);
+  transition: color 0.3s;
+}
+.nav-links a:hover, .nav-links a.active{ color:var(--accent-text,#5E1A26); }
+@media (max-width: 768px){ .nav-links{ display: none; } }
+
+/* HERO - overture */
+.overture{
+  background: var(--navy); color: var(--paper);
+  min-height: 100vh;
+  padding: 140px 48px 80px;
+  position:relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.overture::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    none,
+    none;
+}
+.overture::after{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(251,248,242,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251,248,242,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+.overture-wrap{
+  position:relative; z-index:2;
+  max-width: 1320px; margin: 0 auto;
+  width: 100%;
+}
+.ov-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px; letter-spacing: 0.4em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 36px;
+  display:flex; align-items:center; gap: 18px;
+}
+.ov-eyebrow .rule{ flex: 0 0 60px; height:1px; background: var(--accent); }
+.ov-h1{
+  font-family:'Cormorant Garamond', serif;
+  
+  font-size: clamp(40px, 5.5vw, 72px); line-height: 0.85;
+  font-weight:500; letter-spacing: -0.04em;
+  color: var(--paper);
+  margin-bottom: 40px;
+  display: inline-block;
+}
+.ov-h1 em{ font-style: italic; color:var(--accent-text,#5E1A26); font-weight: 200; }
+.ov-h1 .word{ display: inline-block; opacity:0; transform: translateY(40px); animation: word-rise 1s cubic-bezier(0.2,0,0.2,1) forwards; }
+.ov-h1 .word:nth-child(2){ animation-delay: 0.15s; }
+@keyframes word-rise{ to{ opacity: 1; transform: translateY(0); } }
+
+.ov-lede{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  font-size: clamp(22px, 2.2vw, 32px); line-height: 1.4;
+  color: rgba(251,248,242,0.82);
+  max-width: 880px; margin-bottom: 64px;
+  opacity:0; animation: fade-up 0.9s 0.5s cubic-bezier(0.2,0,0.2,1) forwards;
+}
+@keyframes fade-up{ from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:none;} }
+.ov-lede em{ color:var(--accent-text,#5E1A26); font-style: italic; }
+
+.ov-stats{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+  padding-top: 36px; border-top: 1px solid rgba(251,248,242,0.12);
+  opacity:0; animation: fade-up 0.9s 0.8s cubic-bezier(0.2,0,0.2,1) forwards;
+}
+.ov-stat{ font-family:'Cormorant Garamond', serif; }
+.ov-stat .n{
+  font-size: clamp(40px, 4.5vw, 64px); line-height: 0.95;
+  font-weight: 300; font-style: italic;
+  color:var(--accent-text,#5E1A26);
+  letter-spacing: -0.02em;
+}
+.ov-stat .l{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(251,248,242,0.6);
+  margin-top: 14px;
+}
+.ov-scroll-hint{
+  position:absolute; bottom:32px; left: 50%; transform: translateX(-50%);
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px; letter-spacing:0.32em; text-transform:uppercase;
+  color: rgba(251,248,242,0.5);
+  z-index: 3;
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  opacity: 0; animation: fade-up 1s 1.4s forwards;
+}
+.ov-scroll-hint::after{
+  content:''; width:1px; height: 28px;
+  background: rgba(251,248,242,0.4);
+  animation: scroll-pulse 2s infinite;
+}
+@keyframes scroll-pulse{
+  0%,100%{ opacity: 0.4; transform: scaleY(1); transform-origin: top; }
+  50%{ opacity: 1; transform: scaleY(0.6); transform-origin: top; }
+}
+
+@media (max-width: 768px){
+  .overture{ padding: 100px 24px 60px; }
+  .ov-stats{ grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+/* W skrócie */
+.brief{
+  background: var(--bg);
+  padding: 120px 48px 80px;
+}
+.brief-wrap{
+  max-width: 1320px; margin: 0 auto;
+  display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 96px;
+  align-items: start;
+}
+.brief-aside{ position: sticky; top: 120px; }
+.brief-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 24px;
+}
+.brief-aside h2{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(40px, 4.5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin-bottom: 28px;
+}
+.brief-aside h2 em{ color:var(--accent-text,#5E1A26); font-style: italic; font-weight: 200;}
+.brief-aside .sig{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted); margin-top: 28px;
+  padding-top: 24px; border-top: 1px solid var(--line);
+}
+.brief-body{
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size: 19px; line-height: 1.6;
+  color: var(--ink-soft);
+}
+.brief-body p{ margin-bottom: 24px; }
+.brief-body p:first-of-type::first-letter{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  font-size: 96px; line-height: 0.85;
+  color:var(--accent-text,#5E1A26);
+  float: left; margin: 6px 14px -2px -2px;
+}
+.brief-body em{ color:var(--accent-text,#5E1A26); font-style: italic; }
+.brief-body strong{ color: var(--ink); font-weight: 500; }
+@media (max-width: 900px){
+  .brief-wrap{ grid-template-columns: 1fr; gap: 48px; }
+  .brief-aside{ position: static; }
+}
+
+/* Featured Długi tekst */
+.featured{
+  background: var(--bg);
+  padding: 80px 0 120px;
+}
+.featured-wrap{ max-width: 1480px; margin: 0 auto; padding: 0 48px; }
+.featured-meta-strip{
+  display:flex; align-items:center; gap:24px; margin-bottom: 28px;
+}
+.featured-meta-strip .pill{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--paper); background: var(--accent);
+  padding: 8px 14px;
+  border-radius: 100px;
+}
+.featured-meta-strip .meta{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+}
+.featured-card{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; gap: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  overflow: hidden;
+  position: relative;
+}
+.featured-img{
+  background: linear-gradient(135deg, var(--navy) 0%, #0F0F0E 100%);
+  aspect-ratio: 1.91/1;
+  position: relative; overflow: hidden;
+}
+.featured-img img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.featured-card:hover .featured-img img{ transform: scale(1.04); }
+.featured-img::after{
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(94,26,38,0.0) 60%, rgba(15,15,14,0.2) 100%);
+}
+.featured-body{
+  padding: 56px 48px 48px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.featured-body .eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 24px;
+}
+.featured-body h3{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(32px, 3.6vw, 52px); line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.featured-body .lede{
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size: 18px; line-height: 1.55;
+  color: var(--ink-soft); margin-bottom: 36px;
+  max-width: 540px;
+}
+.featured-body .meta{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.featured-cta{
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 16px 28px;
+  background: var(--ink); color: var(--paper);
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  align-self: flex-start;
+  transition: transform 0.3s, background 0.3s;
+}
+.featured-cta:hover{ transform: translateY(-3px); background: var(--accent); }
+.featured-cta svg{ width: 16px; height: 16px; }
+@media (max-width: 900px){
+  .featured-card{ grid-template-columns: 1fr; }
+  .featured-body{ padding: 36px 28px; }
+}
+
+/* Section divider */
+.section-divider{
+  padding: 100px 48px 80px;
+  background: var(--bg);
+}
+.section-divider .div-num{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+}
+.section-divider h2{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin-top: 28px;
+  max-width: 1320px;
+}
+.section-divider h2 em{ color:var(--accent-text,#5E1A26); font-style: italic; font-weight: 200;}
+.section-divider .sub{
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:500;
+  font-size: 22px; line-height: 1.45;
+  color: var(--ink-soft);
+  margin-top: 32px; max-width: 600px;
+}
+
+/* Essays editorial list */
+.essays-list{
+  padding: 0 48px 120px;
+  background: var(--bg);
+}
+.essays-wrap{ max-width: 1320px; margin: 0 auto; }
+.essay-row{
+  display: grid; grid-template-columns: 80px 1fr; gap: 48px;
+  padding: 60px 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+  position: relative;
+  transition: background 0.4s;
+}
+.essay-row:hover{ background: var(--bone); padding: 60px 24px; margin-left: -24px; margin-right: -24px; }
+.essay-row:last-child{ border-bottom: 1px solid var(--line);}
+.essay-num{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: 64px; line-height: 1;
+  color:var(--accent-text,#5E1A26);
+  letter-spacing: -0.02em;
+}
+.essay-body{
+  display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 56px;
+  align-items: start;
+}
+.essay-meta{
+  display: flex; flex-direction: column; gap: 14px;
+}
+.essay-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+}
+.essay-title{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(28px, 3.5vw, 44px); line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.essay-row:hover .essay-title{ color:var(--accent-text,#5E1A26); }
+.essay-lede{
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size: 16px; line-height: 1.6;
+  color: var(--ink-soft);
+}
+.essay-info{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 18px; border-top: 1px solid var(--line);
+}
+.essay-thumb{
+  position: relative; overflow: hidden;
+  aspect-ratio: 1.91/1;
+  background: linear-gradient(135deg, var(--navy), #0F0F0E);
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid var(--line);
+}
+.essay-thumb img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.8s;
+}
+.essay-row:hover .essay-thumb img{ transform: scale(1.06); }
+.essay-arrow{
+  position: absolute; top: 60px; right: 0;
+  width: 56px; height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.3s, background 0.3s, border-color 0.3s;
+}
+.essay-row:hover .essay-arrow{
+  background: var(--accent); border-color: var(--accent);
+  transform: rotate(-45deg);
+}
+.essay-arrow svg{ width: 16px; height: 16px; transition: stroke 0.3s; }
+.essay-row:hover .essay-arrow svg{ stroke: var(--paper); }
+
+@media (max-width: 1100px){
+  .essay-row{ grid-template-columns: 60px 1fr; gap: 28px; padding: 48px 0;}
+  .essay-row:hover{ padding: 48px 16px; margin: 0 -16px;}
+  .essay-num{ font-size: 52px; }
+  .essay-body{ grid-template-columns: 1fr; gap: 24px; }
+  .essay-arrow{ display: none; }
+}
+@media (max-width: 700px){
+  .essays-list{ padding: 0 24px 80px; }
+  .essay-row{ grid-template-columns: 1fr; gap: 16px; padding: 36px 0;}
+  .essay-row:hover{ padding: 36px 0; margin: 0; background: transparent;}
+  .essay-num{ font-size: 44px; }
+  .essay-thumb{ aspect-ratio: 1.91/1; }
+}
+
+/* Marquee */
+.marquee{
+  background: var(--ink); color: var(--paper);
+  padding: 36px 0; overflow: hidden;
+  border-top: 1px solid var(--ink-soft);
+  border-bottom: 1px solid var(--ink-soft);
+}
+.marquee-track{
+  display: flex; gap: 80px;
+  animation: marquee 50s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+.marquee-item{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  font-size: clamp(28px, 4vw, 56px); line-height: 1;
+  color: rgba(251,248,242,0.65);
+}
+.marquee-item em{ color:var(--accent-text,#5E1A26); font-style: italic;}
+.marquee-item.dot{
+  color:var(--accent-text,#5E1A26); font-style: normal;
+}
+@keyframes marquee{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+
+/* Workplace Solutions section */
+.wp-section{
+  background: var(--bg);
+  padding: 120px 48px 100px;
+}
+.wp-wrap{ max-width: 1480px; margin: 0 auto; }
+.wp-head{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  margin-bottom: 64px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--line);
+}
+.wp-head-left .eye{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+}
+.wp-head-left h2{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(48px, 6vw, 96px); line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-top: 24px;
+}
+.wp-head-left h2 em{ color:var(--accent-text,#5E1A26); font-style: italic; }
+.wp-head-right{
+  display: flex; flex-direction: column; gap: 22px;
+}
+.wp-head-right p{
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:500;
+  font-size: 19px; line-height: 1.55;
+  color: var(--ink-soft);
+}
+.wp-author-card{
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  margin-top: 12px;
+}
+.wp-author-card .avatar{
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--paper);
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-size: 22px;
+  font-weight:500;
+  flex: 0 0 52px;
+}
+.wp-author-card .who{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted);
+}
+.wp-author-card .name{
+  font-family:'Cormorant Garamond', serif; font-style: italic;
+  font-size: 18px; color: var(--ink);
+  margin-top: 2px;
+}
+
+.wp-filters{
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 48px;
+}
+.wp-pill{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.wp-pill:hover{ border-color: var(--accent); color:var(--accent-text,#5E1A26); }
+.wp-pill.active{
+  background: var(--ink); border-color: var(--ink); color: var(--paper);
+}
+
+.wp-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 4px;
+}
+.wp-card{
+  background: var(--paper);
+  padding: 32px 28px 28px;
+  border: 1px solid var(--line);
+  transition: background 0.3s, transform 0.4s, border-color 0.3s;
+  position: relative;
+  display: flex; flex-direction: column;
+  min-height: 260px;
+}
+.wp-card:hover{
+  background: var(--bone);
+  transform: translateY(-3px);
+  border-color: rgba(94,26,38,0.4);
+}
+.wp-card-head{
+  display:flex; justify-content:space-between; align-items: flex-start;
+  margin-bottom: 24px;
+}
+.wp-card .num{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: 36px; line-height: 1;
+  color:var(--accent-text,#5E1A26);
+  letter-spacing: -0.02em;
+}
+.wp-card .cat{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--muted);
+  padding: 4px 10px;
+  background: var(--bone);
+  border-radius: 100px;
+}
+.wp-card h4{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  font-size: 20px; line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.wp-card .desc{
+  font-family:'Inter', sans-serif;
+  font-size: 13px; line-height: 1.55;
+  color: var(--ink-soft);
+  flex: 1;
+}
+.wp-card-foot{
+  display:flex; justify-content:space-between; align-items: center;
+  margin-top: 22px; padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  font-family:'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+.wp-card-foot .read::after{
+  content: ' →';
+  color:var(--accent-text,#5E1A26);
+}
+
+.wp-load-more{
+  margin: 60px auto 0;
+  display: flex; justify-content: center;
+}
+.wp-load-btn{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+  padding: 18px 32px;
+  background: var(--ink); color: var(--paper);
+  border: none; cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.wp-load-btn:hover{ transform: translateY(-3px); background: var(--accent); }
+.wp-load-btn.hidden{ display: none; }
+
+/* Editorial principles (scrollytelling lite) */
+.principles{
+  background: var(--ink); color: var(--paper);
+  padding: 140px 48px;
+  position: relative; overflow: hidden;
+}
+.principles::before{
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background: none;
+}
+.principles-wrap{ max-width: 1320px; margin: 0 auto; position: relative; z-index: 2; }
+.principles-head{
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  margin-bottom: 80px;
+}
+.principles-head .eye{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+}
+.principles-head h2{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(48px, 6vw, 84px); line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-top: 22px;
+  color: var(--paper);
+}
+.principles-head h2 em{ color:var(--accent-text,#5E1A26); font-style: italic;}
+.principles-head .sub{
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:500;
+  font-size: 19px; line-height: 1.55;
+  color: rgba(251,248,242,0.78);
+}
+.principles-grid{
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px;
+}
+.principle{
+  padding: 56px 44px;
+  background: rgba(251,248,242,0.04);
+  border: 1px solid rgba(251,248,242,0.08);
+  display:flex; flex-direction:column;
+  min-height: 380px;
+  position: relative; overflow:hidden;
+  transition: background 0.4s, transform 0.4s;
+}
+.principle:hover{
+  background: rgba(94,26,38,0.08);
+  transform: translateY(-4px);
+}
+.principle .pnum{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: 96px; line-height: 1;
+  color:var(--accent-text,#5E1A26);
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+}
+.principle h3{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  font-size: 32px; line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.principle p{
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size: 17px; line-height: 1.6;
+  color: rgba(251,248,242,0.78);
+  flex: 1;
+}
+.principle .tag{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(251,248,242,0.12);
+}
+@media (max-width: 900px){
+  .principles-grid{ grid-template-columns: 1fr; }
+  .principles-head{ grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Newsletter */
+.newsletter{
+  background: var(--bg);
+  padding: 140px 48px;
+}
+.newsletter-wrap{
+  max-width: 1080px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px;
+  align-items: center;
+}
+.nl-aside .eye{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26); margin-bottom: 20px;
+}
+.nl-aside h2{
+  font-family:'Cormorant Garamond', serif;
+  font-style: italic; font-weight:500;
+  
+  font-size: clamp(36px, 4.5vw, 64px); line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.nl-aside h2 em{ color:var(--accent-text,#5E1A26); font-style: italic;}
+.nl-aside p{
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:500;
+  font-size: 18px; line-height: 1.55;
+  color: var(--ink-soft);
+}
+.nl-form{
+  background: var(--paper);
+  padding: 40px 36px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+}
+.nl-form label{
+  display: block;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.nl-form input[type="email"]{
+  width: 100%;
+  padding: 16px 0;
+  border: none; border-bottom: 1px solid var(--line);
+  background: transparent;
+  font-family:'Cormorant Garamond', serif; font-style: italic;
+  font-size: 22px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.nl-form input[type="email"]:focus{ border-color: var(--accent); }
+.nl-form input::placeholder{ color: var(--muted-soft); }
+.nl-form button{
+  margin-top: 20px;
+  padding: 16px 28px;
+  background: var(--ink); color: var(--paper);
+  border: none;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.nl-form button:hover{ background: var(--accent); transform: translateY(-2px); }
+.nl-form .meta{
+  margin-top: 18px;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--muted);
+}
+@media (max-width: 900px){
+  .newsletter-wrap{ grid-template-columns: 1fr; gap: 48px; }
+}
+
+/* Footer */
+.footer{
+  background: var(--ink); color: var(--paper);
+  padding: 100px 48px 48px;
+}
+.footer-wrap{
+  max-width: 1320px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px;
+}
+.footer-brand{ font-family:'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; letter-spacing: -0.01em;}
+.footer-brand em{ font-style: italic; color:var(--accent-text,#5E1A26); font-weight: 300; }
+.footer-tagline{
+  margin-top: 18px;
+  font-family:'Cormorant Garamond', serif; font-style: italic; font-weight:500;
+  font-size: 16px; line-height: 1.55;
+  color: rgba(251,248,242,0.65);
+  max-width: 320px;
+}
+.footer-col h4{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color:var(--accent-text,#5E1A26);
+  margin-bottom: 18px;
+}
+.footer-col a{
+  display: block;
+  font-family:'Inter', sans-serif;
+  font-size: 14px; color: rgba(251,248,242,0.75);
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+.footer-col a:hover{ color:var(--accent-text,#5E1A26); }
+.footer-bottom{
+  margin-top: 80px; padding-top: 32px;
+  border-top: 1px solid rgba(251,248,242,0.1);
+  display: flex; justify-content: space-between;
+  font-family:'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(251,248,242,0.5);
+}
+@media (max-width: 900px){
+  .footer-wrap{ grid-template-columns: 1fr 1fr; }
+}
+
+/* Reveal animations */
+.reveal{ opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+.reveal.in{ opacity: 1; transform: translateY(0); }
+
+.reveal-stagger > *{ opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+.reveal-stagger.in > *{ opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(1){ transition-delay: 0s; }
+.reveal-stagger.in > *:nth-child(2){ transition-delay: 0.08s; }
+.reveal-stagger.in > *:nth-child(3){ transition-delay: 0.16s; }
+.reveal-stagger.in > *:nth-child(4){ transition-delay: 0.24s; }
+.reveal-stagger.in > *:nth-child(5){ transition-delay: 0.32s; }
+.reveal-stagger.in > *:nth-child(6){ transition-delay: 0.40s; }
+
+/* Back to top */
+.back-top{
+  position: fixed; bottom: 32px; right: 32px;
+  width: 48px; height: 48px;
+  background: var(--ink); color: var(--paper);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
+  z-index: 90;
+}
+.back-top.visible{ opacity: 1; pointer-events: auto; }
+.back-top:hover{ transform: translateY(-3px); background: var(--accent); }
+
+/* Grain overlay */
+.grain{
+  position: fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 200;
+  mix-blend-mode: multiply;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+  .reveal, .reveal-stagger > *{ opacity: 1; transform: none; }
+}
+</style>
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.back-top,
+.featured-cta,
+.footer,
+.marquee,
+.preloader,
+.principles,
+.wp-load-btn,
+.wp-pill.active,
+[data-dark="1"],
+.article-footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+<style id="tpl-override">/* generated by _tools/apply_templates.py - szablon A */
+/* Nagłówki bez pomarańczowej kursywy - akcent tylko w logo */
+html body.tpl-a h1 em, html body.tpl-a h2 em, html body.tpl-a h3 em,
+html body.tpl-a .ah-title em, html body.tpl-a .faq-h2 em, html body.tpl-a .af-author-info h3 em,
+html body.tpl-a .byline-name em {font-style:inherit;color:inherit;font-weight:inherit}
+html body.tpl-a h1 .dot, html body.tpl-a h2 .dot {color:inherit}
+
+html body.tpl-a h1{font-size:clamp(40px,5.4vw,68px)!important;line-height:1.02!important;font-weight:400!important;letter-spacing:-.02em!important}
+html body.tpl-a [class*="lede"], html body.tpl-a [class*="lead"], html body.tpl-a [class*="deck"], html body.tpl-a .hero-sub, html body.tpl-a [class*="hero"] p{font-style:normal}
+html body.tpl-a .progress-bar{display:none}
+/* jasny nagłówek zamiast ciemnego „cinematic” */
+html body.tpl-a .hero{background:var(--bg);color:var(--ink);border-bottom:1px solid var(--line);padding-top:72px;padding-bottom:56px}
+html body.tpl-a .hero::before, html body.tpl-a .hero::after{display:none}
+html body.tpl-a .hero h1{color:var(--ink)}
+html body.tpl-a .hero-eyebrow{color:var(--muted);letter-spacing:.16em}
+html body.tpl-a .hero-eyebrow .rule{background:var(--line)}
+html body.tpl-a .hero-lede{color:var(--ink-soft);font-style:normal}
+html body.tpl-a .hero-stats{border-top-color:var(--line);margin-top:40px}
+html body.tpl-a .hero-stat .num{color:var(--ink);font-size:36px}
+html body.tpl-a .hero-stat .lab{color:var(--muted)}
+
+html body.tpl-a .preloader, html body.tpl-a .grain, html body.tpl-a .ov-scroll-hint{display:none!important}
+html body.tpl-a .overture{background:var(--bg);color:var(--ink);min-height:0;padding:120px 48px 56px;border-bottom:1px solid var(--line)}
+html body.tpl-a .overture::before, html body.tpl-a .overture::after{display:none}
+html body.tpl-a .ov-eyebrow{color:var(--muted);letter-spacing:.16em}
+html body.tpl-a .ov-eyebrow .rule{background:var(--line)}
+html body.tpl-a .ov-h1{color:var(--ink)}
+html body.tpl-a .ov-h1 .word{opacity:1;transform:none;animation:none}
+html body.tpl-a .ov-lede{color:var(--ink-soft);font-style:normal}
+html body.tpl-a .ov-lede em{color:inherit;font-style:normal}
+html body.tpl-a .ov-stat .n{color:var(--ink);font-style:normal}
+html body.tpl-a .ov-stat .l{color:var(--muted)}
+html body.tpl-a .ov-stats{border-top-color:var(--line)}
+html body.tpl-a .nav.is-dark{background:rgba(239,234,226,.94)}
+html body.tpl-a .nav.is-dark .nav-brand{color:var(--ink)}
+html body.tpl-a .nav.is-dark .nav-links a{color:var(--ink-soft)}
+</style>
+</head>
+<body class="tpl-a">
+
+<a href="#main" class="skip-link">Przejdź do treści</a>
+
+
+
+<!-- NAV -->
+<nav class="nav is-dark" id="nav">
+  <a href="biurofilia.html" class="nav-brand">Showroom <em>Biur</em></a>
+  <div class="nav-links">
+    <a href="biurofilia.html">Archiwum</a>
+    <a href="workplace.html">Workplace</a>
+    <a href="wyposazenie.html">Wyposażenie</a>
+    <a href="czytelnia.html" class="active">Czytelnia</a>
+    <a href="biuro-roku-2026.html">Biuro Roku</a>
+    <a href="o-magazynie.html">O magazynie</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- HERO / OVERTURE -->
+<section class="overture" id="overture">
+  <div class="overture-wrap">
+    <div class="ov-eyebrow"><span class="rule"></span>Czytelnia</div>
+    <h1 class="ov-h1">Czytelnia</h1>
+    <p class="ov-lede">
+      Pięć esejów redakcyjnych. Trzydzieści artykułów <em>Workplace&nbsp;Solutions</em>. I cztery zasady, według których piszemy.
+    </p>
+    <div class="ov-stats">
+      <div class="ov-stat">
+        <div class="n">5</div>
+        <div class="l">Esejów redakcyjnych</div>
+      </div>
+      <div class="ov-stat">
+        <div class="n">30</div>
+        <div class="l">Artykułów workplace</div>
+      </div>
+      <div class="ov-stat">
+        <div class="n">4</div>
+        <div class="l">Zasady redakcyjne</div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- EDITOR'S BRIEF -->
+<section class="brief" id="brief">
+  <div class="brief-wrap">
+    <aside class="brief-aside reveal">
+      <div class="brief-eyebrow">Nr 01 · Od redakcji</div>
+      <h2>Czemu <em>czytelnia</em>, kiedy mamy archiwum.</h2>
+      <div class="sig">Filip Sarzyński</div>
+    </aside>
+    <div class="brief-body reveal">
+      <p>Archiwum bez ramy interpretacyjnej to po prostu katalog. <em>257 polskie realizacje biurowe</em> wymagają kogoś, kto zauważy: dlaczego Warszawa nie produkuje już biur korporacyjnych, dlaczego pięć pracowni zaprojektowało 30% wszystkiego, czemu Varso Tower stało się polem testowym dla pięciu różnych wizji workplace.</p>
+      <p>Czytelnia jest dla tej drugiej rzeczy. To <strong>perspektywa, dane, narracje</strong> - pięć esejów redakcyjnych, które zamykają tematy. I trzydzieści krótkich tekstów o workplace - każdy odpowiada na jedno konkretne pytanie projektowe, bez wodolejstwa.</p>
+      <p>Pisanie tutaj rządzi się czterema zasadami, które przedstawiamy w&nbsp;dalszej części. <strong>Nie ma reklam pracowni.</strong> Nie ma rankingów płatnych. Nie ma generycznych benchmarków zachodnich. Tylko polski rynek, polskie dane, polskie spojrzenie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED LONG READ -->
+<section class="featured">
+  <div class="featured-wrap">
+    <div class="featured-meta-strip reveal">
+      <span class="pill">Nr 02 · Esej miesiąca</span>
+      <span class="meta">Najdłuższy esej w Czytelni</span>
+    </div>
+    <a class="featured-card reveal" href="artykul-anatomia-workplace-2026.html">
+      <div class="featured-img">
+        <img src="og-anatomia-workplace-2026.jpg" alt="Anatomia polskiego workplace 2026" loading="lazy"/>
+      </div>
+      <div class="featured-body">
+        <div class="eyebrow">Tekst główny · długa forma</div>
+        <h3>Anatomia<br>polskiego <em>workplace</em> 2026.</h3>
+        <p class="lede">Czego nauczyło nas zebranie 257 polskich biur w&nbsp;jednej bazie. O&nbsp;tym, jakie miasta dominują, które pracownie ustawiły standard, i&nbsp;jakie wzorce się powtarzają.</p>
+        <div class="meta">14 min czytania &middot; Filip Sarzyński &middot; 2026 &middot; 4 800 słów</div>
+        <span class="featured-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Przeczytaj cały esej
+        </span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Section divider - eseje -->
+<section class="section-divider">
+  <div class="div-num reveal">Nr 03 · Kolejne eseje</div>
+  <h2 class="reveal">Pełna<br><em>czytelnia</em>.</h2>
+  <p class="sub reveal">Spojrzenie na 5 pracowni, retrospektywa po&nbsp;pandemii, studium Varso Tower - każdy esej zamyka jeden temat z&nbsp;pełnym kontekstem.</p>
+</section>
+
+<!-- ESSAYS LIST -->
+<section class="essays-list">
+  <div class="essays-wrap">
+
+    <a class="essay-row reveal" href="artykul-piec-pracowni.html">
+      <div class="essay-num">02</div>
+      <div class="essay-body">
+        <div class="essay-meta">
+          <div class="essay-eyebrow">Esej · Profil</div>
+          <div class="essay-title">Pięć pracowni, które definiują polski design</div>
+          <div class="essay-lede">Trzop, Massive, mode:lina, The Design Group, BIT Creative - pięć studiów odpowiada za 30% wszystkich biur w bazie. Każda z nich pracuje inaczej. Każda zmieniła kanon.</div>
+          <div class="essay-info">11 min czytania · Filip Sarzyński · 2026</div>
+        </div>
+        <div class="essay-thumb">
+          <img src="og-piec-pracowni.jpg" alt="Pięć pracowni, które definiują polski design" loading="lazy"/>
+        </div>
+      </div>
+      <div class="essay-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
+    </a>
+    
+    <a class="essay-row reveal" href="artykul-po-pandemii.html">
+      <div class="essay-num">03</div>
+      <div class="essay-body">
+        <div class="essay-meta">
+          <div class="essay-eyebrow">Esej · Trendy</div>
+          <div class="essay-title">Po pandemii: jak zmieniło się biuro</div>
+          <div class="essay-lede">Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami. Hybrid, focus zones, akustyka, biofilia, neighborhood model.</div>
+          <div class="essay-info">9 min czytania · Filip Sarzyński · 2026</div>
+        </div>
+        <div class="essay-thumb">
+          <img src="og-po-pandemii.jpg" alt="Po pandemii: jak zmieniło się biuro" loading="lazy"/>
+        </div>
+      </div>
+      <div class="essay-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
+    </a>
+    
+    <a class="essay-row reveal" href="artykul-varso-tower.html">
+      <div class="essay-num">04</div>
+      <div class="essay-body">
+        <div class="essay-meta">
+          <div class="essay-eyebrow">Esej · Studium przypadku</div>
+          <div class="essay-title">Varso Tower jako miasto biur</div>
+          <div class="essay-lede">Najwyższy budynek UE jako studium przypadku. Pięć najemców, pięć pracowni, jeden adres. Co stanie się, gdy 310 metrów wieży zostanie zapełnione różnymi wizjami biura?</div>
+          <div class="essay-info">10 min czytania · Filip Sarzyński · 2026</div>
+        </div>
+        <div class="essay-thumb">
+          <img src="og-varso-tower.jpg" alt="Varso Tower jako miasto biur" loading="lazy"/>
+        </div>
+      </div>
+      <div class="essay-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
+    </a>
+    
+    <a class="essay-row reveal" href="workplace.html">
+      <div class="essay-num">05</div>
+      <div class="essay-body">
+        <div class="essay-meta">
+          <div class="essay-eyebrow">Esej · Metodologia</div>
+          <div class="essay-title">Workplace Solutions według Marioli Bitner.</div>
+          <div class="essay-lede">Jak wygląda metodologia, która zamyka 70% projektów workplace w terminie. 3 dyscypliny, 25 deliverables, pełna ścieżka od strategy do change management.</div>
+          <div class="essay-info">8 min czytania · Mariola Bitner · Workplace landing</div>
+        </div>
+        <div class="essay-thumb">
+          <img src="og-anatomia-workplace-2026.jpg" alt="Workplace Solutions metoda Marioli Bitner" loading="lazy"/>
+        </div>
+      </div>
+      <div class="essay-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Marquee divider -->
+
+<!-- WORKPLACE SOLUTIONS - 30 articles -->
+<section class="wp-section" id="wp-articles">
+  <div class="wp-wrap">
+    <div class="wp-head reveal">
+      <div class="wp-head-left">
+        <div class="eye">Nr 04 · Workplace Solutions</div>
+        <h2><em>Trzydzieści</em> tematów<br>o&nbsp;workplace.</h2>
+      </div>
+      <div class="wp-head-right">
+        <p>Krótkie teksty redakcyjne. Każdy odpowiada na jedno konkretne pytanie projektowe - od obecności w biurze po akustykę i certyfikaty.</p>
+        
+      </div>
+    </div>
+
+    <div class="wp-filters reveal" id="wpFilters">
+      <button class="wp-pill active" data-filter="all">Wszystkie · 30</button>
+      <button class="wp-pill" data-filter="hybryda">Hybryda · 6</button>
+      <button class="wp-pill" data-filter="inne">Przestrzeń · 6</button>
+      <button class="wp-pill" data-filter="transformacja">Transformacja · 4</button>
+      <button class="wp-pill" data-filter="przyszlosc">Przyszłość · 3</button>
+      <button class="wp-pill" data-filter="sektor">Sektor · 3</button>
+      <button class="wp-pill" data-filter="wskazniki">Wskaźniki · 2</button>
+      <button class="wp-pill" data-filter="tech">Technologia · 2</button>
+      <button class="wp-pill" data-filter="design">Design · 2</button>
+      <button class="wp-pill" data-filter="ludzie">Ludzie · 1</button>
+      <button class="wp-pill" data-filter="akustyka">Akustyka · 1</button>
+    </div>
+
+    <div class="wp-grid" id="wpGrid">
+      <a class="wp-card" href="workplace-wp-01-dlaczego-biura-stoja-puste-w-czwartki-anatomia-kryzysu-obecn.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">01</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>Dlaczego biura stoja puste w czwartki - anatomia kryzysu obecnosci</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-02-nakaz-powrotu-do-biura-dlaczego-mandatoryjne-rto-nie-dziala-.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">02</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>Nakaz powrotu do biura. Dlaczego mandatoryjne RTO nie dziala (i co dziala)</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-03-anchor-days-jak-wyrownac-obecnosc-w-tygodniu-bez-mandatu.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">03</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>Anchor days. Jak wyrownac obecnosc w tygodniu bez mandatu</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-04-desk-sharing-czy-stale-biurka-matematyka-ktora-rozstrzyga-sp.html" data-cat="wskazniki">
+        <div class="wp-card-head">
+          <div class="num">04</div>
+          <span class="cat">Wskaźniki</span>
+        </div>
+        <h4>Desk sharing czy stale biurka? Matematyka, ktora rozstrzyga spor</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-05-generacje-w-jednym-biurze-co-kazda-z-nich-potrzebuje-i-czemu.html" data-cat="ludzie">
+        <div class="wp-card-head">
+          <div class="num">05</div>
+          <span class="cat">Ludzie</span>
+        </div>
+        <h4>Generacje w jednym biurze. Co kazda z nich potrzebuje (i czemu Gen Z chce do biura)</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-06-halas-w-biurze-ukryty-kradzieja-produktywnosci.html" data-cat="akustyka">
+        <div class="wp-card-head">
+          <div class="num">06</div>
+          <span class="cat">Akustyka</span>
+        </div>
+        <h4>Halas w biurze: ukryty kradzieja produktywnosci</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-07-budki-telefoniczne-i-pokoje-fokusu-matematyka-prywatnosci-w-.html" data-cat="wskazniki">
+        <div class="wp-card-head">
+          <div class="num">07</div>
+          <span class="cat">Wskaźniki</span>
+        </div>
+        <h4>Budki telefoniczne i pokoje fokusu: matematyka prywatnosci w open plan</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-08-sound-masking-tajna-technologia-ktorej-polskie-biura-nie-zna.html" data-cat="tech">
+        <div class="wp-card-head">
+          <div class="num">08</div>
+          <span class="cat">Technologia</span>
+        </div>
+        <h4>Sound masking: tajna technologia, ktorej polskie biura nie znaja</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-09-biofilia-rosliny-w-biurze-to-nie-dekoracja-to-inwestycja.html" data-cat="design">
+        <div class="wp-card-head">
+          <div class="num">09</div>
+          <span class="cat">Design</span>
+        </div>
+        <h4>Biofilia: rosliny w biurze to nie dekoracja, to inwestycja</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-10-swiatlo-dzienne-i-circadian-rhythm-gdzie-postawisz-biurko-zm.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">10</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4>Swiatlo dzienne i circadian rhythm: gdzie postawisz biurko zmienia twoj sen</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-11-jakosc-powietrza-w-biurze-niewidzialny-faktor-ktory-podwaja-.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">11</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4>Jakosc powietrza w biurze. Niewidzialny faktor, ktory podwaja produktywnosc</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-12-ergonomia-hybrydowa-jak-zaprojektowac-biuro-dla-pracownika-k.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">12</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>Ergonomia hybrydowa: jak zaprojektowac biuro dla pracownika, ktory polowe czasu siedzi przy laptopie</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-13-ruch-w-biurze-jak-design-wymusza-aktywnosc-fizyczna-bez-silo.html" data-cat="design">
+        <div class="wp-card-head">
+          <div class="num">13</div>
+          <span class="cat">Design</span>
+        </div>
+        <h4>Ruch w biurze. Jak design wymusza aktywnosc fizyczna - bez silowni</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-14-strefy-aktywno-bazowe-abw-co-to-naprawde-jest-i-kiedy-dziala.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">14</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4>Strefy aktywno-bazowe (ABW). Co to naprawde jest i kiedy dziala</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-15-neighborhoods-poczucie-wlasnego-miejsca-bez-przypisanego-biu.html" data-cat="transformacja">
+        <div class="wp-card-head">
+          <div class="num">15</div>
+          <span class="cat">Transformacja</span>
+        </div>
+        <h4>Neighborhoods: poczucie 'wlasnego miejsca' bez przypisanego biurka</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-16-sale-konferencyjne-ery-hybrydy-70-spotkan-jest-mieszanych-cz.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">16</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>Sale konferencyjne ery hybrydy: 70% spotkan jest mieszanych - czy twoje sale to widza</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-17-workplace-experience-wx-biuro-jako-produkt-nie-obiekt.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">17</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4></h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-18-pomierz-zeby-zarzadzac-workplace-analytics-2026.html" data-cat="przyszlosc">
+        <div class="wp-card-head">
+          <div class="num">18</div>
+          <span class="cat">Przyszłość</span>
+        </div>
+        <h4>Pomierz, zeby zarzadzac.</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-19-ile-metrow-na-pracownika-polski-benchmark-2026.html" data-cat="przyszlosc">
+        <div class="wp-card-head">
+          <div class="num">19</div>
+          <span class="cat">Przyszłość</span>
+        </div>
+        <h4>Ile metrów na pracownika? Polski benchmark 2026</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-20-change-management-workplace-70-projektow-konczy-sie-porazka-.html" data-cat="transformacja">
+        <div class="wp-card-head">
+          <div class="num">20</div>
+          <span class="cat">Transformacja</span>
+        </div>
+        <h4>Change management</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-21-ambasadorzy-zmiany-dlaczego-wystarczy-10-zespolu-zeby-zmiana.html" data-cat="transformacja">
+        <div class="wp-card-head">
+          <div class="num">21</div>
+          <span class="cat">Transformacja</span>
+        </div>
+        <h4>Ambasadorzy zmiany. Dlaczego wystarczy 10% zespolu, zeby zmiana sie udala</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-22-workplace-komunikacja-kiedy-mowic-co-mowic-kto-mowic.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">22</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4></h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-23-certyfikat-well-po-co-i-ile-to-kosztuje-i-co-daje.html" data-cat="inne">
+        <div class="wp-card-head">
+          <div class="num">23</div>
+          <span class="cat">Przestrzeń</span>
+        </div>
+        <h4>Certyfikat WELL: po co i ile to kosztuje (i co daje)</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-24-breeam-leed-well-ktory-certyfikat-dla-kogo.html" data-cat="transformacja">
+        <div class="wp-card-head">
+          <div class="num">24</div>
+          <span class="cat">Transformacja</span>
+        </div>
+        <h4>BREEAM, LEED, WELL: ktory certyfikat dla kogo</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-25-esg-w-biurze-co-najemcy-musza-zaraportowac-w-2026.html" data-cat="hybryda">
+        <div class="wp-card-head">
+          <div class="num">25</div>
+          <span class="cat">Hybryda</span>
+        </div>
+        <h4>ESG w biurze: co najemcy musza zaraportowac w 2026</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-26-warszawa-2026-rynek-biurowy-w-punkcie-zwrotnym.html" data-cat="sektor">
+        <div class="wp-card-head">
+          <div class="num">26</div>
+          <span class="cat">Sektor</span>
+        </div>
+        <h4>Warszawa 2026: rynek biurowy w punkcie zwrotnym</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-27-krakow-wroclaw-poznan-regionalne-rynki-biurowe-2026.html" data-cat="sektor">
+        <div class="wp-card-head">
+          <div class="num">27</div>
+          <span class="cat">Sektor</span>
+        </div>
+        <h4>Krakow, Wroclaw, Poznan: regionalne rynki biurowe 2026</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-28-flex-office-w-polsce-trend-ktory-rozsadnie-polski-rynek-najm.html" data-cat="sektor">
+        <div class="wp-card-head">
+          <div class="num">28</div>
+          <span class="cat">Sektor</span>
+        </div>
+        <h4>Flex office w Polsce: trend, ktory rozsadnie polski rynek najmu</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-29-ai-i-workplace-co-znaczy-frontier-firm-dla-projektantow-biur.html" data-cat="tech">
+        <div class="wp-card-head">
+          <div class="num">29</div>
+          <span class="cat">Technologia</span>
+        </div>
+        <h4>AI i</h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+      <a class="wp-card" href="workplace-wp-30-workplace-2030-jak-zaprojektowac-biuro-ktore-przetrwa-nastep.html" data-cat="przyszlosc">
+        <div class="wp-card-head">
+          <div class="num">30</div>
+          <span class="cat">Przyszłość</span>
+        </div>
+        <h4></h4>
+        <p class="desc">Problem</p>
+        <div class="wp-card-foot">
+          <span>Redakcja</span>
+          <span class="read">6 min</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL PRINCIPLES -->
+<section class="principles" id="principles">
+  <div class="principles-wrap">
+    <div class="principles-head reveal">
+      <div>
+        <div class="eye">Nr 05 · Zasady redakcyjne</div>
+        <h2>Cztery zasady, według których piszemy.</h2>
+      </div>
+      <p class="sub">Każdy esej, każdy artykuł, każda wzmianka w&nbsp;Showroom Biur przechodzi przez te cztery filtry. Bez wyjątku.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle reveal">
+        <div class="pnum">01</div>
+        <h3>Dane przed opinią.</h3>
+        <p>Każda teza jest podparta danymi z&nbsp;257 polskich realizacji biurowych lub publicznie dostępnymi źródłami. Brak "według mojego doświadczenia". Brak generycznych benchmarków zachodnich. Tylko polski rynek, polskie liczby.</p>
+        <div class="tag">Metoda</div>
+      </div>
+      <div class="principle reveal">
+        <div class="pnum">02</div>
+        <h3>Bez reklam pracowni.</h3>
+        <p>Showroom Biur nie&nbsp;przyjmuje pieniędzy od&nbsp;pracowni za umieszczenie projektu. Nie ma rankingów płatnych. Nie ma "polecanych studio". To redakcja, nie marketplace. Każda wzmianka jest niezależną decyzją redakcji.</p>
+        <div class="tag">Niezależność</div>
+      </div>
+      <div class="principle reveal">
+        <div class="pnum">03</div>
+        <h3>Polskie spojrzenie.</h3>
+        <p>Polski klimat, polskie regulacje, polskie tempo rynku, polskie organizacje. Nie kopiujemy zagranicznych trendów bez przefiltrowania ich przez polski kontekst. Nie wszystko, co działa w&nbsp;Londynie, działa w&nbsp;Warszawie.</p>
+        <div class="tag">Context · Locality</div>
+      </div>
+      <div class="principle reveal">
+        <div class="pnum">04</div>
+        <h3>Konkret przed teorią.</h3>
+        <p>Każdy esej zamyka się rekomendacją, którą można wdrożyć. Bez "rozważcie", bez "warto zwrócić uwagę". Konkretne liczby, konkretne ścieżki, konkretne ryzyka. Twórca biura musi z&nbsp;tego skorzystać w&nbsp;pracy.</p>
+        <div class="tag">Actionable · Practical</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-wrap">
+    <div class="nl-aside reveal">
+      <div class="eye">Nr 06 · Newsletter</div>
+      <h2>Następne <em>wydanie</em><br>do skrzynki.</h2>
+      <p>Raz na dwa tygodnie: nowe biura w bazie i teksty z Czytelni. Bez reklam.</p>
+    </div>
+    <form class="nl-form reveal" id="nlForm" data-newsletter>
+      <label for="nlEmail">Adres email</label>
+      <input type="email" id="nlEmail" name="email" placeholder="ty@firma.pl" required/>
+      <button type="submit">Zapisz mnie ↗</button>
+      <div class="meta">Raz na dwa tygodnie · wypis jednym kliknięciem</div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<!-- sb-band -->
+<section class="sb-band" aria-label="Dodaj biuro">
+  <div><h4>Zrealizowaliście biuro w Polsce?</h4><p>Dodajcie je do bazy. Publikacja jest bezpłatna - potrzebujemy znanego najemcy i zdjęć z nazwiskiem fotografa.</p></div>
+  <a href="dodaj-biuro.html">Dodaj biuro →</a>
+</section>
+<!-- /sb-band -->
+<footer class="footer">
+  <div class="footer-wrap">
+    <div>
+      <div class="footer-brand">Showroom <em>Biur</em></div>
+      <div class="footer-tagline">Magazyn o polskich biurach.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Magazyn</h4>
+      <a href="biurofilia.html">Biurofilia · archiwum</a>
+      <a href="workplace.html">Workplace · Mariola</a>
+      <a href="wyposazenie.html">Wyposażenie</a>
+      <a href="czytelnia.html">Czytelnia</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tematy</h4>
+      <a href="biuro-roku-2026.html">Biuro Roku 2026</a>
+      <a href="sektor-w-liczbach.html">Sektor w liczbach</a>
+      <a href="o-magazynie.html">O magazynie</a>
+      <a href="press.html">Dla mediów</a>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="mailto:redakcja@showroombiur.pl">redakcja@showroombiur.pl</a>
+      <a href="https://brookfield.pl" target="_blank" rel="noopener">brookfield.pl ↗</a>
+      <a href="/rss.xml">RSS feed</a>
+      <a href="https://officelist.pl" target="_blank" rel="noopener">officelist.pl ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Showroom Biur</span>
+    <span>Aktualizowane na bieżąco</span>
+  </div>
+</footer>
+
+</main>
+
+<button class="back-top" id="backTop" aria-label="Wróć na górę">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+// Preloader
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    document.getElementById('preloader')?.classList.add('hidden');
+  }, 1100);
+});
+
+// Nav scroll + dark mode swap
+(function(){
+  const nav = document.getElementById('nav');
+  const overture = document.getElementById('overture');
+  const onScroll = function(){
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 60);
+    // dark nav while over hero (overture)
+    if (overture){
+      const r = overture.getBoundingClientRect();
+      nav.classList.toggle('is-dark', r.bottom > 100);
+    }
+  };
+  window.addEventListener('scroll', onScroll, {passive: true});
+  onScroll();
+})();
+
+// Reveal observer
+(function(){
+  if (typeof IntersectionObserver === 'undefined') return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el=>io.observe(el));
+})();
+
+// Workplace filters
+(function(){
+  const pills = document.querySelectorAll('.wp-pill');
+  const cards = document.querySelectorAll('#wpGrid .wp-card');
+  pills.forEach(p => {
+    p.addEventListener('click', function(){
+      const f = this.getAttribute('data-filter');
+      pills.forEach(x => x.classList.remove('active'));
+      this.classList.add('active');
+      cards.forEach(c => {
+        const cat = c.getAttribute('data-cat');
+        const show = f === 'all' || cat === f;
+        c.style.display = show ? '' : 'none';
+      });
+    });
+  });
+})();
+
+// Back to top
+(function(){
+  const btn = document.getElementById('backTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 800);
+  }, {passive: true});
+  btn.addEventListener('click', ()=>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+
+</script>
+
+<script src="search-index.js" defer></script>
+<script src="search.js" defer></script>
+<script src="mobile-nav.js" defer></script>
+
+<script src="site-config.js" defer></script>
+<script src="forms.js" defer></script>
+</body>
+</html>

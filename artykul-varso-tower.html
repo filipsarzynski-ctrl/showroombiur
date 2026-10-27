@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Varso Tower jako miasto biur - Showroom Biur</title>
+<meta name="description" content="Najwyższy budynek UE jako studium przypadku. Pięć najemców, pięć pracowni, jeden adres." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEAE2;--bg-deep:#E5DFD3;--bone:#F3EFE6;--ink:#0F0F0E;--ink-soft:#2A2A28;--muted:#8B7E6A;--muted-soft:#B6AC99;--accent:#5E1A26;--accent-deep:#7A2433;--line:#D9D2C2;--paper:#FBF8F2;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{background:var(--bg);scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;height:auto;}
+::selection{background:var(--accent);color:var(--paper);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 32px;background:rgba(239,234,226,0.85);backdrop-filter:blur(12px);border-bottom:1px solid transparent;}
+.nav.scrolled{border-bottom-color:var(--line);}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;letter-spacing:-0.01em;}
+.nav-brand em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.nav-back{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-soft);padding:10px 18px;border:1px solid var(--line);border-radius:999px;}
+.nav-back:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.progress-bar{position:fixed;top:64px;left:0;height:2px;background:var(--accent);z-index:999;transform-origin:left;transform:scaleX(var(--p,0));}
+.article-hero{margin-top:64px;padding:100px 32px 80px;background:var(--ink);color:var(--paper);}
+.ah-wrap{max-width:1080px;margin:0 auto;}
+.ah-meta{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted-soft);margin-bottom:36px;display:flex;gap:24px;flex-wrap:wrap;}
+.ah-meta .accent{color:var(--accent-text,#5E1A26);}
+.ah-meta .pipe{color:var(--muted);}
+.ah-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:28px;}
+.ah-title{font-family:'Cormorant Garamond',serif;font-size: clamp(40px, 5.5vw, 72px);line-height:0.9;font-weight:500;letter-spacing:-0.03em;margin-bottom:36px;}
+.ah-title em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.ah-deck{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2vw,28px);line-height:1.4;font-weight:500;font-style:italic;color:var(--muted-soft);max-width:800px;}
+.article-body{max-width:760px;margin:80px auto 60px;padding:0 32px;}
+.article-body p{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.65;color:var(--ink-soft);margin-bottom:1.4em;}
+.article-body p strong{color:var(--ink);font-weight:500;}
+.article-body p em{color:var(--accent-text,#5E1A26);font-style:italic;}
+.article-body .dropcap{font-family:'Cormorant Garamond',serif;float:left;font-size: 64px;line-height:0.85;font-weight:500;font-style:italic;color:var(--accent-text,#5E1A26);padding:8px 14px 0 0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;line-height:1.05;letter-spacing:-0.02em;margin:60px 0 32px;}
+.article-body h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.article-body h2::before{content:attr(data-num);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:12px;font-weight:normal;}
+.tower-graphic{margin:60px auto;max-width:540px;background:var(--bg-deep);border:1px solid var(--line);padding:40px;text-align:center;}
+.tower-svg{margin:0 auto;display:block;}
+.tower-caption{margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+.tenant-row{display:grid;grid-template-columns:80px 1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center;}
+.tenant-row:last-child{border-bottom:0;}
+.tenant-floor{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:500;line-height:1;color:var(--accent-text,#5E1A26);}
+.tenant-floor em{font-style:italic;font-weight:300;}
+.tenant-body{font-family:'Cormorant Garamond',serif;}
+.tenant-name{font-size:24px;font-weight:400;margin-bottom:4px;color:var(--ink);}
+.tenant-name em{font-style:italic;color:var(--accent-text,#5E1A26);}
+.tenant-meta{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+.tenant-arch{font-family:'Inter',sans-serif;font-size:12px;color:var(--ink-soft);text-align:right;}
+.tenant-arch a{color:var(--accent-text,#5E1A26);border-bottom:1px solid var(--accent);}
+.pullquote{margin:60px -40px;padding:36px 40px;border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1.15;font-weight:500;font-style:italic;color:var(--ink);letter-spacing:-0.01em;}
+.pullquote::before{content:'"';display:block;color:var(--accent-text,#5E1A26);font-size:1.4em;line-height:0.5;margin-bottom:8px;}
+.pullquote .attr{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);font-style:normal;margin-top:24px;}
+.stat-callout{background:var(--paper);border-left:4px solid var(--accent);padding:28px 32px;margin:50px 0;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;}
+.stat-callout-num{font-family:'Cormorant Garamond',serif;font-size:84px;line-height:0.9;font-weight:500;color:var(--accent-text,#5E1A26);letter-spacing:-0.02em;}
+.stat-callout-label{font-family:'Inter',sans-serif;font-size:14px;line-height:1.55;color:var(--ink-soft);}
+.stat-callout-label strong{color:var(--ink);font-weight:500;}
+.article-footer{background:var(--ink);color:var(--paper);padding:80px 32px;}
+.af-wrap{max-width:1080px;margin:0 auto;}
+.af-cta{font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;font-weight:500;color:var(--paper);display:inline-block;margin-bottom:40px;border-bottom:1px solid var(--accent);padding-bottom:6px;}
+.af-cta:hover{color:var(--accent-text,#5E1A26);}
+.af-meta{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;font-family:'Inter',sans-serif;font-size:13px;color:var(--muted-soft);padding-top:40px;border-top:1px solid rgba(251,248,242,0.1);}
+.af-meta h5{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:12px;}
+.af-meta a{color:var(--paper);border-bottom:1px solid transparent;}
+.af-meta a:hover{border-bottom-color:var(--accent);}
+@media (max-width:900px){.article-hero{padding:60px 20px;}.article-body{padding:0 20px;margin:50px auto 60px;}.article-body p{font-size:18px;}.pullquote{font-size:24px;margin:40px 0;padding:24px 0;}.stat-callout{grid-template-columns:1fr;gap:12px;padding:24px;}.stat-callout-num{font-size:60px;}.tenant-row{grid-template-columns:60px 1fr;gap:16px;}.tenant-arch{grid-column:1/-1;text-align:left;}.af-meta{grid-template-columns:1fr;}}
+
+/* TL;DR & FAQ injected styles */
+.tldr-box{max-width:760px;margin:50px auto 0;padding:32px 40px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);}
+.tldr-box .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
+.tldr-box p{font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;color:var(--ink);}
+.tldr-box p strong{color:var(--ink);font-weight:600;background:rgba(94,26,38,0.1);padding:0 3px;}
+.faq-section{background:var(--bone);padding:80px 32px;border-top:1px solid var(--line);}
+.faq-wrap{max-width:900px;margin:0 auto;}
+.faq-head{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:16px;}
+.faq-h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;letter-spacing:-0.02em;margin-bottom:50px;line-height:1.05;}
+.faq-h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item:last-child{border-bottom:0;}
+.faq-q{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);padding:24px 0 12px;letter-spacing:-0.01em;margin:0;}
+.faq-a{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.65;color:var(--ink-soft);padding:0 0 24px;max-width:760px;margin:0;}
+@media (max-width:900px){.faq-section{padding:50px 20px;}.faq-h2{font-size:32px;}.tldr-box{margin:30px 20px 0;padding:24px;}.faq-q{font-size:18px;}.faq-a{font-size:15px;}}
+
+/* Editorial hero photo for articles */
+.article-hero-photo{margin:60px auto 40px;max-width:1100px;padding:0 32px;}
+.article-hero-photo figure{margin:0;}
+.article-hero-photo .ahp-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink-soft, #1a1a18);}
+.article-hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.article-hero-photo figcaption{margin-top:14px;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted, #6b6b67);line-height:1.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.article-hero-photo figcaption .ahp-credit{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-text,#5E1A26);}
+.article-hero-photo figcaption .ahp-illu{opacity:0.8;}
+@media (max-width:700px){.article-hero-photo{padding:0 20px;margin:40px auto 28px;}}
+
+
+/* ============ A11Y + PERFORMANCE LAYER ============ */
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; }
+  .h1-split .word { transform: none !important; opacity: 1 !important; }
+  .reveal, .reveal-stagger > *, .reveal-stagger { opacity: 1 !important; transform: none !important; }
+  .anim-stroke { stroke-dashoffset: 0 !important; }
+  .pulse-dot { animation: none !important; }
+  .aurora-drift, .orb-drift { animation: none !important; }
+}
+
+/* Focus-visible accent ring */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent, #5E1A26) !important;
+  outline-offset: 3px !important;
+  border-radius: 2px;
+}
+.contact-btn:focus-visible,
+.cta:focus-visible,
+.so-search-trigger:focus-visible,
+.back-top:focus-visible {
+  outline-offset: 4px !important;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink, #0F0F0E);
+  color: var(--paper, #FBF8F2);
+  padding: 12px 20px;
+  z-index: 9999;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid var(--accent, #5E1A26);
+  transition: top 0.2s;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline-offset: 0 !important;
+}
+
+/* sr-only utility for screen-reader-only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Article share section */
+.art-share{margin:48px auto;max-width:920px;padding:24px 28px;background:var(--paper, #FBF8F2);border-left:3px solid var(--accent, #5E1A26);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
+.art-share-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-text,#5E1A26);font-weight:600;}
+.art-share-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.art-share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bone, #F3EFE6);border:1px solid var(--line, #D9D2C2);color:var(--ink, #0F0F0E);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.art-share-btn:hover{background:var(--ink, #0F0F0E);color:var(--paper, #FBF8F2);border-color:var(--ink, #0F0F0E);transform:translateY(-2px);}
+.art-share-btn svg{width:14px;height:14px;}
+.art-share-btn.copy.done{background:#2A6F4D;color:#FBF8F2;border-color:#2A6F4D;}
+@media (max-width:600px){.art-share{flex-direction:column;align-items:flex-start;}}
+
+</style>
+
+<!-- === SEO / AEO START === -->
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="canonical" href="https://showroombiur.pl/artykul-varso-tower.html" />
+<meta name="author" content="Filip Sarzyński, Showroom Biur" />
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="generator" content="Showroom Biur Editorial System" />
+<meta name="keywords" content="Varso Tower, najwyższy budynek UE, biura Varso, HB Reavis Varso, Beiersdorf Varso, Saint-Gobain Varso" />
+
+<!-- Open Graph + Twitter Cards -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Varso Tower jako miasto biur" />
+<meta property="og:description" content="Najwyższy budynek Unii Europejskiej (310 metrów) i pięć fit-outów dla różnych branż w jednej wieży. Co to nam mówi o tym, jak funkcjonuje dziś polski workplace?" />
+<meta property="og:url" content="https://showroombiur.pl/artykul-varso-tower.html" />
+<meta property="og:image" content="https://showroombiur.pl/og-varso-tower.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Varso Tower jako miasto biur" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Showroom Biur" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Varso Tower jako miasto biur" />
+<meta name="twitter:description" content="Najwyższy budynek Unii Europejskiej (310 metrów) i pięć fit-outów dla różnych branż w jednej wieży. Co to nam mówi o tym, jak funkcjonuje dziś polski workplace?" />
+<meta name="twitter:image" content="https://showroombiur.pl/og-varso-tower.jpg" />
+<meta name="twitter:image:alt" content="Varso Tower jako miasto biur" />
+<meta property="article:published_time" content="2026-05-06" />
+<meta property="article:modified_time" content="2026-05-31" />
+<meta property="article:author" content="Filip Sarzyński" />
+<meta property="article:section" content="Studium budynku" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://showroombiur.pl/#organization",
+      "name": "Showroom Biur",
+      "alternateName": "Showroom Biur Magazine",
+      "url": "https://showroombiur.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://showroombiur.pl/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Magazyn o polskich biurach. Baza 272 polskich realizacji biurowych, 80 pracowni, statystyki rynku.",
+      "publisher": {"@type": "Organization", "name": "Showroom Biur", "url": "https://showroombiur.pl"},
+      "foundingDate": "2026-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Filip Sarzyński",
+        "jobTitle": "Wydawca i redaktor naczelny",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Brookfield Partners"
+        }
+      },
+      "sameAs": [
+        "https://brookfield.pl",
+        "https://www.linkedin.com/company/brookfield-partners"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior design",
+        "Polski rynek biurowy",
+        "Polskie pracownie architektoniczne",
+        "Fit-out biurowy"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://showroombiur.pl/#filip-sarzynski",
+      "name": "Filip Sarzyński",
+      "jobTitle": "Wydawca, Redaktor naczelny Showroom Biur",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Brookfield Partners",
+        "url": "https://brookfield.pl"
+      },
+      "email": "filip.sarzynski@brookfield.pl",
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior",
+        "Polski rynek biurowy",
+        "Workplace strategy"
+      ],
+      "url": "https://showroombiur.pl/o-magazynie.html#zespol"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://showroombiur.pl/artykul-varso-tower.html#article",
+      "headline": "Varso Tower jako miasto biur - studium budynku",
+      "alternativeHeadline": "Varso Tower jako miasto biur",
+      "description": "Najwyższy budynek Unii Europejskiej (310 metrów) i pięć fit-outów dla różnych branż w jednej wieży. Co to nam mówi o tym, jak funkcjonuje dziś polski workplace?",
+      "url": "https://showroombiur.pl/artykul-varso-tower.html",
+      "mainEntityOfPage": "https://showroombiur.pl/artykul-varso-tower.html",
+      "image": [
+        "https://showroombiur.pl/og-varso-tower.jpg",
+        "https://showroombiur.pl/og-default.jpg"
+      ],
+      "datePublished": "2026-05-06",
+      "dateModified": "2026-05-31",
+      "author": {
+        "@id": "https://showroombiur.pl/#filip-sarzynski"
+      },
+      "publisher": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "inLanguage": "pl-PL",
+      "articleSection": "Studium budynku",
+      "wordCount": 1600,
+      "timeRequired": "PT8M",
+      "keywords": "Varso Tower, najwyższy budynek UE, biura Varso, HB Reavis Varso, Beiersdorf Varso, Saint-Gobain Varso",
+      "isPartOf": {
+        "@id": "https://showroombiur.pl/#website"
+      },
+      "isAccessibleForFree": true,
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Varso Tower"
+        },
+        {
+          "@type": "Thing",
+          "name": "Warsaw skyscraper"
+        },
+        {
+          "@type": "Thing",
+          "name": "HB Reavis"
+        },
+        {
+          "@type": "Thing",
+          "name": "Polish workplace"
+        }
+      ],
+      "citation": {
+        "@id": "https://showroombiur.pl/biurofilia.html#dataset"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://showroombiur.pl/artykul-varso-tower.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://showroombiur.pl/biurofilia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Czytelnia",
+          "item": "https://showroombiur.pl/czytelnia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Varso Tower jako miasto biur",
+          "item": "https://showroombiur.pl/artykul-varso-tower.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- === SEO / AEO END === -->
+
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.article-footer,
+.article-hero-photo .ahp-img-wrap,
+[data-dark="1"],
+.footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+<style id="tpl-override">/* generated by _tools/apply_templates.py - szablon C */
+/* Nagłówki bez pomarańczowej kursywy - akcent tylko w logo */
+html body.tpl-c h1 em, html body.tpl-c h2 em, html body.tpl-c h3 em,
+html body.tpl-c .ah-title em, html body.tpl-c .faq-h2 em, html body.tpl-c .af-author-info h3 em,
+html body.tpl-c .byline-name em {font-style:inherit;color:inherit;font-weight:inherit}
+html body.tpl-c h1 .dot, html body.tpl-c h2 .dot {color:inherit}
+
+html body.tpl-c .progress-bar{display:none}
+html body.tpl-c .article-hero{background:var(--paper);color:var(--ink);padding:72px 32px 44px;border-bottom:1px solid var(--line)}
+html body.tpl-c .ah-wrap{max-width:760px}
+html body.tpl-c .ah-meta{color:var(--muted);letter-spacing:.14em;margin-bottom:22px}
+html body.tpl-c .ah-meta .accent{color:var(--ink)}
+html body.tpl-c .ah-eyebrow{color:var(--muted);letter-spacing:.16em;margin-bottom:18px}
+html body.tpl-c .ah-title{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em;margin-bottom:22px}
+html body.tpl-c .ah-deck{font-style:normal;font-size:20px;line-height:1.5;color:var(--ink-soft)}
+html body.tpl-c .byline{border-top-color:var(--line);margin-top:32px;padding-top:22px}
+html body.tpl-c .byline-name{color:var(--ink)}
+html body.tpl-c .byline-role{color:var(--muted)}
+html body.tpl-c .ah-updated{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+html body.tpl-c .article-body .dropcap{float:none;font-size:inherit;line-height:inherit;font-style:normal;font-weight:inherit;color:inherit;padding:0}
+html body.tpl-c .article-body h2{font-size:30px;line-height:1.15;margin:56px 0 18px}
+html body.tpl-c .article-body h2::before{color:var(--muted)}
+html body.tpl-c .article-body p em{color:inherit}
+html body.tpl-c .pullquote{margin:44px 0;padding:2px 0 2px 22px;border:0;border-left:3px solid var(--ink);font-size:24px;line-height:1.35;font-style:normal;font-weight:400}
+html body.tpl-c .pullquote::before{display:none}
+html body.tpl-c .tldr-box, html body.tpl-c .tldr{border-left-color:var(--ink)}
+html body.tpl-c .tldr-label, html body.tpl-c .faq-head, html body.tpl-c .aside .label, html body.tpl-c .art-share-label{color:var(--muted)}
+html body.tpl-c .art-share{border-left-color:var(--line)}
+html body.tpl-c .tldr-box p strong{background:none}
+html body.tpl-c .faq-h2{font-size:32px}
+html body.tpl-c .af-cta{font-style:normal;font-size:24px}
+html body.tpl-c .stat-callout-num{font-style:normal}
+/* metodologia */
+html body.tpl-c .hero{padding:72px 32px 36px}
+html body.tpl-c .hero h1{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em}
+html body.tpl-c .hero-lede{font-style:normal;font-size:20px}
+html body.tpl-c .body h2{font-size:30px}
+@media(max-width:900px){html body.tpl-c .article-hero{padding:48px 20px 32px}}
+</style>
+</head>
+<body class="tpl-c">
+<a href="#main" class="skip-link">Pomiń do treści</a>
+
+<nav class="nav" role="navigation" aria-label="Główna nawigacja" id="nav">
+  <a class="nav-brand" href="biurofilia.html">Showroom <em>Biur</em></a>
+  <a class="nav-back" href="czytelnia.html">← Wszystkie eseje</a>
+</nav>
+<a id="main" tabindex="-1" class="sr-only">Główna treść strony</a>
+<div class="progress-bar" id="progress"></div>
+
+<section class="article-hero">
+  <div class="ah-wrap">
+    <div class="ah-meta">
+      <span>Esej numeru 04</span><span class="pipe">·</span>
+      <span class="accent">Studium budynku</span><span class="pipe">·</span>
+      <span>8 min czytania</span><span class="pipe">·</span>
+      <span>Redakcja Showroom Biur</span>
+    </div>
+    <div class="ah-eyebrow">Nr 04 · Budynek</div>
+    <h1 class="ah-title">Varso Tower<br><em>jako miasto</em> biur.</h1>
+    <p class="ah-deck">
+      Najwyższy budynek Unii Europejskiej (310 metrów) i pięć fit-outów dla różnych branż w jednej wieży. Co to nam mówi o tym, jak funkcjonuje dziś polski workplace?
+    </p>
+    <div class="ah-updated">Ostatnia aktualizacja: 26.10.2026</div>
+  </div>
+</section>
+<aside class="art-share">
+  <div class="art-share-label">Udostępnij artykuł</div>
+  <div class="art-share-btns">
+    <a class="art-share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//showroombiur.pl/artykul-varso-tower.html" target="_blank" rel="noopener" aria-label="Udostępnij na LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.27 18.5H5.5V9.5h2.77v9zM6.88 8.25c-.89 0-1.61-.72-1.61-1.61s.72-1.61 1.61-1.61 1.61.72 1.61 1.61-.72 1.61-1.61 1.61zm11.62 10.25h-2.77V14c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H9.75V9.5h2.66v1.22h.04c.37-.7 1.28-1.43 2.63-1.43 2.81 0 3.33 1.85 3.33 4.26v4.95z"/></svg>
+      LinkedIn
+    </a>
+    <a class="art-share-btn" href="https://twitter.com/intent/tweet?text=Varso%20Towerjako%20miasto%20biur.&url=https%3A//showroombiur.pl/artykul-varso-tower.html" target="_blank" rel="noopener" aria-label="Udostępnij na X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X
+    </a>
+    <button class="art-share-btn copy" data-url="https://showroombiur.pl/artykul-varso-tower.html" type="button" aria-label="Skopiuj link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Kopiuj link</span></button>
+  </div>
+</aside>
+
+<!-- editorial hero photo -->
+<div class="article-hero-photo">
+  <figure>
+    <div class="ahp-img-wrap">
+      <img src="https://www.officelovin.com/wp-content/uploads/2025/06/greenberg-office-1.jpg" loading="lazy" decoding="async" alt="Greenberg Traurig - projekt BIT Creative, Warszawa 2025">
+    </div>
+    <figcaption>
+      <span class="ahp-illu">Realizacja referencyjna: <a href="projekt.html?slug=greenberg-traurig-warszawa-2025"><strong>Greenberg Traurig</strong></a> - proj. BIT Creative, Warszawa 2025.</span>
+      <span class="ahp-credit">Fot. materiały pracowni</span>
+    </figcaption>
+  </figure>
+</div>
+
+
+<aside class="tldr-box">
+  <div class="label">W skrócie</div>
+  <p>Varso Tower (310 m, najwyższy budynek UE) gości <strong>pięciu najemców z pięciu różnych branż</strong>: Beiersdorf (Nivea, FMCG), Saint-Gobain (budowlanka), SAP Polska (tech), Greenberg Traurig (prawo), Burda International (media). Trzech zaprojektował <strong>Trzop Architekci</strong> (Beiersdorf, Saint-Gobain, Burda), jednego <strong>Massive Design</strong> (SAP), jednego <strong>BIT Creative</strong> (Greenberg). Adres bez branżowego DNA okazuje się najmocniejszym argumentem.</p>
+</aside>
+
+
+<article class="article-body">
+
+<p><span class="dropcap">V</span>arso Tower to nie tylko budynek. To wertykalne miasto. 310 metrów wysokości, 53 piętra biurowe, 75 000 m² wynajmowalnej powierzchni biurowej. Najwyższy budynek Unii Europejskiej - i jednocześnie najgęstsze zbiorowisko premium-najemców w Polsce. W naszej bazie figuruje <strong>pięć osobnych projektów</strong> z adresem Varso Tower lub Varso II. Każdy z nich pochodzi z innej branży, każdy zaprojektowany przez różną pracownię, każdy z innej koncepcji workplace. Razem dają obraz polskiego corporate-u 2024-2026 w mikrokosmosie jednego budynku.</p>
+
+<div class="stat-callout">
+  <div class="stat-callout-num">5</div>
+  <div class="stat-callout-label">
+    <strong>fit-outów w Varso Tower</strong> w naszej bazie - najbardziej skoncentrowana liczba realizacji workplace w jednym budynku w całej Polsce. Wszystkie zaprojektowane między 2023 a 2026 rokiem.
+  </div>
+</div>
+
+<h2 data-num="Najemcy">Pięć branż, <em>jeden adres</em>.</h2>
+
+<div style="background:var(--bone);border:1px solid var(--line);padding:36px 40px;margin:40px 0;">
+
+  <div class="tenant-row">
+    <div class="tenant-floor">37<em>p.</em></div>
+    <div class="tenant-body">
+      <div class="tenant-name">Beiersdorf Polska <em>(Nivea)</em></div>
+      <div class="tenant-meta">2025 · 340 m² · Cosmetics / FMCG</div>
+    </div>
+    <div class="tenant-arch">
+      <a href="projekt.html?id=beiersdorf-polska-nivea-warszawa-2025">Trzop Architekci →</a>
+    </div>
+  </div>
+
+  <div class="tenant-row">
+    <div class="tenant-floor">28<em>p.</em></div>
+    <div class="tenant-body">
+      <div class="tenant-name">Saint-<em>Gobain</em></div>
+      <div class="tenant-meta">2024 · Building materials</div>
+    </div>
+    <div class="tenant-arch">
+      <a href="projekt.html?id=saint-gobain-warszawa-2024">Trzop Architekci →</a>
+    </div>
+  </div>
+
+  <div class="tenant-row">
+    <div class="tenant-floor">11<em>p.</em></div>
+    <div class="tenant-body">
+      <div class="tenant-name">SAP <em>Polska</em></div>
+      <div class="tenant-meta">2024 · Tech / Enterprise SaaS</div>
+    </div>
+    <div class="tenant-arch">
+      <a href="projekt.html?id=sap-polska-varso-tower-warszawa-2025">Massive Design →</a>
+    </div>
+  </div>
+
+  <div class="tenant-row">
+    <div class="tenant-floor">-</div>
+    <div class="tenant-body">
+      <div class="tenant-name">Greenberg <em>Traurig</em></div>
+      <div class="tenant-meta">2024-2025 · Law / Legal services</div>
+    </div>
+    <div class="tenant-arch">
+      <a href="projekt.html?id=greenberg-traurig-warszawa-2024">BIT Creative →</a>
+    </div>
+  </div>
+
+  <div class="tenant-row">
+    <div class="tenant-floor">-</div>
+    <div class="tenant-body">
+      <div class="tenant-name">Burda <em>International</em></div>
+      <div class="tenant-meta">2023-2024 · Media / Publishing</div>
+    </div>
+    <div class="tenant-arch">
+      <a href="projekt.html?id=burda-international-warszawa">Trzop Architekci →</a>
+    </div>
+  </div>
+
+</div>
+
+<p>Pięć branż, które normalnie nie funkcjonują w jednym budynku: kosmetyki, budowlanka, software, prawo, media. W tradycyjnym modelu rynku - każda z tych firm miałaby swoje dedykowane piętro w innym mieście Warszawy. Greenberg w Mokotowie, SAP w Mordorze, Saint-Gobain pod Warszawą. Tymczasem wszystkie wybrały Varso Tower. <strong>Dlaczego?</strong></p>
+
+<h2 data-num="Hipoteza">Adres jako <em>argument</em>.</h2>
+
+<p>Pierwsza hipoteza jest banalna: Varso Tower to <em>najlepszy adres</em> w Polsce. 310 metrów, panorama z każdego piętra, certyfikat WELL Platinum, deweloperem HB Reavis (czeski deweloper z reputacją globalną). Dla firm globalnych, dla których biuro w Warszawie jest oddziałem, a nie HQ, wybór budynku to wybór wizytówki. Varso jest synonimiczny z „Polska, premium, ekspansja".</p>
+
+<p>Druga hipoteza jest subtelniejsza. Varso Tower łamie zasadę „dzielnicowości" warszawskiego corporate-u. Mokotów to dzielnica IT i konsultingu. Wola - dawniej przemysłowa, dziś prawnicy. Centrum - banki. Varso, jako neutralna „nowość" w samym sercu Warszawy (przy dworcu Centralnym), <strong>nie ma branżowego DNA</strong>. Każdy może tam wejść i być na właściwym miejscu. Brak tożsamości jest, paradoksalnie, jego najsilniejszym atutem dla wielobranżowości.</p>
+
+<div class="pullquote">
+  Varso, jako neutralna „nowość" w sercu Warszawy, nie ma branżowego DNA. Każdy może tam wejść i być na właściwym miejscu.
+  <span class="attr">Showroom Biur, Studium Varso</span>
+</div>
+
+<h2 data-num="Architektura">Pięć projektów, <em>trzy podejścia</em>.</h2>
+
+<p>Patrząc na pięć fit-outów w jednym budynku, można zauważyć trzy zupełnie różne podejścia do tej samej przestrzeni:</p>
+
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;line-height:1.2;margin:50px 0 16px;letter-spacing:-0.01em;">Trzop Architekci - <em>spójna marka</em>.</h3>
+<p>Beiersdorf, Saint-Gobain, Burda - wszystkie zaprojektowane przez Trzopa. Wszystkie podobne stylistycznie: powściągnięta paleta, dobrze wyważone akcenty kolorystyczne marki, mocna integracja z widokami z okien. Trzop nie próbuje konkurować z architekturą Varso - wpisuje się w nią. Każdy fit-out wygląda jak „domyślny" projekt dla tego budynku - w pozytywnym sensie.</p>
+
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;line-height:1.2;margin:50px 0 16px;letter-spacing:-0.01em;">Massive Design (SAP) - <em>luksus materialny</em>.</h3>
+<p>SAP na 11. piętrze to inne podejście. Massive Design wykorzystał wysokie kondygnacje Varso jako pretekst do zaprojektowania biura, które wygląda jak hotel. Drewno, mosiądz, naturalne tkaniny, ciepłe oświetlenie - wszystko zaprojektowane przeciwko zimnemu szkło-stali budynku. To projekt, który <em>tłumaczy</em> Varso na język comfort-zone.</p>
+
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;line-height:1.2;margin:50px 0 16px;letter-spacing:-0.01em;">BIT Creative (Greenberg Traurig) - <em>narracja</em>.</h3>
+<p>Greenberg Traurig to z kolei narracyjne podejście BIT Creative. Miedź, kamień, drewno. Widok na PKiN. Sztuka jako część architektury - abstrakcyjne rzeźby, malarstwo, biel galeryjna. Greenberg w Varso jest, dosłownie, projektem dla najwyższej wieży UE - z miedzianymi akcentami nawiązującymi do warszawskiej tradycji, ale w skali budynku, który skala tradycji nie ma.</p>
+
+<h2 data-num="Wniosek">Co to nam <em>mówi</em>.</h2>
+
+<p>Varso Tower jest mikroskopowym studium polskiego workplace 2024-2026. Pokazuje trzy rzeczy: <strong>(1) adres ma znaczenie</strong>, ale wolny od branżowej tożsamości adres ma jeszcze większe; <strong>(2) jeden budynek może gościć diametralnie różne typologie biur</strong>, jeśli pozwala mu na to architektura; <strong>(3) najwięksi gracze polskiego workplace</strong> - Trzop, Massive Design, BIT Creative - wszyscy znaleźli swoje miejsce w tej wieży.</p>
+
+<p>W kolejnych tekstach planujemy podobne studia innych budynków: Mennica Legacy Tower, Q22, Warsaw Spire, The Park Warsaw, Browary Warszawskie, .KTW II Katowice. Każdy z nich ma podobnie skomprymowaną opowieść do opowiedzenia. Varso jest po prostu największą - najbliższą definicji „polskiego workplace w jednym adresie".</p>
+
+</article>
+
+<section class="faq-section">
+  <div class="faq-wrap">
+    <div class="faq-head">Najczęściej zadawane pytania</div>
+    <h2 class="faq-h2">Pytania i <em>odpowiedzi</em>.</h2>
+    <div class="faq-item">
+      <h3 class="faq-q">Ilu najemców biurowych ma Varso Tower w Warszawie?</h3>
+      <p class="faq-a">W bazie Showroom Biur jest 5 udokumentowanych fit-outów w Varso Tower: Beiersdorf Polska (Nivea, 37. piętro, 2025), Saint-Gobain (28. piętro, 2024), SAP Polska (11. piętro, 2024), Greenberg Traurig (kancelaria prawna, 2024-2025), Burda International (media, 2023-2024). To najbardziej skoncentrowana liczba realizacji workplace w jednym budynku w Polsce.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Kto jest deweloperem Varso Tower?</h3>
+      <p class="faq-a">Deweloperem Varso Tower jest HB Reavis - czeski deweloper z portfolio w całej Europie Środkowej. Varso Tower osiąga 310 metrów wysokości, ma 53 piętra biurowe i 75 000 m² wynajmowalnej powierzchni biurowej. Certyfikacja: WELL Platinum.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Która pracownia zaprojektowała najwięcej biur w Varso Tower?</h3>
+      <p class="faq-a">Trzop Architekci - zaprojektowali trzy z pięciu udokumentowanych fit-outów w Varso Tower: Beiersdorf Polska (Nivea), Saint-Gobain, Burda International. Charakterystyczne podejście: powściągliwa elegancja, mocna integracja z widokami z wysokich pięter.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Czym wyróżnia się projekt SAP Polska w Varso Tower?</h3>
+      <p class="faq-a">Biuro SAP Polska na 11. piętrze Varso Tower zaprojektowała Massive Design. Podejście wyjątkowe: drewno, mosiądz, naturalne tkaniny, ciepłe oświetlenie - wszystko zaprojektowane przeciwko zimnemu szkło-stali budynku. Hotelarska atmosfera, „tłumacząca&quot; Varso na język comfort-zone.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Dlaczego firmy z różnych branż wybierają Varso Tower?</h3>
+      <p class="faq-a">Varso Tower jest „neutralną nowością&quot; w sercu Warszawy. W przeciwieństwie do dzielnic z silnym branżowym DNA (Mokotów = IT/konsulting, Wola = prawnicy, Centrum = banki), Varso nie ma tożsamości branżowej. Każdy najemca może tam wejść i być na właściwym miejscu - brak tożsamości jest, paradoksalnie, jego najsilniejszym atutem.</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ilu najemców biurowych ma Varso Tower w Warszawie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "W bazie Showroom Biur jest 5 udokumentowanych fit-outów w Varso Tower: Beiersdorf Polska (Nivea, 37. piętro, 2025), Saint-Gobain (28. piętro, 2024), SAP Polska (11. piętro, 2024), Greenberg Traurig (kancelaria prawna, 2024-2025), Burda International (media, 2023-2024). To najbardziej skoncentrowana liczba realizacji workplace w jednym budynku w Polsce."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kto jest deweloperem Varso Tower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deweloperem Varso Tower jest HB Reavis - czeski deweloper z portfolio w całej Europie Środkowej. Varso Tower osiąga 310 metrów wysokości, ma 53 piętra biurowe i 75 000 m² wynajmowalnej powierzchni biurowej. Certyfikacja: WELL Platinum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Która pracownia zaprojektowała najwięcej biur w Varso Tower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trzop Architekci - zaprojektowali trzy z pięciu udokumentowanych fit-outów w Varso Tower: Beiersdorf Polska (Nivea), Saint-Gobain, Burda International. Charakterystyczne podejście: powściągliwa elegancja, mocna integracja z widokami z wysokich pięter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czym wyróżnia się projekt SAP Polska w Varso Tower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biuro SAP Polska na 11. piętrze Varso Tower zaprojektowała Massive Design. Podejście wyjątkowe: drewno, mosiądz, naturalne tkaniny, ciepłe oświetlenie - wszystko zaprojektowane przeciwko zimnemu szkło-stali budynku. Hotelarska atmosfera, „tłumacząca\" Varso na język comfort-zone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego firmy z różnych branż wybierają Varso Tower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Varso Tower jest „neutralną nowością\" w sercu Warszawy. W przeciwieństwie do dzielnic z silnym branżowym DNA (Mokotów = IT/konsulting, Wola = prawnicy, Centrum = banki), Varso nie ma tożsamości branżowej. Każdy najemca może tam wejść i być na właściwym miejscu - brak tożsamości jest, paradoksalnie, jego najsilniejszym atutem."
+      }
+    }
+  ]
+}
+</script>
+
+<section class="article-footer">
+  <div class="af-wrap">
+    <a href="czytelnia.html" class="af-cta">Czytaj kolejne eseje →</a>
+    <div class="af-meta">
+      <div>
+        <h5>Esej</h5>
+        <p>Varso Tower jako miasto biur<br>8 min czytania · 2026</p>
+      </div>
+      <div>
+        <h5>Powiązane</h5>
+        <p><a href="artykul-anatomia-workplace-2026.html">Anatomia workplace 2026</a><br><a href="artykul-piec-pracowni.html">Pięć pracowni</a></p>
+      </div>
+      <div>
+        <h5>Realizacje w Varso</h5>
+        <p><a href="projekt.html?id=beiersdorf-polska-nivea-warszawa-2025">Beiersdorf</a> · <a href="projekt.html?id=saint-gobain-warszawa-2024">Saint-Gobain</a><br><a href="projekt.html?id=sap-polska-varso-tower-warszawa-2025">SAP Polska</a> · <a href="projekt.html?id=greenberg-traurig-warszawa-2024">Greenberg</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const progress=document.getElementById('progress'),nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.setProperty('--p',(window.scrollY/h).toFixed(3));nav.classList.toggle('scrolled',window.scrollY>20);});
+</script>
+
+  <script src="mobile-nav.js" defer></script>
+  <script src="search-index.js" defer></script>
+  <script src="search.js" defer></script>
+<script>
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.art-share-btn.copy');
+  if (!btn) return;
+  navigator.clipboard.writeText(btn.dataset.url).then(() => {
+    btn.classList.add('done');
+    btn.querySelector('span').textContent = 'Skopiowano ✓';
+    setTimeout(() => {
+      btn.classList.remove('done');
+      btn.querySelector('span').textContent = 'Kopiuj link';
+    }, 1800);
+  });
+});
+</script>
+</body>
+</html>

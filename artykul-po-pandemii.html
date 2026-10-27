@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Po pandemii: jak zmieniło się biuro - Showroom Biur</title>
+<meta name="description" content="Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEAE2;--bg-deep:#E5DFD3;--bone:#F3EFE6;--ink:#0F0F0E;--ink-soft:#2A2A28;--muted:#8B7E6A;--muted-soft:#B6AC99;--accent:#5E1A26;--accent-deep:#7A2433;--line:#D9D2C2;--paper:#FBF8F2;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{background:var(--bg);scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;height:auto;}
+::selection{background:var(--accent);color:var(--paper);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 32px;background:rgba(239,234,226,0.85);backdrop-filter:blur(12px);border-bottom:1px solid transparent;}
+.nav.scrolled{border-bottom-color:var(--line);}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;letter-spacing:-0.01em;}
+.nav-brand em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.nav-back{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-soft);padding:10px 18px;border:1px solid var(--line);border-radius:999px;}
+.nav-back:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.progress-bar{position:fixed;top:64px;left:0;height:2px;background:var(--accent);z-index:999;transform-origin:left;transform:scaleX(var(--p,0));}
+.article-hero{margin-top:64px;padding:100px 32px 80px;background:var(--ink);color:var(--paper);}
+.ah-wrap{max-width:1080px;margin:0 auto;}
+.ah-meta{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted-soft);margin-bottom:36px;display:flex;gap:24px;flex-wrap:wrap;}
+.ah-meta .accent{color:var(--accent-text,#5E1A26);}
+.ah-meta .pipe{color:var(--muted);}
+.ah-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:28px;}
+.ah-title{font-family:'Cormorant Garamond',serif;font-size: clamp(40px, 5.5vw, 72px);line-height:0.9;font-weight:500;letter-spacing:-0.03em;margin-bottom:36px;}
+.ah-title em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.ah-deck{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2vw,28px);line-height:1.4;font-weight:500;font-style:italic;color:var(--muted-soft);max-width:800px;}
+.article-body{max-width:760px;margin:80px auto 120px;padding:0 32px;}
+.article-body p{font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.65;color:var(--ink-soft);margin-bottom:1.4em;}
+.article-body p strong{color:var(--ink);font-weight:500;}
+.article-body p em{color:var(--accent-text,#5E1A26);font-style:italic;}
+.article-body .dropcap{font-family:'Cormorant Garamond',serif;float:left;font-size: 64px;line-height:0.85;font-weight:500;font-style:italic;color:var(--accent-text,#5E1A26);padding:8px 14px 0 0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;line-height:1.05;letter-spacing:-0.02em;margin:80px 0 32px;}
+.article-body h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.article-body h2::before{content:attr(data-num);display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:12px;font-weight:normal;}
+.pullquote{margin:60px -40px;padding:36px 40px;border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1.15;font-weight:500;font-style:italic;color:var(--ink);letter-spacing:-0.01em;}
+.pullquote::before{content:'"';display:block;color:var(--accent-text,#5E1A26);font-size:1.4em;line-height:0.5;margin-bottom:8px;}
+.pullquote .attr{display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);font-style:normal;margin-top:24px;}
+.aside{margin:50px -20px;padding:28px 32px;background:var(--bone);border-left:1px solid var(--accent);font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;color:var(--ink-soft);}
+.aside strong{color:var(--ink);}
+.aside .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
+.trend-block{margin:60px 0;background:var(--paper);border:1px solid var(--line);padding:48px 40px;}
+.trend-num{font-family:'Cormorant Garamond',serif;font-size:80px;line-height:0.9;font-weight:500;color:var(--accent-text,#5E1A26);letter-spacing:-0.02em;margin-bottom:24px;}
+.trend-block h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px;}
+.trend-block h3 em{font-style:italic;color:var(--accent-text,#5E1A26);}
+.trend-examples{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line);}
+.trend-examples .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;padding:6px 12px;background:var(--bg-deep);color:var(--ink);border-radius:999px;}
+.trend-examples .tag a{color:inherit;border-bottom:1px solid transparent;}
+.trend-examples .tag a:hover{color:var(--accent-text,#5E1A26);border-bottom-color:var(--accent);}
+.article-footer{background:var(--ink);color:var(--paper);padding:80px 32px;}
+.af-wrap{max-width:1080px;margin:0 auto;}
+.af-cta{font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;font-weight:500;color:var(--paper);display:inline-block;margin-bottom:40px;border-bottom:1px solid var(--accent);padding-bottom:6px;}
+.af-cta:hover{color:var(--accent-text,#5E1A26);}
+.af-meta{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;font-family:'Inter',sans-serif;font-size:13px;color:var(--muted-soft);padding-top:40px;border-top:1px solid rgba(251,248,242,0.1);}
+.af-meta h5{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:12px;}
+.af-meta a{color:var(--paper);border-bottom:1px solid transparent;}
+.af-meta a:hover{border-bottom-color:var(--accent);}
+@media (max-width:900px){.article-hero{padding:60px 20px;}.article-body{padding:0 20px;margin:50px auto 80px;}.article-body p{font-size:18px;}.pullquote{font-size:24px;margin:40px 0;padding:24px 0;}.article-body h2{font-size:32px;margin:50px 0 24px;}.af-meta{grid-template-columns:1fr;}.trend-block{padding:28px 24px;}.trend-num{font-size:60px;}.trend-block h3{font-size:24px;}}
+
+/* TL;DR & FAQ injected styles */
+.tldr-box{max-width:760px;margin:50px auto 0;padding:32px 40px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);}
+.tldr-box .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
+.tldr-box p{font-family:'Inter',sans-serif;font-size:15px;line-height:1.65;color:var(--ink);}
+.tldr-box p strong{color:var(--ink);font-weight:600;background:rgba(94,26,38,0.1);padding:0 3px;}
+.faq-section{background:var(--bone);padding:80px 32px;border-top:1px solid var(--line);}
+.faq-wrap{max-width:900px;margin:0 auto;}
+.faq-head{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:16px;}
+.faq-h2{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:500;letter-spacing:-0.02em;margin-bottom:50px;line-height:1.05;}
+.faq-h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item:last-child{border-bottom:0;}
+.faq-q{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--ink);padding:24px 0 12px;letter-spacing:-0.01em;margin:0;}
+.faq-a{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.65;color:var(--ink-soft);padding:0 0 24px;max-width:760px;margin:0;}
+@media (max-width:900px){.faq-section{padding:50px 20px;}.faq-h2{font-size:32px;}.tldr-box{margin:30px 20px 0;padding:24px;}.faq-q{font-size:18px;}.faq-a{font-size:15px;}}
+
+/* Editorial hero photo for articles */
+.article-hero-photo{margin:60px auto 40px;max-width:1100px;padding:0 32px;}
+.article-hero-photo figure{margin:0;}
+.article-hero-photo .ahp-img-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--ink-soft, #1a1a18);}
+.article-hero-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.article-hero-photo figcaption{margin-top:14px;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted, #6b6b67);line-height:1.6;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.article-hero-photo figcaption .ahp-credit{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-text,#5E1A26);}
+.article-hero-photo figcaption .ahp-illu{opacity:0.8;}
+@media (max-width:700px){.article-hero-photo{padding:0 20px;margin:40px auto 28px;}}
+
+
+/* ============ A11Y + PERFORMANCE LAYER ============ */
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; }
+  .h1-split .word { transform: none !important; opacity: 1 !important; }
+  .reveal, .reveal-stagger > *, .reveal-stagger { opacity: 1 !important; transform: none !important; }
+  .anim-stroke { stroke-dashoffset: 0 !important; }
+  .pulse-dot { animation: none !important; }
+  .aurora-drift, .orb-drift { animation: none !important; }
+}
+
+/* Focus-visible accent ring */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent, #5E1A26) !important;
+  outline-offset: 3px !important;
+  border-radius: 2px;
+}
+.contact-btn:focus-visible,
+.cta:focus-visible,
+.so-search-trigger:focus-visible,
+.back-top:focus-visible {
+  outline-offset: 4px !important;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--ink, #0F0F0E);
+  color: var(--paper, #FBF8F2);
+  padding: 12px 20px;
+  z-index: 9999;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid var(--accent, #5E1A26);
+  transition: top 0.2s;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  outline-offset: 0 !important;
+}
+
+/* sr-only utility for screen-reader-only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Article share section */
+.art-share{margin:48px auto;max-width:920px;padding:24px 28px;background:var(--paper, #FBF8F2);border-left:3px solid var(--accent, #5E1A26);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
+.art-share-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-text,#5E1A26);font-weight:600;}
+.art-share-btns{display:flex;gap:10px;flex-wrap:wrap;}
+.art-share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bone, #F3EFE6);border:1px solid var(--line, #D9D2C2);color:var(--ink, #0F0F0E);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.art-share-btn:hover{background:var(--ink, #0F0F0E);color:var(--paper, #FBF8F2);border-color:var(--ink, #0F0F0E);transform:translateY(-2px);}
+.art-share-btn svg{width:14px;height:14px;}
+.art-share-btn.copy.done{background:#2A6F4D;color:#FBF8F2;border-color:#2A6F4D;}
+@media (max-width:600px){.art-share{flex-direction:column;align-items:flex-start;}}
+
+</style>
+
+<!-- === SEO / AEO START === -->
+<link rel="alternate" type="application/rss+xml" title="Showroom Biur - RSS" href="/rss.xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0F0F0E">
+<link rel="canonical" href="https://showroombiur.pl/artykul-po-pandemii.html" />
+<meta name="author" content="Filip Sarzyński, Showroom Biur" />
+<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="generator" content="Showroom Biur Editorial System" />
+<meta name="keywords" content="workplace post-pandemia, hot-desking Polska, biofilia w biurze, biuro hybryda, akustyka biuro" />
+
+<!-- Open Graph + Twitter Cards -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Po pandemii: jak zmieniło się biuro" />
+<meta property="og:description" content="Hot-desking, akustyka, biofilia, hybryda, narracja. Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami z archiwum 272 realizacji." />
+<meta property="og:url" content="https://showroombiur.pl/artykul-po-pandemii.html" />
+<meta property="og:image" content="https://showroombiur.pl/og-po-pandemii.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Po pandemii: jak zmieniło się biuro" />
+<meta property="og:locale" content="pl_PL" />
+<meta property="og:site_name" content="Showroom Biur" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Po pandemii: jak zmieniło się biuro" />
+<meta name="twitter:description" content="Hot-desking, akustyka, biofilia, hybryda, narracja. Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami z archiwum 272 realizacji." />
+<meta name="twitter:image" content="https://showroombiur.pl/og-po-pandemii.jpg" />
+<meta name="twitter:image:alt" content="Po pandemii: jak zmieniło się biuro" />
+<meta property="article:published_time" content="2026-04-22" />
+<meta property="article:modified_time" content="2026-05-31" />
+<meta property="article:author" content="Filip Sarzyński" />
+<meta property="article:section" content="Trendy" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://showroombiur.pl/#organization",
+      "name": "Showroom Biur",
+      "alternateName": "Showroom Biur Magazine",
+      "url": "https://showroombiur.pl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://showroombiur.pl/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Magazyn o polskich biurach. Baza 272 polskich realizacji biurowych, 80 pracowni, statystyki rynku.",
+      "publisher": {"@type": "Organization", "name": "Showroom Biur", "url": "https://showroombiur.pl"},
+      "foundingDate": "2026-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Filip Sarzyński",
+        "jobTitle": "Wydawca i redaktor naczelny",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Brookfield Partners"
+        }
+      },
+      "sameAs": [
+        "https://brookfield.pl",
+        "https://www.linkedin.com/company/brookfield-partners"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Polska"
+      },
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior design",
+        "Polski rynek biurowy",
+        "Polskie pracownie architektoniczne",
+        "Fit-out biurowy"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://showroombiur.pl/#filip-sarzynski",
+      "name": "Filip Sarzyński",
+      "jobTitle": "Wydawca, Redaktor naczelny Showroom Biur",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Brookfield Partners",
+        "url": "https://brookfield.pl"
+      },
+      "email": "filip.sarzynski@brookfield.pl",
+      "knowsAbout": [
+        "Workplace design",
+        "Office interior",
+        "Polski rynek biurowy",
+        "Workplace strategy"
+      ],
+      "url": "https://showroombiur.pl/o-magazynie.html#zespol"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://showroombiur.pl/artykul-po-pandemii.html#article",
+      "headline": "Po pandemii: jak zmieniło się polskie biuro",
+      "alternativeHeadline": "Po pandemii: jak zmieniło się biuro",
+      "description": "Hot-desking, akustyka, biofilia, hybryda, narracja. Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami z archiwum 272 realizacji.",
+      "url": "https://showroombiur.pl/artykul-po-pandemii.html",
+      "mainEntityOfPage": "https://showroombiur.pl/artykul-po-pandemii.html",
+      "image": [
+        "https://showroombiur.pl/og-po-pandemii.jpg",
+        "https://showroombiur.pl/og-default.jpg"
+      ],
+      "datePublished": "2026-04-22",
+      "dateModified": "2026-05-31",
+      "author": {
+        "@id": "https://showroombiur.pl/#filip-sarzynski"
+      },
+      "publisher": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "inLanguage": "pl-PL",
+      "articleSection": "Trendy",
+      "wordCount": 2000,
+      "timeRequired": "PT10M",
+      "keywords": "workplace post-pandemia, hot-desking Polska, biofilia w biurze, biuro hybryda, akustyka biuro",
+      "isPartOf": {
+        "@id": "https://showroombiur.pl/#website"
+      },
+      "isAccessibleForFree": true,
+      "copyrightYear": 2026,
+      "copyrightHolder": {
+        "@id": "https://showroombiur.pl/#organization"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Post-pandemic workplace"
+        },
+        {
+          "@type": "Thing",
+          "name": "Hot-desking"
+        },
+        {
+          "@type": "Thing",
+          "name": "Biofilia"
+        },
+        {
+          "@type": "Thing",
+          "name": "Hybrid work"
+        }
+      ],
+      "citation": {
+        "@id": "https://showroombiur.pl/biurofilia.html#dataset"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://showroombiur.pl/artykul-po-pandemii.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://showroombiur.pl/biurofilia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Czytelnia",
+          "item": "https://showroombiur.pl/czytelnia.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Po pandemii: jak zmieniło się biuro",
+          "item": "https://showroombiur.pl/artykul-po-pandemii.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- === SEO / AEO END === -->
+
+<link rel="stylesheet" href="theme.css">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.article-footer,
+.article-hero-photo .ahp-img-wrap,
+[data-dark="1"],
+.footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
+<style id="tpl-override">/* generated by _tools/apply_templates.py - szablon C */
+/* Nagłówki bez pomarańczowej kursywy - akcent tylko w logo */
+html body.tpl-c h1 em, html body.tpl-c h2 em, html body.tpl-c h3 em,
+html body.tpl-c .ah-title em, html body.tpl-c .faq-h2 em, html body.tpl-c .af-author-info h3 em,
+html body.tpl-c .byline-name em {font-style:inherit;color:inherit;font-weight:inherit}
+html body.tpl-c h1 .dot, html body.tpl-c h2 .dot {color:inherit}
+
+html body.tpl-c .progress-bar{display:none}
+html body.tpl-c .article-hero{background:var(--paper);color:var(--ink);padding:72px 32px 44px;border-bottom:1px solid var(--line)}
+html body.tpl-c .ah-wrap{max-width:760px}
+html body.tpl-c .ah-meta{color:var(--muted);letter-spacing:.14em;margin-bottom:22px}
+html body.tpl-c .ah-meta .accent{color:var(--ink)}
+html body.tpl-c .ah-eyebrow{color:var(--muted);letter-spacing:.16em;margin-bottom:18px}
+html body.tpl-c .ah-title{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em;margin-bottom:22px}
+html body.tpl-c .ah-deck{font-style:normal;font-size:20px;line-height:1.5;color:var(--ink-soft)}
+html body.tpl-c .byline{border-top-color:var(--line);margin-top:32px;padding-top:22px}
+html body.tpl-c .byline-name{color:var(--ink)}
+html body.tpl-c .byline-role{color:var(--muted)}
+html body.tpl-c .ah-updated{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+html body.tpl-c .article-body .dropcap{float:none;font-size:inherit;line-height:inherit;font-style:normal;font-weight:inherit;color:inherit;padding:0}
+html body.tpl-c .article-body h2{font-size:30px;line-height:1.15;margin:56px 0 18px}
+html body.tpl-c .article-body h2::before{color:var(--muted)}
+html body.tpl-c .article-body p em{color:inherit}
+html body.tpl-c .pullquote{margin:44px 0;padding:2px 0 2px 22px;border:0;border-left:3px solid var(--ink);font-size:24px;line-height:1.35;font-style:normal;font-weight:400}
+html body.tpl-c .pullquote::before{display:none}
+html body.tpl-c .tldr-box, html body.tpl-c .tldr{border-left-color:var(--ink)}
+html body.tpl-c .tldr-label, html body.tpl-c .faq-head, html body.tpl-c .aside .label, html body.tpl-c .art-share-label{color:var(--muted)}
+html body.tpl-c .art-share{border-left-color:var(--line)}
+html body.tpl-c .tldr-box p strong{background:none}
+html body.tpl-c .faq-h2{font-size:32px}
+html body.tpl-c .af-cta{font-style:normal;font-size:24px}
+html body.tpl-c .stat-callout-num{font-style:normal}
+/* metodologia */
+html body.tpl-c .hero{padding:72px 32px 36px}
+html body.tpl-c .hero h1{font-size:clamp(34px,4.2vw,54px);line-height:1.08;font-weight:400;letter-spacing:-.015em}
+html body.tpl-c .hero-lede{font-style:normal;font-size:20px}
+html body.tpl-c .body h2{font-size:30px}
+@media(max-width:900px){html body.tpl-c .article-hero{padding:48px 20px 32px}}
+</style>
+</head>
+<body class="tpl-c">
+<a href="#main" class="skip-link">Pomiń do treści</a>
+
+<nav class="nav" role="navigation" aria-label="Główna nawigacja" id="nav">
+  <a class="nav-brand" href="biurofilia.html">Showroom <em>Biur</em></a>
+  <a class="nav-back" href="czytelnia.html">← Wszystkie eseje</a>
+</nav>
+<a id="main" tabindex="-1" class="sr-only">Główna treść strony</a>
+<div class="progress-bar" id="progress"></div>
+
+<section class="article-hero">
+  <div class="ah-wrap">
+    <div class="ah-meta">
+      <span>Esej numeru 02</span><span class="pipe">·</span>
+      <span class="accent">Trendy</span><span class="pipe">·</span>
+      <span>10 min czytania</span><span class="pipe">·</span>
+      <span>Redakcja Showroom Biur</span>
+    </div>
+    <div class="ah-eyebrow">Nr 02 · Trendy</div>
+    <h1 class="ah-title">Po pandemii:<br>jak <em>zmieniło się</em> biuro.</h1>
+    <p class="ah-deck">
+      Hot-desking, akustyka, biofilia, hybryda, narracja. Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami z archiwum 272 realizacji.
+    </p>
+    <div class="ah-updated">Ostatnia aktualizacja: 26.10.2026</div>
+  </div>
+</section>
+<aside class="art-share">
+  <div class="art-share-label">Udostępnij artykuł</div>
+  <div class="art-share-btns">
+    <a class="art-share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//showroombiur.pl/artykul-po-pandemii.html" target="_blank" rel="noopener" aria-label="Udostępnij na LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.27 18.5H5.5V9.5h2.77v9zM6.88 8.25c-.89 0-1.61-.72-1.61-1.61s.72-1.61 1.61-1.61 1.61.72 1.61 1.61-.72 1.61-1.61 1.61zm11.62 10.25h-2.77V14c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H9.75V9.5h2.66v1.22h.04c.37-.7 1.28-1.43 2.63-1.43 2.81 0 3.33 1.85 3.33 4.26v4.95z"/></svg>
+      LinkedIn
+    </a>
+    <a class="art-share-btn" href="https://twitter.com/intent/tweet?text=Po%20pandemii%3Ajak%20zmieni%C5%82o%20si%C4%99%20biuro.&url=https%3A//showroombiur.pl/artykul-po-pandemii.html" target="_blank" rel="noopener" aria-label="Udostępnij na X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X
+    </a>
+    <button class="art-share-btn copy" data-url="https://showroombiur.pl/artykul-po-pandemii.html" type="button" aria-label="Skopiuj link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Kopiuj link</span></button>
+  </div>
+</aside>
+
+<!-- editorial hero photo -->
+<div class="article-hero-photo">
+  <figure>
+    <div class="ahp-img-wrap">
+      <img src="https://pliki.propertydesign.pl/i/19/55/81/195581_1140.jpg" loading="lazy" decoding="async" alt="JLL &amp; Tétris - projekt Tétris (in-house), Kraków 2024">
+    </div>
+    <figcaption>
+      <span class="ahp-illu">Realizacja referencyjna: <a href="projekt.html?slug=jll-and-t-tris-krakow-2024"><strong>JLL &amp; Tétris</strong></a> - proj. Tétris (in-house), Kraków 2024.</span>
+      <span class="ahp-credit">Fot. materiały pracowni</span>
+    </figcaption>
+  </figure>
+</div>
+
+
+<aside class="tldr-box">
+  <div class="label">W skrócie</div>
+  <p>Pandemia trwale zmieniła polskie biuro. <strong>Pięć trendów</strong> definiuje workplace 2022-2026: <strong>(1) hot-desking jako norma</strong> (60%+ nowych projektów), <strong>(2) akustyka jako pełna kategoria projektowa</strong>, <strong>(3) biofilia</strong> jako fundament narracji marki, <strong>(4) hybryda</strong> przekształcająca biuro w event-space, <strong>(5) narracja marki</strong> w architekturze (specjalność mode:lina, BIT Creative, HUKK.studio). Wszystkie pięć ma charakter strukturalny - żaden nie zniknie.</p>
+</aside>
+
+
+<article class="article-body">
+
+<p><span class="dropcap">P</span>andemia COVID-19 zatrzymała projektowanie biur na 18 miesięcy. Marzec 2020 do września 2021 to dla polskiego workplace de facto pauza - większość firm zamroziła decyzje, fit-outy ruszały dopiero gdy pracownicy zaczęli wracać do biura. Ale gdy ruszyły - zmiana była głęboka. <strong>Nie wracaliśmy do biur sprzed pandemii.</strong> Każdy nowy projekt 2022-2026 odpowiada na to samo pytanie: jeśli ludzie mogą pracować z domu, po co w ogóle to biuro? Pięć trendów dało pięć różnych odpowiedzi.</p>
+
+<div class="trend-block">
+  <div class="trend-num">01.</div>
+  <h3>Hot-desking jako <em>norma</em>, nie eksperyment.</h3>
+  <p>Do 2020 roku hot-desking był awangardą - zarezerwowany dla startupów technologicznych i co-workingów. Po pandemii stał się standardem. Z 272 realizacji w naszej bazie, <strong>co najmniej 60% projektów od 2022 roku</strong> wprowadza fizyczne ograniczenie liczby stanowisk do 70-80% liczby pracowników. To znaczy: zakładamy strukturalnie, że część etatów będzie zawsze pracować zdalnie.</p>
+  <p>Konsekwencje projektowe są subtelne, ale liczne. Brak dedykowanych biurek znaczy konieczność lokerów dla rzeczy osobistych. Brak ścian między działami - bo trudno alokować zespół do strefy, jeśli skład tego zespołu zmienia się co dzień. Stąd boom na <em>neighborhoods</em>: strefy o miękkim charakterze działowym, ale otwartym dla każdego.</p>
+  <div class="trend-examples">
+    <span class="tag"><a href="projekt.html?id=vaillant-katowice-2026">Vaillant Katowice</a></span>
+    <span class="tag"><a href="projekt.html?id=msc-warszawa-2024">MSC Warszawa</a></span>
+    <span class="tag"><a href="projekt.html?id=natek-warszawa-2024">Natek (Q22)</a></span>
+    <span class="tag"><a href="projekt.html?id=hines-warszawa-2023">Hines</a></span>
+  </div>
+</div>
+
+<div class="trend-block">
+  <div class="trend-num">02.</div>
+  <h3>Akustyka jako <em>kategoria</em> projektowa.</h3>
+  <p>Drugi efekt hot-deskingu i open-space'ów jest hałas. Gdy w biurze nie ma stałych miejsc, a strefy są podzielone luźno - koncentracja staje się problemem strukturalnym. Stąd wybuch zainteresowania akustyką jako pełnoprawną kategorią projektową, a nie dodatkiem.</p>
+  <p><strong>Pomiędzy 2022 a 2026 rokiem słowo „akustyczny" pojawia się w 30+ opisach projektów</strong> w naszej bazie - od „panele akustyczne studyjne" w biurze Sennheisera (mode:lina), przez „budki telefoniczne" w corporate'owych fit-outach Workplace, po skandynawskie wyciszenia w Ørstedzie. Akustyka stała się tematem dyskutowanym z klientem na równi z paletą kolorów.</p>
+  <div class="trend-examples">
+    <span class="tag"><a href="projekt.html?id=sennheiser-poznan-2023">Sennheiser (Andersia)</a></span>
+    <span class="tag"><a href="projekt.html?id=orsted-warszawa-2024">Ørsted</a></span>
+    <span class="tag"><a href="projekt.html?id=qair-wroclaw-2025">Qair</a></span>
+  </div>
+</div>
+
+<div class="trend-block">
+  <div class="trend-num">03.</div>
+  <h3>Biofilia jako <em>znak czasu</em>.</h3>
+  <p>Trzeci wielki temat to natura w biurze. Nie chodzi o kilka kwiatków na biurku - chodzi o systematyczne zielone ściany, drzewa wewnątrz, naturalne materiały i odniesienia do polskich krajobrazów.</p>
+  <p>Ørsted (Workplace) wprowadził skandynawską prostotę z dosłownym hasłem „Love your workplace" na materiale ściennym. Beiersdorf Polska (Trzop Architekci) - niebieski pas wykładziny i sufitu nawiązujący do kolorów Nivei i odniesień morskich. KRUK (BIT Creative) - wrocławska panorama jako mozaika ARDEA Studio i piętra inspirowane sztormem, lasem, miastem. Biofilia rzadko była tylko motywem dekoracyjnym - częściej była fundamentem narracji marki.</p>
+  <div class="trend-examples">
+    <span class="tag"><a href="projekt.html?id=orsted-warszawa-2024">Ørsted</a></span>
+    <span class="tag"><a href="projekt.html?id=kruk-wroclaw-2025">KRUK Wrocław</a></span>
+    <span class="tag"><a href="projekt.html?id=qair-wroclaw-2025">Qair</a></span>
+    <span class="tag"><a href="projekt.html?id=concordia-design-wroclaw-2020">Concordia Design</a></span>
+  </div>
+</div>
+
+<div class="pullquote">
+  Akustyka stała się tematem dyskutowanym z klientem na równi z paletą kolorów.
+  <span class="attr">Showroom Biur, Analiza trendów</span>
+</div>
+
+<div class="trend-block">
+  <div class="trend-num">04.</div>
+  <h3>Hybryda <em>jako</em> projekt.</h3>
+  <p>Cztery dni w biurze, trzy w domu. Albo trzy w biurze, dwa w domu. Polskie firmy ustaliły hybrydę między pandemią a 2023 rokiem, ale dopiero teraz pojawiają się projekty, które są <em>fundamentalnie</em> zaprojektowane pod hybrydę - a nie tylko dostosowane do niej.</p>
+  <p>Wyborowa Pernod Ricard (mode:lina, 2400 m² w Lumen) to flagowy przykład: ograniczona liczba stanowisk, mocny nacisk na strefy spotkań i prezentacji, marmurowy bar 4 metry jako miejsce wydarzeń. <strong>Biuro jako event space, nie warsztat</strong>. Podobnie LUX MED (Workplace, 13 000 m²) i Lipton Teas &amp; Infusions Global Services Hub w Katowicach.</p>
+  <p>To zmiana paradygmatu: biuro przestaje być miejscem produkcji, staje się miejscem spotkania. Spotkania wewnętrznego (zespół), zewnętrznego (klient), kulturowego (event firmowy). Projekt fit-outu zaczyna wyglądać bardziej jak projekt hotelu albo restauracji niż klasycznego biura.</p>
+  <div class="trend-examples">
+    <span class="tag"><a href="projekt.html?id=wyborowa-pernod-ricard-warszawa-2025">Wyborowa Pernod Ricard</a></span>
+    <span class="tag"><a href="projekt.html?id=luxmed-warszawa-2024">LUX MED</a></span>
+    <span class="tag"><a href="projekt.html?id=lipton-teas-and-infusions-katowice-2026">Lipton Teas</a></span>
+  </div>
+</div>
+
+<div class="trend-block">
+  <div class="trend-num">05.</div>
+  <h3>Narracja <em>marki</em> w architekturze.</h3>
+  <p>Ostatni - i być może najmocniejszy - trend to fizyczna materializacja marki w przestrzeni biurowej. Każdy projekt staje się trochę showroomem, trochę muzeum, trochę storytelling-iem.</p>
+  <p>Sennheiser w Poznaniu (mode:lina): sale konferencyjne nazwane gatunkami muzycznymi (Jazz, Funk, Rock, Disco), drewniana trybuna kadrująca panoramę Poznania, studyjne panele akustyczne - wszystko opowiada o marce audio. Volkswagen (mode:lina) - drewniane „domki" jako odniesienie do niemieckiej koncepcji DNA. KRUK Wrocław - sztorm, las, miasto jako trzy piętra firmy windykacyjnej.</p>
+  <p>Inaczej niż w latach 2010-tych, gdy „brand" w biurze sprowadzał się do koloru ścian i logo na recepcji, dziś - marka jest fundamentem narracyjnym całego projektu, materializowanym w typografii sal, materiałach, gestach przestrzennych. To bardzo polska specjalność: mode:lina, BIT Creative i HUKK.studio specjalizują się dosłownie w takich biurach.</p>
+  <div class="trend-examples">
+    <span class="tag"><a href="projekt.html?id=kruk-wroclaw-2025">KRUK Wrocław</a></span>
+    <span class="tag"><a href="projekt.html?id=huuuge-games-warszawa-2024">Huuuge Games</a></span>
+    <span class="tag"><a href="projekt.html?id=rock-capital-warszawa-2025">Rock Capital</a></span>
+    <span class="tag"><a href="projekt.html?id=qair-wroclaw-2025">Qair</a></span>
+  </div>
+</div>
+
+<h2 data-num="Konkluzja">Co dalej.</h2>
+
+<p>Wszystkie pięć trendów ma jedną wspólną cechę: <strong>żaden nie zniknie</strong>. Hot-desking i hybryda są strukturalne, nie cykliczne. Biofilia jest wzmacniana przez certyfikaty WELL i BREEAM. Akustyka - przez psychologię pracy. Narracja marki - przez ekonomię uwagi.</p>
+
+<p>Co zatem nadejdzie? Stawiamy na cztery rzeczy: <em>AI-asystenci w przestrzeni</em> (boty rezerwacyjne, monitoring zajętości, dynamiczne strefowanie), <em>powrót do biura jako celu</em> (wzmocnienie elementów eventowych), <em>radykalizacja akustyki</em> (silent rooms, focus pods) i <em>specjalizacja sektorowa</em> (biura, które wyglądają jak laboratoria - dla tech, jak studio - dla mediów, jak salon - dla luxury). Showroom Biur będzie to dokumentował.</p>
+
+<div class="aside">
+  <div class="label">Polskie biuro vs. globalne</div>
+  <p>Czy polskie biura są inne od berlińskich, londyńskich, holenderskich? Tak - i odpowiedzialność za to ponoszą cztery rzeczy: <strong>polskie pracownie</strong> (mode:lina, Trzop, BIT) z bardzo narracyjnym podejściem; <strong>biurowce</strong> (Varso, Q22, .KTW II) jako sceny dla projektów; <strong>polski klimat</strong> (akustyka i światło jako priorytet); <strong>budżety</strong> (niższe niż w UK, wymuszające kreatywność).</p>
+</div>
+
+</article>
+
+<section class="faq-section">
+  <div class="faq-wrap">
+    <div class="faq-head">Najczęściej zadawane pytania</div>
+    <h2 class="faq-h2">Pytania i <em>odpowiedzi</em>.</h2>
+    <div class="faq-item">
+      <h3 class="faq-q">Czy hot-desking jest standardem w polskich biurach?</h3>
+      <p class="faq-a">Tak. Od 2022 roku co najmniej 60% nowych projektów workplace w Polsce wprowadza fizyczne ograniczenie liczby stanowisk do 70-80% liczby pracowników. To strukturalne dostosowanie do hybrydy: zakładamy, że część etatów zawsze pracuje zdalnie.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Co to znaczy biofilia w workplace designie?</h3>
+      <p class="faq-a">Biofilia to systematyczne wprowadzanie natury do biura - zielone ściany, drzewa wewnątrz, naturalne materiały, odniesienia do polskich krajobrazów. Polskie przykłady: Ørsted (Workplace) ze skandynawską prostotą, KRUK Wrocław (BIT Creative) z mozaiką panoramy Wrocławia, Concordia Design (MVRDV) na Wyspie Słodowej.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Które polskie pracownie najlepiej projektują narracyjnie?</h3>
+      <p class="faq-a">Specjalnością narracyjną wyróżniają się trzy pracownie: mode:lina (Sennheiser z salami nazywanymi gatunkami muzycznymi, Volkswagen z drewnianymi „domkami&quot;), BIT Creative (Rock Capital, KRUK), HUKK.studio (L&#x27;Oréal, ATC CARGO). Każde z tych biur jest opowieścią o marce najemcy.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Jak akustyka wpłynęła na projektowanie biur po pandemii?</h3>
+      <p class="faq-a">Akustyka stała się pełnoprawną kategorią projektową na równi z paletą kolorów. W 30+ projektach 2022-2026 pojawia się słowo &quot;akustyczny&quot; w opisach. Sennheiser w Andersia Tower ma studyjne panele akustyczne, Ørsted - skandynawskie wyciszenia, korporacyjne biura - budki telefoniczne i focus pods.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Czy biuro post-pandemiczne to nadal warsztat pracy?</h3>
+      <p class="faq-a">Nie - biuro post-pandemiczne to event-space. Wyborowa Pernod Ricard (mode:lina, 2400 m² w Lumen) ma marmurowy 4-metrowy bar jako miejsce wydarzeń. LUX MED (13 000 m²) i Lipton Teas (Katowice) - podobnie. Biuro przestaje być warsztatem, staje się miejscem spotkania (zespół, klient, event firmowy).</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Czy hot-desking jest standardem w polskich biurach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tak. Od 2022 roku co najmniej 60% nowych projektów workplace w Polsce wprowadza fizyczne ograniczenie liczby stanowisk do 70-80% liczby pracowników. To strukturalne dostosowanie do hybrydy: zakładamy, że część etatów zawsze pracuje zdalnie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co to znaczy biofilia w workplace designie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biofilia to systematyczne wprowadzanie natury do biura - zielone ściany, drzewa wewnątrz, naturalne materiały, odniesienia do polskich krajobrazów. Polskie przykłady: Ørsted (Workplace) ze skandynawską prostotą, KRUK Wrocław (BIT Creative) z mozaiką panoramy Wrocławia, Concordia Design (MVRDV) na Wyspie Słodowej."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Które polskie pracownie najlepiej projektują narracyjnie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specjalnością narracyjną wyróżniają się trzy pracownie: mode:lina (Sennheiser z salami nazywanymi gatunkami muzycznymi, Volkswagen z drewnianymi „domkami\"), BIT Creative (Rock Capital, KRUK), HUKK.studio (L'Oréal, ATC CARGO). Każde z tych biur jest opowieścią o marce najemcy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak akustyka wpłynęła na projektowanie biur po pandemii?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Akustyka stała się pełnoprawną kategorią projektową na równi z paletą kolorów. W 30+ projektach 2022-2026 pojawia się słowo \"akustyczny\" w opisach. Sennheiser w Andersia Tower ma studyjne panele akustyczne, Ørsted - skandynawskie wyciszenia, korporacyjne biura - budki telefoniczne i focus pods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Czy biuro post-pandemiczne to nadal warsztat pracy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nie - biuro post-pandemiczne to event-space. Wyborowa Pernod Ricard (mode:lina, 2400 m² w Lumen) ma marmurowy 4-metrowy bar jako miejsce wydarzeń. LUX MED (13 000 m²) i Lipton Teas (Katowice) - podobnie. Biuro przestaje być warsztatem, staje się miejscem spotkania (zespół, klient, event firmowy)."
+      }
+    }
+  ]
+}
+</script>
+
+<section class="article-footer">
+  <div class="af-wrap">
+    <a href="czytelnia.html" class="af-cta">Czytaj kolejne eseje →</a>
+    <div class="af-meta">
+      <div>
+        <h5>Esej</h5>
+        <p>Po pandemii: jak zmieniło się biuro<br>10 min czytania · 2026</p>
+      </div>
+      <div>
+        <h5>Powiązane</h5>
+        <p><a href="artykul-anatomia-workplace-2026.html">Anatomia workplace 2026</a><br><a href="artykul-piec-pracowni.html">Pięć pracowni</a></p>
+      </div>
+      <div>
+        <h5>Archiwum</h5>
+        <p><a href="biurofilia.html#archive">Wszystkie 272 projekty</a><br><a href="sektor-w-liczbach.html">Sektor w liczbach</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const progress=document.getElementById('progress'),nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-window.innerHeight;progress.style.setProperty('--p',(window.scrollY/h).toFixed(3));nav.classList.toggle('scrolled',window.scrollY>20);});
+</script>
+
+  <script src="mobile-nav.js" defer></script>
+  <script src="search-index.js" defer></script>
+  <script src="search.js" defer></script>
+<script>
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.art-share-btn.copy');
+  if (!btn) return;
+  navigator.clipboard.writeText(btn.dataset.url).then(() => {
+    btn.classList.add('done');
+    btn.querySelector('span').textContent = 'Skopiowano ✓';
+    setTimeout(() => {
+      btn.classList.remove('done');
+      btn.querySelector('span').textContent = 'Kopiuj link';
+    }, 1800);
+  });
+});
+</script>
+</body>
+</html>
