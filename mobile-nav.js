@@ -9,7 +9,7 @@
 .so-mobile-toggle.open .bar:nth-child(2){opacity:0;}
 .so-mobile-toggle.open .bar:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
 
-@media (max-width: 880px){
+@media (max-width: 1360px){
   .nav{padding:14px 18px !important;}
   .nav-brand{font-size:18px !important;}
   .so-mobile-toggle{display:block;}
