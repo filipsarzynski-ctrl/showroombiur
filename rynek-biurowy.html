@@ -93,7 +93,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .rb-chip{font-family:'Inter',sans-serif;font-size:13px;padding:7px 14px;border:1px solid var(--line);background:transparent;color:var(--ink2);cursor:pointer}
 .rb-chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .rb-month{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:44px 0 8px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.rb-item{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.rb-item{display:grid;grid-template-columns:120px 1fr 300px;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
 .rb-date{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);line-height:1.5}
 .rb-date b{display:block;color:var(--ink);font-weight:500}
 .rb-type{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:8px}
@@ -105,7 +105,12 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .rb-meta a:hover{color:var(--accent-text,#5E1A26)}
 .rb-item p a.rb-ol,.rb-meta a.rb-ol{color:var(--accent-text,#5E1A26);border-bottom:1px solid currentColor}
 .rb-note{font-size:14px;color:var(--muted);max-width:760px;margin:48px 0 80px;line-height:1.6}
-@media(max-width:700px){.rb-item{grid-template-columns:1fr;gap:6px}.rb-item h2{font-size:23px}}
+.rb-photo{display:block;align-self:start;position:relative;overflow:hidden;background:var(--line)}
+.rb-photo img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;transition:transform .5s}
+.rb-photo:hover img{transform:scale(1.03)}
+.rb-photo span{position:absolute;left:0;bottom:0;background:rgba(15,15,14,.72);color:#fff;font-family:'Inter',sans-serif;font-size:11px;padding:5px 9px}
+@media(max-width:1000px){.rb-item{grid-template-columns:120px 1fr}.rb-photo{grid-column:2;max-width:420px}}
+@media(max-width:700px){.rb-item{grid-template-columns:1fr;gap:6px}.rb-photo{grid-column:1}.rb-item h2{font-size:23px}}
 </style>
 <link rel="stylesheet" href="theme.css?v=20261027b">
 <style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
@@ -175,6 +180,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Operator elastycznych biur Mindspace wynajmie 4500 m² na czterech piętrach wieżowca <a class="rb-ol" href="https://www.officelist.pl/oferta/skyliner-ii" target="_blank" rel="noopener" title="Skyliner II w Officelist">Skyliner II</a> przy Rondzie Daszyńskiego. Powstanie tam ponad 650 stanowisk, a otwarcie zaplanowano na połowę 2027 roku. To trzeci adres marki w Warszawie, po Hali Koszyki i sąsiednim Skylinerze.</p>
     <div class="rb-meta"><span><b>Najemca</b> Mindspace</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/skyliner-ii" target="_blank" rel="noopener" title="Skyliner II w Officelist">Skyliner II</a></span> <span><b>Powierzchnia</b> 4 500 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64168-mindspace-otworzy-nowe-biura-w-skyliner-ii-w-warszawie" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/skyliner-ii" target="_blank" rel="noopener" title="Skyliner II w Officelist"><img src="https://cdn.officelist.pl/property_photo/Sky2_3_S.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=3b6e7fcad5f321cf5d745b798ae0f591" alt="Budynek Skyliner II" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Skyliner II</span></a>
 </article>
 <article class="rb-item" data-city="Warszawa">
   <div class="rb-date"><b>22 października</b>Warszawa</div>
@@ -193,6 +199,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Grupa RMF, właściciel stacji RMF FM i RMF MAXX, podpisała długoterminową umowę najmu w katowickim <a class="rb-ol" href="https://www.officelist.pl/oferta/dl-tower" target="_blank" rel="noopener" title="DL Tower w Officelist">DL Tower</a> przy al. Korfantego. Obie rozgłośnie zajmą 11. piętro budynku na co najmniej dziesięć lat. Umowę zawarto 15 lipca, a informację podano w październiku.</p>
     <div class="rb-meta"><span><b>Najemca</b> Grupa RMF</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/dl-tower" target="_blank" rel="noopener" title="DL Tower w Officelist">DL Tower</a></span> <span>Źródło: <a href="https://eurobuildcee.com/news/64148-grupa-rmf-wynajmuje-powierzchnie-w-dl-tower" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/dl-tower" target="_blank" rel="noopener" title="DL Tower w Officelist"><img src="https://cdn.officelist.pl/property_photo/dl_TOWER.png?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=38d4f33c7dc86527262be18d92110dfe" alt="Budynek DL Tower" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>DL Tower</span></a>
 </article>
 <article class="rb-item" data-city="Kraków">
   <div class="rb-date"><b>15 października</b>Kraków</div>
@@ -202,6 +209,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Tesco Technology Services Europe, technologiczna spółka Grupy Tesco, wynajęła ponad 3700 m² w krakowskim <a class="rb-ol" href="https://www.officelist.pl/oferta/unity-square-two-university-office" target="_blank" rel="noopener" title="Unity Square Two w Officelist">Unity Square Two</a>. Biuro na pięciu piętrach przygotowano dla około 400 osób, z 26 salami spotkań, strefami cichej pracy i miejscem na 30 budek telefonicznych. Przy transakcji doradzał JLL, aranżację prowadzi Tétris, a projekt wnętrz przygotowała pracownia Abundo Space.</p>
     <div class="rb-meta"><span><b>Najemca</b> Tesco Technology Services Europe</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/unity-square-two-university-office" target="_blank" rel="noopener" title="Unity Square Two w Officelist">Unity Square Two</a></span> <span><b>Powierzchnia</b> 3 700 m²</span> <span><b>Doradca</b> JLL</span> <span><b>Projekt</b> Abundo Space (dla Tétris)</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64130-tesco-technology-wybiera-unity-square-two-w-krakowie" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/unity-square-two-university-office" target="_blank" rel="noopener" title="Unity Square Two w Officelist"><img src="https://cdn.officelist.pl/property_photo/wizualizacja-051-high-1400x875.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=336bf9b2652096081298b3d2b9698794" alt="Budynek Unity Square Two" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Unity Square Two</span></a>
 </article>
 <article class="rb-item" data-city="Warszawa">
   <div class="rb-date"><b>15 października</b>Warszawa</div>
@@ -211,6 +219,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Deweloper Yareal Polska przeniósł warszawską siedzibę do budynku <a class="rb-ol" href="https://www.officelist.pl/oferta/lixa-c" target="_blank" rel="noopener" title="LIXA C w Officelist">LIXA C</a>. Nowe biuro ma 750 m², a jego wnętrza zaprojektowała pracownia The Design Group.</p>
     <div class="rb-meta"><span><b>Najemca</b> Yareal Polska</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/lixa-c" target="_blank" rel="noopener" title="LIXA C w Officelist">LIXA C</a></span> <span><b>Powierzchnia</b> 750 m²</span> <span><b>Projekt</b> The Design Group</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64129-yareal-polska-przenosi-biuro-do-budynku-lixa-c" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/lixa-c" target="_blank" rel="noopener" title="LIXA C w Officelist"><img src="https://cdn.officelist.pl/property_photo/Lixa_2_IA1eZtb.png?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=1699441076177b5f85c035a5662421fb" alt="Budynek LIXA C" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>LIXA C</span></a>
 </article>
 <article class="rb-item" data-city="Warszawa">
   <div class="rb-date"><b>14 października</b>Warszawa</div>
@@ -220,6 +229,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Capgemini dobiera 1700 m² w kampusie Business Garden przy ul. Żwirki i Wigury i będzie zajmować tam łącznie 3400 m² Warszawski zespół firmy liczy ponad 300 osób. Kompleks zbudował i zarządza nim Vastint, z którego budynków Capgemini korzysta także we Wrocławiu i Poznaniu.</p>
     <div class="rb-meta"><span><b>Najemca</b> Capgemini</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/park-biurowy/business-garden-warszawa" target="_blank" rel="noopener" title="Business Garden Warszawa w Officelist">Business Garden Warszawa</a></span> <span><b>Powierzchnia</b> 3 400 m²</span> <span>Źródło: <a href="https://news.poland.vastint.eu/archiwum/878375/capgemini-rozwija-skrzydla-w-business-garden-warszawa1" target="_blank" rel="noopener nofollow">Biuro prasowe Vastint Poland</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/park-biurowy/business-garden-warszawa" target="_blank" rel="noopener" title="Business Garden Warszawa w Officelist"><img src="https://cdn.officelist.pl/office_park_photo/Business_Garden_Warszawa_1.png?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=78ea7a87536df0ea08b58fb8589b91bc" alt="Budynek Business Garden Warszawa" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Business Garden Warszawa</span></a>
 </article>
 <article class="rb-item" data-city="Warszawa">
   <div class="rb-date"><b>6 października</b>Warszawa</div>
@@ -229,6 +239,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Operator płatności bezgotówkowych eService wynajął 7500 m² w budynku B1B powstającego <a class="rb-ol" href="https://www.officelist.pl/oferta/drucianka-campus" target="_blank" rel="noopener" title="Drucianka Campus w Officelist">Drucianka Campus</a> przy ul. Kijowskiej na Pradze-Północ. Kompleks rośnie na terenie dawnej Warszawskiej Fabryki Drutu, Sztyftów i Gwoździ, a jego historyczne hale zostaną odnowione. Budowa ma się zakończyć latem 2028 roku.</p>
     <div class="rb-meta"><span><b>Najemca</b> eService</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/drucianka-campus" target="_blank" rel="noopener" title="Drucianka Campus w Officelist">Drucianka Campus</a></span> <span><b>Powierzchnia</b> 7 500 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64072-eservice-wynajmuje-7500-mkw-w-drucianka-campus" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/drucianka-campus" target="_blank" rel="noopener" title="Drucianka Campus w Officelist"><img src="https://cdn.officelist.pl/property_photo/G1_K08-scaled-e1644401246575_1.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=75cf4e5ec81bc07c4e2947e26e4aa528" alt="Budynek Drucianka Campus" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Drucianka Campus</span></a>
 </article>
 <article class="rb-item" data-city="Warszawa">
   <div class="rb-date"><b>5 października</b>Warszawa</div>
@@ -238,6 +249,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Grupa medialno-analityczna Defence24 podpisała długoterminową umowę na 1150 m² w <a class="rb-ol" href="https://www.officelist.pl/oferta/warsaw-corporate-center-wcc" target="_blank" rel="noopener" title="Warsaw Corporate Center w Officelist">Warsaw Corporate Center</a> przy ul. Emilii Plater. Redakcja zajmie całe siódme piętro i część ósmego.</p>
     <div class="rb-meta"><span><b>Najemca</b> Defence24</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/warsaw-corporate-center-wcc" target="_blank" rel="noopener" title="Warsaw Corporate Center w Officelist">Warsaw Corporate Center</a></span> <span><b>Powierzchnia</b> 1 150 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64060-defence24-wynajmuje-1150-mkw" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/warsaw-corporate-center-wcc" target="_blank" rel="noopener" title="Warsaw Corporate Center w Officelist"><img src="https://cdn.officelist.pl/property_photo/Emili_Plater_28_-_13.JPG?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=dcf2e3b7c9e24825aa1cdef515913baa" alt="Budynek Warsaw Corporate Center" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Warsaw Corporate Center</span></a>
 </article>
 <div class="rb-month">Wrzesień 2026</div>
 <article class="rb-item" data-city="Warszawa">
@@ -248,6 +260,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Producent słodyczy Mieszko zajmie około 700 m² w warszawskim <a class="rb-ol" href="https://www.officelist.pl/park-biurowy/jerozolimskie-business-park" target="_blank" rel="noopener" title="Jerozolimskie Business Park w Officelist">Jerozolimskie Business Park</a>. Długoterminową umowę podpisał z właścicielem kompleksu, NASA Capital, który po tej transakcji ma wynajęte 95 proc. powierzchni.</p>
     <div class="rb-meta"><span><b>Najemca</b> Mieszko</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/park-biurowy/jerozolimskie-business-park" target="_blank" rel="noopener" title="Jerozolimskie Business Park w Officelist">Jerozolimskie Business Park</a></span> <span><b>Powierzchnia</b> 700 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64036-mieszko-wynajmuje-biuro-w-jerozolimskie-business-park" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/park-biurowy/jerozolimskie-business-park" target="_blank" rel="noopener" title="Jerozolimskie Business Park w Officelist"><img src="https://cdn.officelist.pl/office_park_photo/Jerozolimskie_Business_Park_B.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=41b17a84b1eb8208b31c7fb22bb4a9f8" alt="Budynek Jerozolimskie Business Park" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Jerozolimskie Business Park</span></a>
 </article>
 <article class="rb-item" data-city="Wrocław">
   <div class="rb-date"><b>28 września</b>Wrocław</div>
@@ -257,6 +270,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Aliaxis Polska wybrała wrocławski <a class="rb-ol" href="https://www.officelist.pl/oferta/sky-tower" target="_blank" rel="noopener" title="Sky Tower w Officelist">Sky Tower</a> na swoją siedzibę. Firma wyprowadziła się z biura serwisowanego do własnej, wydzielonej przestrzeni.</p>
     <div class="rb-meta"><span><b>Najemca</b> Aliaxis Polska</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/sky-tower" target="_blank" rel="noopener" title="Sky Tower w Officelist">Sky Tower</a></span> <span>Źródło: <a href="https://eurobuildcee.com/news/64029-aliaxis-polska-wybiera-sky-tower-we-wroclawiu" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/sky-tower" target="_blank" rel="noopener" title="Sky Tower w Officelist"><img src="https://cdn.officelist.pl/property_photo/skytower_pion.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=f20503e3d1e97ba4e17b61deacc38f28" alt="Budynek Sky Tower" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Sky Tower</span></a>
 </article>
 <article class="rb-item" data-city="Kraków">
   <div class="rb-date"><b>23 września</b>Kraków</div>
@@ -266,6 +280,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>BNP Paribas przedłużył najem w krakowskim biurowcu <a class="rb-ol" href="https://www.officelist.pl/oferta/avatar" target="_blank" rel="noopener" title="Avatar w Officelist">Avatar</a> i dobrał powierzchnię. Łącznie zajmie 9534 m² na pięciu z sześciu pięter, więc budynek pozostaje w pełni wynajęty. Negocjacje trwały blisko trzy lata, a najemcy doradzało BNP Paribas Real Estate Poland.</p>
     <div class="rb-meta"><span><b>Najemca</b> BNP Paribas</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/avatar" target="_blank" rel="noopener" title="Avatar w Officelist">Avatar</a></span> <span><b>Powierzchnia</b> 9 534 m²</span> <span><b>Doradca</b> BNP Paribas Real Estate Poland</span> <span>Źródło: <a href="https://eurobuildcee.com/news/64007-bnp-paribas-przedluza-najem-w-krakowskim-avatarze" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/avatar" target="_blank" rel="noopener" title="Avatar w Officelist"><img src="https://cdn.officelist.pl/property_photo/avatar.png?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=50e92883e1c12c7cef9f8f813a06b915" alt="Budynek Avatar" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Avatar</span></a>
 </article>
 <article class="rb-item" data-city="Łódź">
   <div class="rb-date"><b>21 września</b>Łódź</div>
@@ -284,6 +299,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Flint Group Packaging Solutions przedłużył umowę w biurowcu <a class="rb-ol" href="https://www.officelist.pl/oferta/lodz-1" target="_blank" rel="noopener" title="Łódź 1 w Officelist">Łódź 1</a> przy al. Piłsudskiego 22 i nadal będzie zajmować tam 3328 m² Decyzję podjęto po przejrzeniu biur dostępnych w Łodzi.</p>
     <div class="rb-meta"><span><b>Najemca</b> Flint Group Packaging Solutions</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/oferta/lodz-1" target="_blank" rel="noopener" title="Łódź 1 w Officelist">Łódź 1</a></span> <span><b>Powierzchnia</b> 3 328 m²</span> <span>Źródło: <a href="https://eurobuildcee.com/news/63949-flint-group-packaging-solutions-zostaje-w-lodzi-1" target="_blank" rel="noopener nofollow">Eurobuild CEE</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/oferta/lodz-1" target="_blank" rel="noopener" title="Łódź 1 w Officelist"><img src="https://cdn.officelist.pl/property_photo/infosys-bpo-poland.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=6ca6841c603e062703b4b21f201bfbdc" alt="Budynek Łódź 1" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Łódź 1</span></a>
 </article>
 <article class="rb-item" data-city="Wrocław">
   <div class="rb-date"><b>3 września</b>Wrocław</div>
@@ -293,6 +309,7 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <p>Vastint podpisał lub przedłużył w ostatnich miesiącach umowy na ponad 8600 m² we wrocławskim Business Garden. Największa z nich to przedłużenie najmu przez Ceneo, które zajmuje 2800 m² Do kampusu weszli m.in. COWI Polska (990 m²), MJ Group (790 m²) i Europejski Fundusz Leasingowy z nowym oddziałem (410 m²), a VSB Energie Odnawialne Polska zostaje i powiększa biuro do 1060 m²</p>
     <div class="rb-meta"><span><b>Najemca</b> Ceneo</span> <span><b>Budynek</b> <a class="rb-ol" href="https://www.officelist.pl/park-biurowy/business-garden-wroclaw" target="_blank" rel="noopener" title="Business Garden Wrocław w Officelist">Business Garden Wrocław</a></span> <span><b>Powierzchnia</b> 2 800 m²</span> <span>Źródło: <a href="https://news.poland.vastint.eu/archiwum/876242/vastint-z-umowami-na-8-6-tys-m2-biur-we-wroclawiu" target="_blank" rel="noopener nofollow">Biuro prasowe Vastint Poland</a></span></div>
   </div>
+  <a class="rb-photo" href="https://www.officelist.pl/park-biurowy/business-garden-wroclaw" target="_blank" rel="noopener" title="Business Garden Wrocław w Officelist"><img src="https://cdn.officelist.pl/office_park_photo/B1_2.jpg?w=1200&amp;h=630&amp;dpr=1&amp;mark=%2Fog-watermark-pl.png&amp;mark-align=left%2Ctop&amp;mark-pad=0&amp;s=ce5ab42ae546b37da79daa78fb221747" alt="Budynek Business Garden Wrocław" loading="lazy" decoding="async" onerror="this.parentNode.remove()"><span>Business Garden Wrocław</span></a>
 </article>
   </div>
   <p class="rb-note">Przy każdej informacji podajemy, skąd ją mamy. Jeśli coś się nie zgadza albo chcecie dać nam znać o swojej przeprowadzce, napiszcie na <a href="mailto:redakcja@showroombiur.pl">redakcja@showroombiur.pl</a>.</p>
