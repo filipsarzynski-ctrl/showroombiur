@@ -804,7 +804,7 @@ function renderStudio(studio, allProjects) {
       <div class="section-head">
         <div>
           <div class="section-head-num">01. Realizacje</div>
-          <h2>Pełne archiwum<br><em>realizacji studia</em></h2>
+          <h2>Wszystkie biura<br><em>realizacji studia</em></h2>
         </div>
         <div class="right">${esc(desc.detail)}</div>
       </div>
@@ -842,7 +842,7 @@ function renderStudio(studio, allProjects) {
     <nav class="footer-nav">
       <a href="biurofilia.html#studios">← Wszystkie pracownie</a>
       <span>Showroom Biur</span>
-      <a href="biurofilia.html">Archiwum projektów →</a>
+      <a href="biurofilia.html">Biura →</a>
     </nav>
   `;
 }
@@ -883,7 +883,7 @@ function buildStudioStats(studio){
   const industries = studio.industries ? studio.industries.length : 0;
   
   const items = [
-    {label:'Realizacje', value: count, sub: 'w archiwum magazynu'},
+    {label:'Realizacje', value: count, sub: 'w bazie magazynu'},
     {label:'Miasta', value: cities.length, sub: cities.slice(0,3).join(' · ')},
     {label:'Lata aktywności', value: years, sub: studio.years ? `${studio.years[1] - studio.years[0]} lat` : ''},
     {label:'Budynki', value: buildings, sub: 'unikalnych adresów'},
