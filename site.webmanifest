@@ -1,0 +1,28 @@
+{
+  "name": "Showroom Biur",
+  "short_name": "Showroom Biur",
+  "description": "Pierwszy polski magazyn workplace designu. 272 realizacje · 80 pracowni · metodologia Marioli Bitner · katalog wyposażenia · Biuro Roku 2026.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0F0F0E",
+  "theme_color": "#D54E18",
+  "lang": "pl-PL",
+  "categories": [
+    "news",
+    "magazines",
+    "design"
+  ],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-label="W bazie Showroom Biur">
+  <rect x="0.5" y="0.5" width="219" height="55" fill="#FBF8F2" stroke="#0F0F0E"/>
+  <text x="16" y="22" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="9" letter-spacing="1.6" fill="#7A6E5C">W BAZIE</text>
+  <text x="16" y="42" font-family="Georgia, 'Fraunces', serif" font-size="19" fill="#0F0F0E">Showroom <tspan font-style="italic" fill="#C2410C">Biur</tspan></text>
+  <text x="204" y="42" text-anchor="end" font-family="Georgia, serif" font-size="16" fill="#0F0F0E">↗</text>
+</svg>

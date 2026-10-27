@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0F0F0E"/>
+  <text x="22" y="44" text-anchor="middle"
+        font-family="'Fraunces', 'Times New Roman', serif"
+        font-size="42" font-style="italic" font-weight="400"
+        fill="#FBF8F2" letter-spacing="-1">S</text>
+  <text x="44" y="44" text-anchor="middle"
+        font-family="'Fraunces', 'Times New Roman', serif"
+        font-size="32" font-style="italic" font-weight="300"
+        fill="#D54E18" letter-spacing="-1">b</text>
+</svg>

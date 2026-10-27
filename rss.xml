@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Showroom Biur - Workplace + Eseje</title>
+    <link>https://showroombiur.pl/</link>
+    <atom:link href="https://showroombiur.pl/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>Magazyn o polskich biurach. Eseje redakcyjne plus artykuły metodologii Marioli Bitner - Partner | Strategic Advisory Lead, Brookfield Partners.</description>
+    <language>pl-PL</language>
+    <copyright>© 2026 Showroom Biur · Brookfield Partners</copyright>
+    <managingEditor>redakcja@showroombiur.pl (Redakcja)</managingEditor>
+    <webMaster>redakcja@showroombiur.pl (Redakcja)</webMaster>
+    <pubDate>Wed, 10 Jun 2026 09:08:55 +0000</pubDate>
+    <lastBuildDate>Wed, 10 Jun 2026 09:08:55 +0000</lastBuildDate>
+    <generator>Showroom Biur RSS generator</generator>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>60</ttl>
+    <image>
+      <url>https://showroombiur.pl/og-default.jpg</url>
+      <title>Showroom Biur</title>
+      <link>https://showroombiur.pl/</link>
+    </image>
+    <item>
+      <title>Metodologia bazy 257 projektów</title>
+      <link>https://showroombiur.pl/metodologia.html</link>
+      <guid isPermaLink="true">https://showroombiur.pl/metodologia.html</guid>
+      <description>Jak Showroom Biur zbiera dane o polskich biurach. Źródła, kryteria, weryfikacja. Baza 257 realizacji workplace 2012-2026.</description>
+      <pubDate>Wed, 10 Jun 2026 09:00:24 +0000</pubDate>
+      <category>Essay</category>
+      <enclosure url="https://showroombiur.pl/og-metodologia.jpg" type="image/jpeg" length="0"/>
+      <dc:creator>Mariola Bitner</dc:creator>
+    </item>
+    <item>
+      <title>Varso Tower jako miasto biur</title>
+      <link>https://showroombiur.pl/artykul-varso-tower.html</link>
+      <guid isPermaLink="true">https://showroombiur.pl/artykul-varso-tower.html</guid>
+      <description>Najwyższy budynek UE jako studium przypadku. Pięć najemców, pięć pracowni, jeden adres.</description>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <category>Essay</category>
+      <enclosure url="https://showroombiur.pl/og-varso-tower.jpg" type="image/jpeg" length="0"/>
+      <dc:creator>Mariola Bitner</dc:creator>
+    </item>
+    <item>
+      <title>Pięć pracowni, które definiują polski design</title>
+      <link>https://showroombiur.pl/artykul-piec-pracowni.html</link>
+      <guid isPermaLink="true">https://showroombiur.pl/artykul-piec-pracowni.html</guid>
+      <description>Trzop, Massive, mode:lina, The Design Group, BIT Creative - pięć studiów, które zaprojektowały 30% wszystkich biur w bazie.</description>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Essay</category>
+      <enclosure url="https://showroombiur.pl/og-piec-pracowni.jpg" type="image/jpeg" length="0"/>
+      <dc:creator>Mariola Bitner</dc:creator>
+    </item>
+    <item>
+      <title>Po pandemii: jak zmieniło się biuro</title>
+      <link>https://showroombiur.pl/artykul-po-pandemii.html</link>
+      <guid isPermaLink="true">https://showroombiur.pl/artykul-po-pandemii.html</guid>
+      <description>Pięć trendów, które zdefiniowały polski workplace 2022-2026 - z konkretnymi przykładami.</description>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Essay</category>
+      <enclosure url="https://showroombiur.pl/og-po-pandemii.jpg" type="image/jpeg" length="0"/>
+      <dc:creator>Mariola Bitner</dc:creator>
+    </item>
+    <item>
+      <title>Anatomia polskiego workplace 2026</title>
+      <link>https://showroombiur.pl/artykul-anatomia-workplace-2026.html</link>
+      <guid isPermaLink="true">https://showroombiur.pl/artykul-anatomia-workplace-2026.html</guid>
+      <description>Co tak naprawdę powiedział nam zbiór 257 polskich realizacji biurowych? Esej redakcyjny.</description>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Essay</category>
+      <enclosure url="https://showroombiur.pl/og-anatomia-workplace-2026.jpg" type="image/jpeg" length="0"/>
+      <dc:creator>Mariola Bitner</dc:creator>
+    </item>
+  </channel>
+</rss>

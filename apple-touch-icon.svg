@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" rx="34" fill="#0F0F0E"/>
+  <rect x="0" y="0" width="180" height="6" fill="#D54E18"/>
+  <text x="90" y="100" text-anchor="middle"
+        font-family="'Fraunces', serif" font-size="96" font-style="italic" font-weight="300"
+        fill="#FBF8F2" letter-spacing="-3">S<tspan fill="#D54E18">b</tspan></text>
+  <text x="90" y="135" text-anchor="middle"
+        font-family="'JetBrains Mono', monospace" font-size="11"
+        font-weight="500" letter-spacing="4" fill="#D54E18">SHOWROOM</text>
+  <text x="90" y="152" text-anchor="middle"
+        font-family="'Fraunces', serif" font-size="15" font-style="italic"
+        fill="#FBF8F2" opacity="0.85">Biur</text>
+</svg>

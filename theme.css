@@ -1,0 +1,164 @@
+/* =====================================================================
+   Showroom Biur — motyw „Bordo” (kierunek D, 26.10.2026)
+   Ładowany jako ostatni arkusz na każdej stronie (dokleja _tools/apply_templates.py).
+   Zasada: bordo tylko w nawigacji, etykietach, cienkich liniach i jednej wstędze.
+   Duże powierzchnie zostają jasne, żeby zdjęcia były najważniejsze.
+   ===================================================================== */
+
+:root{
+  --wine:#5E1A26;        /* główny kolor marki */
+  --wine-2:#7A2433;      /* hover / jaśniejszy wariant */
+  --wine-ink:#1C1416;    /* prawie czarny z nutą bordo */
+  --rose:#F7F3EE;        /* tło */
+
+  /* przepięcie dotychczasowych zmiennych całego serwisu */
+  --accent:var(--wine);
+  --accent-deep:var(--wine-2);
+  --bg:#F7F3EE; --bg-deep:#EFE8E3; --bone:#F3EDE8; --paper:#FCFAF7;
+  --ink:#1C1416; --ink-soft:#3A3033; --ink2:#3A3033;
+  --muted:#8A7B7E; --muted-soft:#B9ADAF;
+  --line:#E3DAD6;
+  --navy:#140F11; /* ciemne sekcje (Workplace, Biuro Roku) */
+}
+
+/* ---------- Nawigacja: bordowy pasek na każdej stronie ---------- */
+.nav, .nav.is-dark, .nav.scrolled{
+  background:var(--wine) !important;
+  color:#F7F3EE !important;
+  border-bottom:1px solid rgba(255,255,255,.08) !important;
+  backdrop-filter:none !important;
+  box-shadow:none !important;
+}
+.nav .nav-brand, .nav .nav-logo, .nav .nav-brand em, .nav .nav-logo em, .nav .logo-em{color:#F7F3EE !important;}
+.nav .nav-brand em, .nav .nav-logo em, .nav .logo-em{opacity:.85;}
+.nav .nav-links a, .nav .nav-links a span{color:rgba(247,243,238,.82) !important;}
+.nav .nav-links a:hover, .nav .nav-links a:hover span, .nav .nav-links a.active, .nav .nav-links a.active span{color:#fff !important;}
+.nav .nav-links a.active{border-bottom:1px solid #fff; padding-bottom:2px;}
+.nav .nav-back, .nav .nav-cta{color:#F7F3EE !important; border-color:rgba(247,243,238,.5) !important; background:transparent !important;}
+.nav .nav-back:hover, .nav .nav-cta:hover{background:#F7F3EE !important; color:var(--wine) !important;}
+.so-mobile-toggle .bar{background:#F7F3EE !important;}
+@media (max-width:880px){
+  .nav-links{background:var(--wine) !important; border-bottom-color:rgba(255,255,255,.12) !important;}
+  .nav-links a{border-bottom-color:rgba(255,255,255,.12) !important;}
+}
+/* pasek postępu czytania pod nawigacją */
+.progress-bar{background:var(--wine) !important;}
+
+/* ---------- Przyciski i akcenty ---------- */
+.cta, .btn, .form-submit, .filter-reset:hover, .newsletter-form button, .nl-form button, .sbf button{
+  background:var(--wine) !important; color:#F7F3EE !important; border-color:var(--wine) !important;
+}
+.cta:hover, .btn:hover, .form-submit:hover, .newsletter-form button:hover, .nl-form button:hover, .sbf button:hover{background:var(--wine-2) !important;}
+.cta.ghost, .cta.cta-ghost{background:transparent !important; color:inherit !important; border-color:currentColor !important;}
+::selection{background:var(--wine); color:#F7F3EE;}
+.chip.active, .filter-bar .chip.active{background:var(--wine) !important; border-color:var(--wine) !important; color:#F7F3EE !important;}
+.chip.active .chip-count{color:rgba(247,243,238,.7) !important;}
+.filter-toggle{border-color:var(--wine) !important; color:var(--wine) !important;}
+.filter-toggle:hover, .filter-bar.open .filter-toggle{background:var(--wine) !important; color:#F7F3EE !important;}
+
+/* ---------- Karty projektów w archiwum: etykieta miasto · rok w bordo ---------- */
+.project .project-index{
+  background:var(--wine); color:#F7F3EE; padding:6px 10px;
+  font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em;
+}
+.project .project-tag{background:rgba(28,20,22,.55); color:#F7F3EE; padding:6px 10px; backdrop-filter:blur(4px);}
+.project .project-title{border-top:1px solid var(--wine); padding-top:12px; margin-top:12px;}
+.project:hover .project-title{color:var(--wine);}
+
+/* ---------- Profile marek / strony A: linie i etykiety ---------- */
+.head, .intro{border-bottom-color:var(--wine) !important;}
+.facts dd, .stat .n{color:var(--ink);}
+.type .big{color:var(--wine) !important; opacity:.9;}
+.row .im.t span{color:var(--wine) !important;}
+.card .go{color:var(--wine) !important;}
+.editor-note{border-left-color:var(--wine) !important;}
+.ah-updated{color:var(--muted);}
+
+/* ---------- Ciemne sekcje: pozostają ciemne, ale ciepłe ---------- */
+.overture, .article-footer, .footer, .newsletter[data-dark], .colophon{background:var(--wine-ink);}
+.footer a:hover{color:#fff;}
+
+/* ---------- Wstęga „Dodaj biuro” (dodawana przez apply_templates.py) ---------- */
+.sb-band{background:var(--wine); color:#F7F3EE; padding:40px 40px; display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center;}
+.sb-band h4{font-family:'Cormorant Garamond',serif; font-weight:500; font-size:32px; line-height:1.1; margin:0;}
+.sb-band p{font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:rgba(247,243,238,.8); margin:8px 0 0; max-width:560px;}
+.sb-band a{display:inline-block; border:1px solid rgba(247,243,238,.6); padding:13px 22px; font-family:'Inter',sans-serif; font-size:13px; font-weight:500; color:#F7F3EE; text-decoration:none; white-space:nowrap;}
+.sb-band a:hover{background:#F7F3EE; color:var(--wine);}
+@media (max-width:800px){.sb-band{grid-template-columns:1fr; padding:32px 20px;}}
+
+/* =====================================================================
+   Duże ekrany (powyżej ~1700 px): treść nie rozciąga się na całą szerokość
+   ===================================================================== */
+:root{ --sb-max:1600px; }
+
+/* strona główna: wewnętrzne kontenery sekcji */
+.hero-top, .hero-title, .hero-bottom, .section-head, .archive-grid, .bfi-wrap, .bfb-wrap, .spread-grid,
+.studios-grid, .studios-cta, .manifesto-pre, .manifesto-text, .index-wrap, .newsletter-left, .newsletter-form,
+.footer-wrap, .sb-band{ max-width:var(--sb-max); margin-left:auto !important; margin-right:auto !important; }
+.index-wrap{ margin-top:40px !important; }
+.hero{ max-height:none !important; }
+
+/* karty archiwum: proporcje zamiast sztywnej wysokości w pikselach */
+.project-img{ min-height:0 !important; aspect-ratio:4/3; }
+.project-img.wide{ aspect-ratio:16/9; }
+.project-img.tall{ aspect-ratio:3/4; }
+.project-img.square{ aspect-ratio:4/3; }
+.project-img img{ aspect-ratio:auto !important; }
+@media (min-width:1700px){
+  .archive-grid{ gap:72px 48px; }
+  .project-title{ font-size:clamp(28px,2.2vw,44px) !important; }
+  .project-desc{ font-size:18px; max-width:620px; }
+  .filter-bar{ max-width:var(--sb-max) !important; }
+}
+
+/* pozostałe strony: wspólne kontenery */
+.wrap, .faq-wrap, .af-wrap, .hero-wrap, .section-wrap, .cat-wrap, .brands-wrap, .grid-wrap, main.wrap{ max-width:min(var(--sb-max), 100%); }
+
+/* =====================================================================
+   Dopracowanie (26.10) — spokojnie, bez efektów
+   ===================================================================== */
+
+/* Cormorant tylko w tytułach. Drobny tekst i opisy w Inter — czytelniej. */
+.project-desc, .card p, .row p, .gal .cap, .faq-a, .tldr-box p, .tldr p, .aside, .data-source, .figure-caption,
+.hero-stat .lab, .stat .l, .facts dt, .note, .photo-cap, .src, .person span, .chip, .contact dl, .footer,
+.brief-body p, .featured-meta, .index-row, .studio-meta, .sp-meta-value{ font-family:'Inter',sans-serif !important; }
+.project-desc{ font-size:15px; line-height:1.6; color:var(--ink-soft); }
+.project-meta{ font-size:13px; color:var(--muted); }
+.project-meta strong{ color:var(--ink); font-weight:500; }
+
+/* Dłuższe teksty w Cormorant: większy stopień i 500, inaczej są za lekkie */
+.article-body p, .story .text p, .body p, .hero-lede, .ah-deck, .lede, .ov-lede, .hero-lead, .lead-big{ font-weight:500; }
+.article-body p{ font-size:22px; line-height:1.6; }
+.story .text p, .body p{ font-size:20px; line-height:1.6; }
+.story .text p.lead{ font-size:23px; }
+
+/* Karta projektu: jedna linia nad tytułem, bez animowanego podkreślenia */
+.project-title::after{ display:none; }
+.project-title{ display:block; margin-top:10px; margin-bottom:14px; }
+.project-no{ display:flex; align-items:center; gap:10px; }
+.project-index{ opacity:1 !important; transform:none !important; background:var(--wine) !important; backdrop-filter:none !important; }
+.project-tag{ background:rgba(28,20,22,.6) !important; color:#F7F3EE !important; backdrop-filter:blur(4px); }
+.project-img{ background:var(--bg-deep) !important; margin-bottom:18px; }
+.project-img img{ filter:none !important; transform:scale(1) !important; transition:transform .9s ease !important; }
+.project-img:hover img{ transform:scale(1.025) !important; }
+
+/* Pasek filtrów: zwykły element w przepływie strony, nie przyklejony */
+.filter-bar{ position:static !important; box-shadow:none !important; backdrop-filter:none !important; border-radius:0 !important; margin:0 auto 56px !important; }
+.filter-bar input[type="search"], .filter-bar select, .filter-bar input[type="number"]{ border-radius:0 !important; }
+.chip{ border-radius:0 !important; }
+.filter-toggle, .nav-back, .nav-cta{ border-radius:0 !important; }
+
+/* Nagłówki sekcji strony głównej: numer sekcji mniejszy, bez kursywy w kolorze */
+.section-head-num{ font-size:14px !important; font-style:normal !important; color:var(--muted) !important; font-family:'JetBrains Mono',monospace !important; letter-spacing:.14em; }
+.section-head h2 em, .featured-title em, .studios h2 em, .manifesto em{ font-style:italic; color:inherit; }
+
+/* Odstępy między sekcjami: równy rytm */
+.section-head{ padding-top:100px !important; padding-bottom:36px !important; }
+.archive{ padding-top:0 !important; }
+
+/* Przyciski: prostokątne, jednolite */
+.cta, .btn, .form-submit, .sbf button, .newsletter-form button, .nl-form button{ border-radius:0 !important; letter-spacing:.04em; }
+
+/* Kolor tekstu akcentu: bordo na jasnym, jasny róż na ciemnym (sekcje ustawia apply_templates.py) */
+:root{ --accent-text:var(--wine); }
+.article-footer, .footer, [data-dark="1"]{ --accent-text:#E8B4BD; --muted:#B9AAAD; --muted-soft:#D2C6C8; }
