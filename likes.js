@@ -80,7 +80,7 @@
       '.sb-like.ovl{background:rgba(255,255,255,.94);border:0;color:#5E1A26;padding:9px 13px;font-size:14px;font-weight:500;box-shadow:0 2px 10px rgba(0,0,0,.18);border-radius:999px}' +
       '.sb-like.ovl svg{width:19px;height:19px}' +
       '.sb-like.ovl:hover{background:#fff;transform:scale(1.06)}' +
-      '.sb-like.ovl .n:empty{display:none}' +
+      '.sb-like.ovl .n{min-width:.6em;text-align:left}' +
       '@keyframes sbpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}' +
       '.sb-like.ovl.hello svg{animation:sbpulse .9s ease 2}' +
       '.sb-like.float{position:fixed;left:24px;bottom:24px;z-index:900;background:#5E1A26;color:#fff;border:0;border-radius:999px;padding:13px 20px;font-size:15px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s}' +
@@ -99,7 +99,7 @@
   function paint(btn, liked, n) {
     btn.classList.toggle('on', !!liked);
     btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
-    btn.querySelector('.n').textContent = n > 0 ? n : ((btn.classList.contains('mini') || btn.classList.contains('ovl')) ? '' : '0');
+    btn.querySelector('.n').textContent = n > 0 ? n : (btn.classList.contains('mini') ? '' : '0');
     btn.title = liked ? 'Kliknij, żeby cofnąć głos' : 'Podoba mi się to biuro';
     var lab = btn.querySelector('.lab'); if (lab) lab.textContent = liked ? 'Podoba Ci się' : 'Podoba mi się';
   }
@@ -178,6 +178,8 @@
         if (l && t) names[l.getAttribute('href').split('id=')[1]] = t.textContent.trim();
       });
       var top = Object.keys(c).filter(function (k) { return names[k] && c[k].total > 0; }).sort(function (a, b) { return c[b].total - c[a].total; }).slice(0, 3);
+      var all = Object.keys(c).reduce(function (a, k) { return a + (c[k].total || 0); }, 0);
+      if (all) d.querySelector('div span').textContent = 'Klikajcie serduszko na zdjęciu. Oddaliście już ' + all + ' ' + (all === 1 ? 'głos' : (all % 10 >= 2 && all % 10 <= 4 && (all % 100 < 12 || all % 100 > 14) ? 'głosy' : 'głosów')) + '.';
       if (top.length) document.getElementById('sbTop').innerHTML = '<span>Teraz prowadzą:</span>' + top.map(function (k, i) { return '<a href="projekt.html?id=' + k + '">' + (i + 1) + '. ' + names[k].replace(/[<>&]/g, '') + '</a>'; }).join('');
     });
   }
