@@ -1153,6 +1153,7 @@ function render(p, allProjects, idx) {
             Nr ${String(idx+1).padStart(3,'0')} <span class="accent">·</span> PL · ${code} · ${p.year || '-'}
           </div>
           <h1 class="hero-title">${titleHtml}</h1>
+          <div class="like-slot" data-like-slug="${esc(p.slug)}"></div>
           ${p.description_paragraphs && p.description_paragraphs[0] ?
             `<p class="hero-tagline">${p.description_paragraphs[0].replace(/<[^>]+>/g,'')}</p>` : ''}
           <dl class="hero-meta">${metaHtml}</dl>
@@ -1294,6 +1295,7 @@ function mount(projects) {
     document.head.appendChild(ld);
   } catch (e) { console.warn('OG update failed', e); }
   root.innerHTML = render(p, projects, idx);
+  if (window.SBLikes) SBLikes.scan();
 
   // === Update SEO/AEO dynamic meta + JSON-LD ===
   updateSEO(p);
@@ -1623,5 +1625,7 @@ document.addEventListener('error', function (e) {
   window.addEventListener('load', function () { setTimeout(checkHero, 50); });
 })();
 </script>
+<script src="site-config.js?v=1"></script>
+<script src="likes.js?v=1" defer></script>
 </body>
 </html>

@@ -2989,7 +2989,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
     <h2>Biura</h2>
   </div>
   <div class="section-head-right">
-    Wszystkie biura z&nbsp;bazy, od najnowszych. Możecie je zawęzić do miasta, roku, branży albo jednej pracowni.
+    Wszystkie biura z&nbsp;bazy, od najnowszych. Możecie je zawęzić do miasta, roku, branży albo jednej pracowni. Klikajcie serduszko przy biurach, które Wam się podobają, a najlepsze trafią do <a href="ranking.html" style="border-bottom:1px solid currentColor">rankingu</a>.
   </div>
 </section>
 
@@ -3005,6 +3005,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
       <label>Sortuj:</label>
       <select id="filterSort">
         <option value="newest">Najnowsze</option>
+        <option value="likes">Najbardziej lubiane</option>
         <option value="oldest">Najstarsze</option>
         <option value="largest">Największe m²</option>
         <option value="smallest">Najmniejsze m²</option>
@@ -8336,6 +8337,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
     }
   }
   
+  document.addEventListener('sb-likes-ready', function () { if (state.sort === 'likes') sortCards(); });
   function sortCards() {
     const visible = allCards.filter(c => !c.classList.contains('filter-hidden'));
     visible.sort((a, b) => {
@@ -8343,6 +8345,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
       const ah = a.dataset.hasHero === '1', bh = b.dataset.hasHero === '1';
       if (ah !== bh) return ah ? -1 : 1;
       switch (state.sort) {
+        case 'likes': return (parseInt(b.dataset.likes || '0') - parseInt(a.dataset.likes || '0')) || (parseInt(b.dataset.year || '0') - parseInt(a.dataset.year || '0'));
         case 'oldest': return (parseInt(a.dataset.year || '0') - parseInt(b.dataset.year || '0'));
         case 'newest': return (parseInt(b.dataset.year || '0') - parseInt(a.dataset.year || '0'));
         case 'largest': return (parseInt(b.dataset.m2 || '0') - parseInt(a.dataset.m2 || '0'));
@@ -8515,5 +8518,6 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 <script src="noty-redakcji.js"></script>
 <script src="site-config.js" defer></script>
 <script src="forms.js" defer></script>
+<script src="likes.js?v=1" defer></script>
 </body>
 </html>
