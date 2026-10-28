@@ -69,23 +69,47 @@
       '.sb-like.mini{padding:0;border:0;font-size:13px;gap:5px;color:var(--muted,#8B7E6A)}' +
       '.sb-like.mini svg{width:15px;height:15px}' +
       '.sb-like.busy{opacity:.6;pointer-events:none}' +
-      '.like-slot{margin:18px 0 6px}';
+      '.like-slot{margin:22px 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}' +
+      '.like-slot .sb-like{background:#5E1A26;border-color:#5E1A26;color:#fff;font-size:15px;padding:12px 20px}' +
+      '.like-slot .sb-like svg{width:20px;height:20px}' +
+      '.like-slot .sb-like:hover{background:#7A2433}' +
+      '.like-slot .sb-like.on{background:#fff;color:#5E1A26}' +
+      '.like-hint{font-family:Inter,sans-serif;font-size:13px;color:var(--muted,#8B7E6A)}' +
+      '.like-hint a{color:inherit;border-bottom:1px solid currentColor}' +
+      '.like-ovl-slot{position:absolute;top:14px;right:14px;z-index:5}' +
+      '.sb-like.ovl{background:rgba(255,255,255,.94);border:0;color:#5E1A26;padding:9px 13px;font-size:14px;font-weight:500;box-shadow:0 2px 10px rgba(0,0,0,.18);border-radius:999px}' +
+      '.sb-like.ovl svg{width:19px;height:19px}' +
+      '.sb-like.ovl:hover{background:#fff;transform:scale(1.06)}' +
+      '.sb-like.ovl .n:empty{display:none}' +
+      '@keyframes sbpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}' +
+      '.sb-like.ovl.hello svg{animation:sbpulse .9s ease 2}' +
+      '.sb-like.float{position:fixed;left:24px;bottom:24px;z-index:900;background:#5E1A26;color:#fff;border:0;border-radius:999px;padding:13px 20px;font-size:15px;box-shadow:0 6px 24px rgba(0,0,0,.25);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .3s,transform .3s}' +
+      '.sb-like.float.show{opacity:1;transform:none;pointer-events:auto}' +
+      '.sb-like.float.on{background:#fff;color:#5E1A26}' +
+      '.sb-vote-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin:0 32px 28px;padding:20px 26px;background:#5E1A26;color:#F3EFE6}' +
+      '.sb-vote-band b{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:26px;display:block;line-height:1.1}' +
+      '.sb-vote-band span{font-family:Inter,sans-serif;font-size:14px;opacity:.85}' +
+      '.sb-vote-band a{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.06em;color:#5E1A26;background:#F3EFE6;padding:11px 18px;white-space:nowrap}' +
+      '.sb-vote-band .top{display:flex;gap:10px;align-items:center}' +
+      '.sb-vote-band .top a{background:none;color:#F3EFE6;padding:0;letter-spacing:0;font-size:13px;opacity:.9;border-bottom:1px solid rgba(243,239,230,.4)}' +
+      '@media(max-width:700px){.sb-like.float{left:12px;bottom:12px}.sb-vote-band{margin:0 16px 20px}}';
     document.head.appendChild(s);
   }
 
   function paint(btn, liked, n) {
     btn.classList.toggle('on', !!liked);
     btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
-    btn.querySelector('.n').textContent = n > 0 ? n : (btn.classList.contains('mini') ? '' : '0');
+    btn.querySelector('.n').textContent = n > 0 ? n : ((btn.classList.contains('mini') || btn.classList.contains('ovl')) ? '' : '0');
     btn.title = liked ? 'Kliknij, żeby cofnąć głos' : 'Podoba mi się to biuro';
     var lab = btn.querySelector('.lab'); if (lab) lab.textContent = liked ? 'Podoba Ci się' : 'Podoba mi się';
   }
 
-  function make(slot, mini) {
+  function make(slot, kind) {
     var slug = slot.getAttribute('data-like-slug');
     var b = document.createElement('button');
-    b.type = 'button'; b.className = 'sb-like' + (mini ? ' mini' : '');
-    b.innerHTML = HEART + (mini ? '' : '<span class="lab">Podoba mi się</span>') + '<span class="n"></span>';
+    b.type = 'button'; b.className = 'sb-like' + (kind ? ' ' + kind : '');
+    b.setAttribute('aria-label', 'Podoba mi się to biuro');
+    b.innerHTML = HEART + (kind === 'ovl' ? '' : '<span class="lab">Podoba mi się</span>') + '<span class="n"></span>';
     b.addEventListener('click', function (ev) {
       ev.preventDefault(); ev.stopPropagation();
       var v = voter(); if (!v) return;
@@ -109,22 +133,52 @@
       if (art.querySelector('[data-like-slug]')) return;
       var a = art.querySelector('a[href*="projekt.html?id="]'); if (!a) return;
       var slug = a.getAttribute('href').split('id=')[1];
-      var meta = art.querySelector('.project-meta'); if (!meta) return;
-      var sp = document.createElement('span'); sp.className = 'like-mini-slot'; sp.setAttribute('data-like-slug', slug);
-      sp.style.marginLeft = '10px';
-      meta.appendChild(sp);
+      if (getComputedStyle(art).position === 'static') art.style.position = 'relative';
+      var sp = document.createElement('span'); sp.className = 'like-ovl-slot'; sp.setAttribute('data-like-slug', slug);
+      art.appendChild(sp);
     });
+    banner();
     var slots = Array.prototype.slice.call(document.querySelectorAll('[data-like-slug]')).filter(function (s) { return !s.querySelector('.sb-like'); });
     if (!slots.length) return;
-    var btns = slots.map(function (s) { return [s, make(s, s.classList.contains('like-mini-slot'))]; });
+    var btns = slots.map(function (s) { return [s, make(s, s.classList.contains('like-ovl-slot') ? 'ovl' : '')]; });
+    // strona projektu: podpowiedź + pływający przycisk
+    var main = slots.filter(function (s) { return s.classList.contains('like-slot'); })[0];
+    if (main) {
+      var hint = document.createElement('span'); hint.className = 'like-hint';
+      hint.innerHTML = 'Najczęściej lubiane biura trafiają do <a href="ranking.html">rankingu czytelników</a>.';
+      main.appendChild(hint);
+      var fs = document.createElement('span'); fs.setAttribute('data-like-slug', main.getAttribute('data-like-slug'));
+      document.body.appendChild(fs);
+      var fb = make(fs, 'float'); btns.push([fs, fb]);
+      var io = new IntersectionObserver(function (en) { fb.classList.toggle('show', !en[0].isIntersecting); });
+      io.observe(main);
+    }
     Promise.all([counts(), mine()]).then(function (res) {
       var c = res[0], m = res[1];
       btns.forEach(function (p) {
         var slug = p[0].getAttribute('data-like-slug'), n = (c[slug] || {}).total || 0;
         paint(p[1], m[slug], n);
+        if (p[1].classList.contains('ovl') && !m[slug]) p[1].classList.add('hello');
         var art = p[0].closest('article'); if (art) art.dataset.likes = n;
       });
       document.dispatchEvent(new CustomEvent('sb-likes-ready'));
+    });
+  }
+
+  function banner() {
+    var bar = document.getElementById('filterBar');
+    if (!bar || document.querySelector('.sb-vote-band')) return;
+    var d = document.createElement('div'); d.className = 'sb-vote-band';
+    d.innerHTML = '<div><b>Które biuro podoba Wam się najbardziej?</b><span>Klikajcie serduszko na zdjęciu. Z Waszych głosów powstaje ranking czytelników.</span></div><div class="top" id="sbTop"></div><a href="ranking.html">Zobacz ranking →</a>';
+    bar.parentNode.insertBefore(d, bar);
+    counts().then(function (c) {
+      var names = {};
+      document.querySelectorAll('article.project').forEach(function (a) {
+        var l = a.querySelector('a[href*="projekt.html?id="]'), t = a.querySelector('.project-title');
+        if (l && t) names[l.getAttribute('href').split('id=')[1]] = t.textContent.trim();
+      });
+      var top = Object.keys(c).filter(function (k) { return names[k] && c[k].total > 0; }).sort(function (a, b) { return c[b].total - c[a].total; }).slice(0, 3);
+      if (top.length) document.getElementById('sbTop').innerHTML = '<span>Teraz prowadzą:</span>' + top.map(function (k, i) { return '<a href="projekt.html?id=' + k + '">' + (i + 1) + '. ' + names[k].replace(/[<>&]/g, '') + '</a>'; }).join('');
     });
   }
 
