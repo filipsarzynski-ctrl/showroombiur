@@ -22,13 +22,13 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:auto}
 .skip{position:absolute;top:-200px;left:16px;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:1000}.skip:focus{top:16px}
 .nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:rgba(239,234,226,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500}.nav-brand em{font-style:italic;color:var(--accent);font-weight:300}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500}.nav-brand em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300}
 .nav-links{display:flex;gap:26px}.nav-links a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links a:hover,.nav-links a.active{color:var(--accent-text,#5E1A26)}
 @media(max-width:820px){.nav-links{display:none}}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 .crumbs{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:40px 0 0}
-.crumbs a{border-bottom:1px solid var(--line)}.crumbs a:hover{color:var(--accent)}
+.crumbs a{border-bottom:1px solid var(--line)}.crumbs a:hover{color:var(--accent-text,#5E1A26)}
 .head{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end;padding:36px 0 40px;border-bottom:1px solid var(--ink)}
 .head h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
 .head .meta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px}
@@ -59,7 +59,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .card .im{aspect-ratio:4/3;background:var(--bg2);overflow:hidden}.card .im img{width:100%;height:100%;object-fit:cover}
 .card .im.t{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--muted)}
 .card .bd{padding:18px 18px 20px}.card h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;margin-bottom:6px}
-.card p{font-size:14px;color:var(--ink2)}.card .go{font-size:12px;color:var(--accent);margin-top:12px}
+.card p{font-size:14px;color:var(--ink2)}.card .go{font-size:12px;color:var(--accent-text,#5E1A26);margin-top:12px}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .gal a{display:block}.gal .im{aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}.gal img{width:100%;height:100%;object-fit:cover}
 .gal .cap{font-size:13px;margin-top:8px}.gal .cap b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;display:block}
@@ -77,7 +77,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .intro h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
 .intro p{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.5;color:var(--ink2)}
 .row{display:grid;grid-template-columns:60px 1.1fr 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
-.row:hover .rn{color:var(--accent)}
+.row:hover .rn{color:var(--accent-text,#5E1A26)}
 .rn{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--muted);transition:color .2s}
 .row h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:36px;line-height:1.05}
 .row .loc{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:8px 0 14px}
@@ -172,7 +172,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .wk-cta{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;background:#5E1A26;color:#F3EFE6;padding:48px;margin:72px 0 24px}
 .wk-cta h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:44px;line-height:1.05;margin:0 0 12px;color:#F3EFE6}
 .wk-cta p{font-size:16px;line-height:1.6;color:#eadfd6;margin:0 0 22px}
-.wk-cta .btn{display:inline-block;background:#F3EFE6;color:#5E1A26;font-family:'Inter',sans-serif;font-size:14px;padding:12px 20px;margin-right:12px}
+.wk-cta .btn{display:inline-block;background:#F3EFE6;color:var(--accent-text,#5E1A26);font-family:'Inter',sans-serif;font-size:14px;padding:12px 20px;margin-right:12px}
 .wk-cta .btn.o{background:transparent;color:#F3EFE6;border:1px solid #F3EFE6}
 .wk-cta dl{margin:0;font-size:15px}
 .wk-cta dt{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d1b9b0;margin-top:14px}
@@ -184,6 +184,10 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 @media(max-width:640px){.wk-author{grid-template-columns:1fr}.wk-steps,.wk-out,.wk-zones,.wk-rel,.wk-curve{grid-template-columns:1fr}.wk-plan,.wk-cta{padding:28px}.wk-sec h2{font-size:36px}.wk-quote{font-size:27px}.wk-acc .body{grid-template-columns:1fr}.wk-acc .body ul{grid-column:1}}
 </style>
 <link rel="stylesheet" href="theme.css?v=20261027b">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.footer,
+[data-dark="1"],
+.article-footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
 </head>
 <body>
 <a href="#main" class="skip">Przejdź do treści</a>
@@ -264,7 +268,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
   <section class="wk-sec">
     <div class="wk-kick">Z Czytelni</div>
     <h2 style="font-size:36px">Więcej o zmianie biura</h2>
-    <div class="wk-rel"><a href="workplace-wp-20-change-management-workplace-70-projektow-konczy-sie-porazka-.html"><div class="cz-ph"><img src="https://www.trzoparchitekci.pl/storage/2024/11/fotomohito_trzop_mck_023_4124.jpg" alt="Siedem na dziesięć zmian w biurze się nie udaje" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Siedem na dziesięć zmian w biurze się nie udaje</h4><div class="wk-meta">3 min czytania</div></a><a href="workplace-wp-21-ambasadorzy-zmiany-dlaczego-wystarczy-10-zespolu-zeby-zmiana.html"><div class="cz-ph"><img src="https://officesnapshots.com/wp-content/uploads/2026/02/tatelyle-offices-lodz-1200x800-compact.jpg" alt="Ambasadorzy zmiany. Wystarczy co dziesiąta osoba" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Ambasadorzy zmiany. Wystarczy co dziesiąta osoba</h4><div class="wk-meta">3 min czytania</div></a><a href="workplace-wp-22-workplace-komunikacja-kiedy-mowic-co-mowic-kto-mowic.html"><div class="cz-ph"><img src="https://pliki.propertydesign.pl/i/20/80/71/208071_r0_1140.jpg" alt="Przeprowadzka biura. Kiedy o niej mówić i kto ma to robić" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Przeprowadzka biura. Kiedy o niej mówić i kto ma to robić</h4><div class="wk-meta">3 min czytania</div></a><a href="workplace-wp-19-ile-metrow-na-pracownika-polski-benchmark-2026.html"><div class="cz-ph"><img src="https://officesnapshots.com/wp-content/uploads/2026/02/moet-hennessy-poland-offices-warsaw-10-1200x675.jpg" alt="Ile metrów na pracownika? Polskie liczby z 2026 roku" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Ile metrów na pracownika? Polskie liczby z 2026 roku</h4><div class="wk-meta">3 min czytania</div></a></div>
+    <div class="wk-rel"><a href="workplace-wp-20-change-management-workplace-70-projektow-konczy-sie-porazka-.html"><div class="cz-ph"><img src="https://www.trzoparchitekci.pl/storage/2024/11/fotomohito_trzop_mck_023_4124.jpg" alt="Nowe biuro, stare nawyki" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Nowe biuro, stare nawyki</h4><div class="wk-meta">4 min czytania</div></a><a href="workplace-wp-21-ambasadorzy-zmiany-dlaczego-wystarczy-10-zespolu-zeby-zmiana.html"><div class="cz-ph"><img src="https://officesnapshots.com/wp-content/uploads/2026/02/tatelyle-offices-lodz-1200x800-compact.jpg" alt="Ambasadorzy nowego biura" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Ambasadorzy nowego biura</h4><div class="wk-meta">4 min czytania</div></a><a href="workplace-wp-22-workplace-komunikacja-kiedy-mowic-co-mowic-kto-mowic.html"><div class="cz-ph"><img src="https://pliki.propertydesign.pl/i/20/80/71/208071_r0_1140.jpg" alt="Kiedy powiedzieć ludziom o przeprowadzce" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Kiedy powiedzieć ludziom o przeprowadzce</h4><div class="wk-meta">4 min czytania</div></a><a href="workplace-wp-19-ile-metrow-na-pracownika-polski-benchmark-2026.html"><div class="cz-ph"><img src="https://officesnapshots.com/wp-content/uploads/2026/02/moet-hennessy-poland-offices-warsaw-10-1200x675.jpg" alt="Ile metrów na osobę w biurze hybrydowym" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><h4>Ile metrów na osobę w biurze hybrydowym</h4><div class="wk-meta">4 min czytania</div></a></div>
   </section>
 
   <section class="wk-cta" id="kontakt">
