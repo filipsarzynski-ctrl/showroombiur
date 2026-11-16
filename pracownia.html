@@ -772,7 +772,7 @@ function renderStudio(studio, allProjects) {
       </div>
       <div class="hero-content">
         <div class="hero-eyebrow">
-          PRACOWNIA <span class="accent">·</span> ${yearsRange}
+          PRACOWNIA${studio.years ? ` <span class="accent">·</span> REALIZACJE OD ${studio.years[0]}` : ''}
         </div>
         <h1 class="hero-name">${nameHtml}</h1>
         <p class="hero-lede">${esc(desc.lede)}</p>
@@ -842,7 +842,6 @@ function buildStudioShare(studio){
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(u)}`;
   return `
     <div class="studio-share">
-      <div class="studio-share-label">Udostępnij</div>
       <div class="studio-share-btns">
         <a class="studio-share-btn" href="${linkedinUrl}" target="_blank" rel="noopener" aria-label="Udostępnij na LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.27 18.5H5.5V9.5h2.77v9zM6.88 8.25c-.89 0-1.61-.72-1.61-1.61s.72-1.61 1.61-1.61 1.61.72 1.61 1.61-.72 1.61-1.61 1.61zm11.62 10.25h-2.77V14c0-1.07-.02-2.45-1.49-2.45-1.49 0-1.72 1.16-1.72 2.37v4.58H9.75V9.5h2.66v1.22h.04c.37-.7 1.28-1.43 2.63-1.43 2.81 0 3.33 1.85 3.33 4.26v4.95z"/></svg>
@@ -1013,7 +1012,7 @@ function buildDescription(studio, projects) {
   // Auto-generate for studios without curated description
   let lede;
   if (count >= 5) {
-    lede = `Polska pracownia projektowa z ${count} realizacjami biurowymi w bazie. Działalność: ${years}.`;
+    lede = `Polska pracownia projektowa z ${count} realizacjami biurowymi w bazie` + (studio.years ? `, najstarsza z ${studio.years[0]} roku.` : '.');
   } else if (count >= 2) {
     lede = `Pracownia projektowa odpowiedzialna za ${count} realizacje biurowe w naszej bazie.`;
   } else {
