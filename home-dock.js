@@ -12,7 +12,7 @@
   var PAGES = [
     ['ranking.html', 'Ranking czytelników'],
     ['rynek-biurowy.html', 'Rynek biurowy'],
-    ['czytelnia.html', 'Czytelnia'],
+    ['trendy.html', 'Trendy'],
     ['wyposazenie.html', 'Wyposażenie'],
     ['workplace.html', 'Workplace'],
     ['biuro-roku-2026.html', 'Biuro Roku'],
