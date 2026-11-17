@@ -56,10 +56,14 @@
   pop.innerHTML = ph;
   document.body.appendChild(dock); document.body.appendChild(pop);
 
+  // strona ma ponad 100 tys. px - płynne przewijanie bywa przerywane, więc na dalekie skoki przeskakujemy od razu
+  function jump(y) {
+    var far = Math.abs(y - window.pageYOffset) > 2500;
+    window.scrollTo({ top: y, behavior: far ? 'auto' : 'smooth' });
+  }
   function go(id) {
     var t = document.getElementById(id); if (!t) return;
-    var y = t.getBoundingClientRect().top + window.pageYOffset - 70;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    jump(t.getBoundingClientRect().top + window.pageYOffset - 70);
     pop.classList.remove('open');
   }
   function onLink(e) {
@@ -67,7 +71,7 @@
     e.preventDefault(); e.stopPropagation(); go(a.getAttribute('data-id'));
   }
   dock.addEventListener('click', onLink, true); pop.addEventListener('click', onLink, true);
-  dock.querySelector('.top').addEventListener('click', function () { pop.classList.remove('open'); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  dock.querySelector('.top').addEventListener('click', function () { pop.classList.remove('open'); jump(0); });
   function toggle(e) { e.stopPropagation(); pop.classList.toggle('open'); }
   dock.querySelector('.more').addEventListener('click', toggle);
   dock.querySelector('.cur').addEventListener('click', toggle);
