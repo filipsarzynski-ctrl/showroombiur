@@ -6,7 +6,7 @@
 <title>Trendy w biurach · Showroom Biur</title>
 <meta name="description" content="Meble, rośliny, światło, sztuka i rozwiązania, które widać dziś w biurach na świecie i w Polsce. Dużo zdjęć, mało teorii.">
 <link rel="canonical" href="https://showroombiur.pl/trendy.html">
-<meta name="robots" content="noindex, nofollow, noimageindex">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:title" content="Trendy w biurach · Showroom Biur">
 <meta property="og:image" content="https://showroombiur.pl/foto/dolby-poland-wroclaw-2026/02.jpg">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -23,13 +23,13 @@ body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-s
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:auto}
 .skip{position:absolute;top:-200px;left:16px;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:1000}.skip:focus{top:16px}
 .nav{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 32px;background:rgba(239,234,226,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500}.nav-brand em{font-style:italic;color:var(--accent);font-weight:350}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500}.nav-brand em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:350}
 .nav-links{display:flex;gap:26px}.nav-links a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links a:hover,.nav-links a.active{color:var(--accent-text,#5E1A26)}
 @media(max-width:820px){.nav-links{display:none}}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
 .crumbs{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:40px 0 0}
-.crumbs a{border-bottom:1px solid var(--line)}.crumbs a:hover{color:var(--accent)}
+.crumbs a{border-bottom:1px solid var(--line)}.crumbs a:hover{color:var(--accent-text,#5E1A26)}
 .head{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end;padding:36px 0 40px;border-bottom:1px solid var(--ink)}
 .head h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
 .head .meta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:18px}
@@ -60,7 +60,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .card .im{aspect-ratio:4/3;background:var(--bg2);overflow:hidden}.card .im img{width:100%;height:100%;object-fit:cover}
 .card .im.t{display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--muted)}
 .card .bd{padding:18px 18px 20px}.card h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:20px;margin-bottom:6px}
-.card p{font-size:14px;color:var(--ink2)}.card .go{font-size:12px;color:var(--accent);margin-top:12px}
+.card p{font-size:14px;color:var(--ink2)}.card .go{font-size:12px;color:var(--accent-text,#5E1A26);margin-top:12px}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .gal a{display:block}.gal .im{aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}.gal img{width:100%;height:100%;object-fit:cover}
 .gal .cap{font-size:13px;margin-top:8px}.gal .cap b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;display:block}
@@ -78,7 +78,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .intro h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5.4vw,68px);line-height:.95;letter-spacing:-.025em}
 .intro p{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.5;color:var(--ink2)}
 .row{display:grid;grid-template-columns:60px 1.1fr 1fr;gap:32px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
-.row:hover .rn{color:var(--accent)}
+.row:hover .rn{color:var(--accent-text,#5E1A26)}
 .rn{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--muted);transition:color .2s}
 .row h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:36px;line-height:1.05}
 .row .loc{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:8px 0 14px}
@@ -93,7 +93,7 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 
 html{scroll-behavior:smooth}
 .tr-hero{padding:34px 0 28px;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:end}
-.tr-hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(84px,13vw,190px);line-height:.82;letter-spacing:-.03em;margin:0}
+.tr-hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(84px,13vw,190px);line-height:.82;letter-spacing:-.03em;margin:0}
 .tr-hero p{font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;color:var(--ink);margin:0 0 10px}
 .tr-hero small{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted)}
 .tr-mos{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:13.5vw;gap:6px;padding:0 6px}
@@ -114,8 +114,8 @@ html{scroll-behavior:smooth}
 .ts .wrap{max-width:1400px}
 .ts-h{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:end;margin-bottom:40px}
 .ts-h .num{font-family:'Cormorant Garamond',serif;font-size:clamp(110px,15vw,220px);line-height:.74;color:transparent;-webkit-text-stroke:1px var(--accent);letter-spacing:-.04em}
-.ts-h .kat{font-family:'Inter',sans-serif;font-size:14px;color:var(--accent)}
-.ts-h h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,6vw,92px);line-height:.95;letter-spacing:-.02em;margin:6px 0 14px}
+.ts-h .kat{font-family:'Inter',sans-serif;font-size:14px;color:var(--accent-text,#5E1A26)}
+.ts-h h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,6vw,92px);line-height:.95;letter-spacing:-.02em;margin:6px 0 14px}
 .ts-h .lead{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.2vw,30px);line-height:1.25;color:var(--ink);margin:0;max-width:760px}
 .tf{margin:0;position:relative}
 .tf .ph{overflow:hidden;background:var(--bg2);cursor:zoom-in}
@@ -123,7 +123,7 @@ html{scroll-behavior:smooth}
 .tf .ph:hover img{transform:scale(1.035)}
 .tf figcaption{font-family:'Inter',sans-serif;font-size:13px;line-height:1.4;color:var(--muted);padding:9px 0 0;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}
 .tf figcaption b{font-weight:500;color:var(--ink);font-size:14px;border-bottom:1px solid var(--line)}
-.tf figcaption a:hover b{border-color:var(--accent);color:var(--accent)}
+.tf figcaption a:hover b{border-color:var(--accent);color:var(--accent-text,#5E1A26)}
 .tf figcaption i{font-style:normal;background:var(--accent);color:#F3EFE6;font-size:11px;padding:2px 8px;border-radius:999px}
 .la{display:grid;grid-template-columns:1.9fr 1fr;gap:18px}
 .la .big .ph{aspect-ratio:4/3}
@@ -158,13 +158,13 @@ html{scroll-behavior:smooth}
 .lc .c4{grid-column:10/13;margin-top:-22%}.lc .c4 .ph{aspect-ratio:3/4}
 .lc .c3,.lc .c4{grid-row:2}
 .tr-fair{background:#221D1B;color:#F3EFE6;padding:96px 0 80px;margin-top:90px}
-.tr-fair h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,6vw,92px);line-height:.95;margin:0 0 16px;color:#F3EFE6}
+.tr-fair h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,6vw,92px);line-height:.95;margin:0 0 16px;color:#F3EFE6}
 .tr-fair p{font-size:19px;line-height:1.6;color:#e8dfd4;max-width:680px;margin:0 0 40px}
 .tr-fair .tf figcaption{color:#b9afa4}.tr-fair .tf figcaption b{color:#F3EFE6;border-color:#5a504b}
 .tr-fair .lb .tf .ph{height:min(58vh,520px);aspect-ratio:3/2}
 .tr-fair .lb .tf:nth-child(n) .ph{aspect-ratio:3/2}
 .tr-read{padding:96px 0 40px}
-.tr-read h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;margin:0 0 34px}
+.tr-read h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,5vw,72px);line-height:1;margin:0 0 34px}
 .tr-read .g{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}
 .tr-read a{color:inherit;display:block}
 .tr-read .ph{aspect-ratio:3/2;overflow:hidden;background:var(--bg2);margin-bottom:12px}
@@ -172,9 +172,9 @@ html{scroll-behavior:smooth}
 .tr-read a:hover img{transform:scale(1.04)}
 .tr-read h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:25px;line-height:1.15;margin:0 0 4px}
 .tr-read span{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted)}
-.tr-read .all{display:inline-block;margin-top:36px;font-family:'Inter',sans-serif;font-size:15px;color:var(--accent);border-bottom:1px solid currentColor}
+.tr-read .all{display:inline-block;margin-top:36px;font-family:'Inter',sans-serif;font-size:15px;color:var(--accent-text,#5E1A26);border-bottom:1px solid currentColor}
 .tr-note{font-size:14px;line-height:1.6;color:var(--muted);max-width:760px;margin:40px 0 70px}
-.tr-note a{color:var(--accent);border-bottom:1px solid currentColor}
+.tr-note a{color:var(--accent-text,#5E1A26);border-bottom:1px solid currentColor}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 #tlb{position:fixed;inset:0;z-index:9999;background:rgba(20,16,15,.96);display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px;cursor:zoom-out}
@@ -193,6 +193,10 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 <link rel="stylesheet" href="theme.css?v=20261027b">
+<style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
+.footer,
+[data-dark="1"],
+.article-footer{--accent-text:#E8B4BD;--muted:#B9AAAD;--muted-soft:#D2C6C8}</style>
 </head>
 <body>
 <a href="#main" class="skip">Przejdź do treści</a>
