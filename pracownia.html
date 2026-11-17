@@ -454,20 +454,18 @@ a { color: inherit; text-decoration: none; }
 }
 .notfound p { color: var(--muted); margin-bottom: 32px; }
 
-.related-studios{padding:80px 32px 100px;background:var(--bg-deep, #E5DFD3);border-top:1px solid var(--line, #D9D2C2);}
+.related-studios{padding:72px 32px 96px;border-top:1px solid var(--line, #D9D2C2);}
 .rs-wrap{max-width:1280px;margin:0 auto;}
-.rs-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px;gap:40px;}
-.rs-head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(40px,4.5vw,64px);line-height:0.98;letter-spacing:-0.02em;margin:0;}
-.rs-head h2 em{font-style:italic;color:var(--accent-text,#5E1A26);font-weight:300;}
-.rs-eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
-.rs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.rs-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--paper, #FBF8F2);padding:28px 24px;border-left:3px solid var(--accent, #5E1A26);transition:transform 0.3s, box-shadow 0.3s;}
-.rs-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
-.rs-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:14px;}
-.rs-card h4{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px;line-height:1.05;margin:0 0 8px;letter-spacing:-0.01em;}
-.rs-meta{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted, #8B7E6A);line-height:1.5;flex:1;}
-.rs-count{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:500;color:var(--ink, #0F0F0E);margin-top:14px;letter-spacing:-0.02em;}
-.rs-count span{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted, #8B7E6A);font-weight:400;margin-left:6px;}
+.rs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--line, #D9D2C2);}
+.rs-head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:40px;line-height:1;margin:0;}
+.rs-all{font-family:'Inter',sans-serif;font-size:13px;color:var(--accent-text,#5E1A26);border-bottom:1px solid currentColor;text-decoration:none;white-space:nowrap;}
+.rs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;}
+.rs-card{text-decoration:none;color:inherit;display:flex;flex-direction:column;}
+.rs-ph{aspect-ratio:4/3;overflow:hidden;background:var(--line, #D9D2C2);margin-bottom:14px;}
+.rs-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.rs-card:hover .rs-ph img{transform:scale(1.03);}
+.rs-card h4{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px;line-height:1.1;margin:0 0 4px;}
+.rs-meta{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted, #8B7E6A);line-height:1.5;}
 @media (max-width:1000px){.rs-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:600px){.rs-grid{grid-template-columns:1fr;}.rs-head{flex-direction:column;align-items:flex-start;}}
 
@@ -921,26 +919,27 @@ function pickRelatedStudios(studio, allStudios) {
 function renderRelatedStudios(studio, allStudios) {
   const related = pickRelatedStudios(studio, allStudios);
   if (!related.length) return '';
+  const biur = n => n === 1 ? 'biuro' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 'biura' : 'biur';
   return `
     <section class="related-studios">
       <div class="rs-wrap">
         <div class="rs-head">
-          <div>
-            <div class="rs-eyebrow">Inne pracownie</div>
-            <h2>Zobacz <em>inne</em> studia.</h2>
-          </div>
+          <h2>Inne pracownie</h2>
+          <a class="rs-all" href="biurofilia.html#studios">Wszystkie pracownie →</a>
         </div>
         <div class="rs-grid">
           ${related.map(r => {
             const s = r.s;
             const sCity = (s.cities && s.cities[0]) || s.city || '';
             const sCount = s.count || (s.projects && s.projects.length) || 0;
+            const yrs = s.years ? (s.years[0] === s.years[1] ? String(s.years[0]) : s.years[0] + '-' + s.years[1]) : '';
+            const hero = s.hero || ((s.projects || []).find(q => q.hero) || {}).hero;
+            const img = hero ? `<div class="rs-ph"><img src="${esc(hero)}" alt="${esc(s.name)}" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('rs-noimg');this.remove()"></div>` : `<div class="rs-ph rs-noimg"></div>`;
             return `
               <a class="rs-card" href="pracownia.html?slug=${esc(s.slug)}">
-                <div class="rs-tag">${esc(r.reason)}</div>
+                ${img}
                 <h4>${esc(s.name)}</h4>
-                <div class="rs-meta">${esc(sCity)}${s.years ? ' · ' + s.years[0] + '-' + s.years[1] : ''}</div>
-                <div class="rs-count">${sCount}<span>realizacji</span></div>
+                <div class="rs-meta">${esc(sCity)}${sCity ? ' · ' : ''}${sCount} ${biur(sCount)} w bazie${yrs ? ' · ' + yrs : ''}</div>
               </a>
             `;
           }).join('')}
