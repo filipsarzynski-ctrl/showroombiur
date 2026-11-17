@@ -111,6 +111,31 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .rb-photo span{position:absolute;left:0;bottom:0;background:rgba(15,15,14,.72);color:#fff;font-family:'Inter',sans-serif;font-size:11px;padding:5px 9px}
 @media(max-width:1000px){.rb-item{grid-template-columns:120px 1fr}.rb-photo{grid-column:2;max-width:420px}}
 @media(max-width:700px){.rb-item{grid-template-columns:1fr;gap:6px}.rb-photo{grid-column:1}.rb-item h2{font-size:23px}}
+.rb-pulse{margin:8px 0 44px;padding:28px 0 0;border-top:1px solid var(--line)}
+.rb-sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:18px}
+.rb-sec-h h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:34px;line-height:1;margin:0}
+.rb-sec-h p{font-size:14px;color:var(--muted);margin:6px 0 0;max-width:640px}
+.rb-sec-h a{font-family:'Inter',sans-serif;font-size:13px;color:var(--accent-text,#5E1A26);border-bottom:1px solid currentColor;white-space:nowrap}
+.rb-cities{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rb-city{display:block;padding:18px 18px 16px;border-right:1px solid var(--line);color:inherit}
+.rb-city:last-child{border-right:0}
+.rb-city:hover{background:rgba(94,26,38,.04)}
+.rb-city h3{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--muted);margin:0 0 10px}
+.rb-city .v{font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1;color:var(--ink)}
+.rb-city .l{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin:2px 0 10px}
+.rb-city .r{font-family:'Inter',sans-serif;font-size:14px;color:var(--ink2)}
+.rb-city .n{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.45}
+.rb-src{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);margin-top:10px}
+.rb-src a{color:var(--muted);border-bottom:1px solid var(--line)}
+.rb-an{margin:0 0 40px}
+.rb-an-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.rb-an-grid a{display:block;color:inherit;border-top:2px solid var(--ink);padding-top:14px}
+.rb-an-grid .d{font-family:'Inter',sans-serif;font-size:12px;color:var(--muted)}
+.rb-an-grid h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px;line-height:1.15;margin:6px 0 8px}
+.rb-an-grid p{font-size:15px;line-height:1.55;color:var(--ink2);margin:0 0 8px}
+.rb-an-grid .m{font-family:'Inter',sans-serif;font-size:13px;color:var(--accent-text,#5E1A26)}
+@media(max-width:1000px){.rb-cities{grid-template-columns:repeat(3,1fr)}.rb-city:nth-child(3){border-right:0}.rb-an-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.rb-cities{grid-template-columns:1fr 1fr}.rb-sec-h{flex-direction:column;align-items:flex-start}}
 </style>
 <link rel="stylesheet" href="theme.css?v=20261027b">
 <style id="tpl-dark">/* jasny akcent na ciemnym tle - generated */
@@ -160,6 +185,9 @@ html body.tpl-a .hero-stat .lab{color:var(--muted)}
     <div><h1>Rynek biurowy</h1><div class="meta">Aktualizacja: 16 listopada 2026</div></div>
     <p class="tag">Kto podpisał umowę najmu, kto się przeprowadza, kto zostaje na dłużej. Co tydzień zbieramy takie informacje z prasy branżowej i komunikatów firm i piszemy je po swojemu, krótko.</p>
   </header>
+  <section class="rb-pulse"><div class="rb-sec-h"><div><h2>Rynek w liczbach</h2><p>Pustostany i średnie czynsze ofertowe w nowoczesnych biurach, III kwartał 2026. Kliknijcie miasto, żeby przeczytać cały raport.</p></div><a href="https://www.brookfield.pl/office-pulse" target="_blank" rel="noopener">Wszystkie raporty →</a></div><div class="rb-cities"><a class="rb-city" href="https://www.brookfield.pl/raporty/rynek-biurowy-warszawa" target="_blank" rel="noopener"><h3>Warszawa</h3><div class="v">7,52%</div><div class="l">pustostany</div><div class="r">czynsz 17,52 €/m² · +6,1% r/r</div><div class="n">Najniższe pustostany w serii Pulse, w budowie 158 tys. m²</div></a><a class="rb-city" href="https://www.brookfield.pl/raporty/rynek-biurowy-krakow" target="_blank" rel="noopener"><h3>Kraków</h3><div class="v">18,07%</div><div class="l">pustostany</div><div class="r">czynsz 14,39 €/m² · bez zmian r/r</div><div class="n">Pustostany najniżej od 2023 roku, w budowie 55 tys. m²</div></a><a class="rb-city" href="https://www.brookfield.pl/raporty/rynek-biurowy-wroclaw" target="_blank" rel="noopener"><h3>Wrocław</h3><div class="v">20,21%</div><div class="l">pustostany</div><div class="r">czynsz 14,31 €/m² · +1,3% r/r</div><div class="n">Pierwszy spadek pustostanów od początku 2025 roku</div></a><a class="rb-city" href="https://www.brookfield.pl/raporty/rynek-biurowy-gdansk" target="_blank" rel="noopener"><h3>Gdańsk</h3><div class="v">8,17%</div><div class="l">pustostany</div><div class="r">czynsz 15,63 €/m² · +11,2% r/r</div><div class="n">Czynsze wyraźnie w górę, w budowie tylko 9 tys. m²</div></a><a class="rb-city" href="https://www.brookfield.pl/raporty/rynek-biurowy-katowice" target="_blank" rel="noopener"><h3>Katowice</h3><div class="v">18,98%</div><div class="l">pustostany</div><div class="r">czynsz 12,40 €/m² · +2,8% r/r</div><div class="n">W rejonie śródmiejskim wolny jest co czwarty metr</div></a></div><div class="rb-src">Dane: <a href="https://www.brookfield.pl/office-pulse" target="_blank" rel="noopener">OfficeList Pulse, Brookfield Partners</a>, stan na 30 września 2026.</div></section>
+  <section class="rb-an"><div class="rb-sec-h"><div><h2>Analizy</h2><p>Liczby, które przydają się przy negocjowaniu najmu. Przygotowuje je Brookfield Partners, partner merytoryczny Showroom Biur.</p></div><a href="https://www.brookfield.pl/blog" target="_blank" rel="noopener">Więcej analiz →</a></div><div class="rb-an-grid"><a href="https://www.brookfield.pl/blog/inflacja-hicp-4-procent-czynsz-biuro-2027" target="_blank" rel="noopener"><div class="d">17 listopada 2026</div><h3>O ile wzrośnie czynsz za biuro od stycznia 2027</h3><p>Inflacja w strefie euro doszła do 4%, więc czynsze indeksowane wskaźnikiem HICP pójdą w górę o 3-4%, zależnie od tego, jak wskaźnik opisano w umowie. Przykład dla biura 1 000 m² i pięć rzeczy do sprawdzenia w piśmie o waloryzacji.</p><span class="m">Czytaj na brookfield.pl ↗</span></a><a href="https://www.brookfield.pl/blog/opoznione-wydanie-biura-umowa-najmu" target="_blank" rel="noopener"><div class="d">9 listopada 2026</div><h3>Co, jeśli wynajmujący nie wyda biura w terminie</h3><p>Umowy najmu podają datę przekazania biura, ale rzadko mówią, co dzieje się przy opóźnieniu. Przy pustostanach na poziomie 7,52% w Warszawie trudno liczyć na piętro zastępcze w tym samym budynku.</p><span class="m">Czytaj na brookfield.pl ↗</span></a><a href="https://www.brookfield.pl/blog/budzet-na-biuro-2027" target="_blank" rel="noopener"><div class="d">30 października 2026</div><h3>Budżet na biuro w 2027 roku w jednym wyliczeniu</h3><p>Biuro 1 000 m² w Warszawie kosztuje dziś około 1,33 mln zł rocznie. W 2027 roku dojdzie do tego 42-63 tys. zł: waloryzacja, wyższe opłaty eksploatacyjne i droższy prąd.</p><span class="m">Czytaj na brookfield.pl ↗</span></a></div></section>
+  <div class="rb-sec-h" style="margin-top:8px"><div><h2>Najmy i przeprowadzki</h2></div></div>
   <div class="rb-filters" id="rbFilters"><button class="rb-chip on" data-c="">Wszystkie</button><button class="rb-chip" data-c="Warszawa">Warszawa</button><button class="rb-chip" data-c="Gdańsk">Gdańsk</button><button class="rb-chip" data-c="Katowice">Katowice</button><button class="rb-chip" data-c="Kraków">Kraków</button><button class="rb-chip" data-c="Polska">Polska</button><button class="rb-chip" data-c="Wrocław">Wrocław</button><button class="rb-chip" data-c="Łódź">Łódź</button></div>
   <div id="rbList">
 <div class="rb-month">Listopad 2026</div>
