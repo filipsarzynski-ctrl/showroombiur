@@ -86,3 +86,7 @@ document.addEventListener('error', function (e) {
   var el = e.target;
   if (el && el.tagName === 'IMG' && !el.closest('.project-img')) el.style.visibility = 'hidden';
 }, true);
+
+/* statystyki ruchu (licznik bez cookies + Google Analytics po zgodzie), 17.11.2026 */
+(function(){ if (window.__sbStatsLoader) return; window.__sbStatsLoader = true;
+  var s = document.createElement('script'); s.src = 'statystyki.js?v=1711'; s.defer = true; document.head.appendChild(s); })();

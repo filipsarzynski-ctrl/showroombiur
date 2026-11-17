@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Statystyki ruchu - Showroom Biur</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EFEAE2;--paper:#FBF8F2;--ink:#0F0F0E;--soft:#2A2A28;--muted:#8B7E6A;--line:#D9D2C2;--accent:#5E1A26;}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;font-size:15px;line-height:1.5;padding:48px 24px 80px}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:56px;line-height:1;letter-spacing:-.02em}
+h1 em{color:var(--accent)}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;margin:44px 0 14px}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0}
+select,input,button{font:inherit;padding:10px 14px;border:1px solid var(--line);background:var(--paper)}
+button{background:var(--ink);color:var(--paper);border-color:var(--ink);cursor:pointer}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.kpi div{background:var(--paper);padding:22px}
+.kpi b{display:block;font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;line-height:1.1}
+.chart{display:flex;align-items:flex-end;gap:3px;height:180px;background:var(--paper);border:1px solid var(--line);padding:16px 16px 28px;position:relative}
+.chart .c{flex:1;background:var(--accent);opacity:.85;min-height:1px;position:relative}
+.chart .c:hover{opacity:1}
+.chart .c span{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line)}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);font-size:14px}
+th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:400}
+td.n{text-align:right;font-variant-numeric:tabular-nums;width:110px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.links a{color:var(--accent);margin-right:18px}
+.err{color:var(--accent);margin-top:12px}
+@media(max-width:800px){.kpi{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}h1{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mono">Showroom Biur · tylko dla redakcji</div>
+  <h1>Statystyki <em>ruchu</em>.</h1>
+  <p style="margin-top:14px;max-width:720px">Licznik bez cookies: liczy wszystkie odsłony, bez względu na zgodę na cookies. Szczegóły o zachowaniu czytelników, którzy zgodzili się na cookies, są w Google Analytics.</p>
+  <p class="links" style="margin-top:12px"><a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">Google Analytics</a><a href="https://search.google.com/search-console?resource_id=https%3A%2F%2Fshowroombiur.pl%2F" target="_blank" rel="noopener">Search Console</a></p>
+
+  <div class="bar" id="login">
+    <input id="k" type="password" placeholder="Klucz redakcji" autocomplete="off" style="min-width:260px">
+    <button id="go">Pokaż</button>
+  </div>
+  <div class="bar" id="ctrl" hidden>
+    <span class="mono">Okres</span>
+    <select id="d"><option value="7">7 dni</option><option value="30" selected>30 dni</option><option value="90">90 dni</option><option value="365">12 miesięcy</option></select>
+    <button id="out" style="background:transparent;color:var(--ink);border-color:var(--line)">Wyloguj</button>
+  </div>
+  <div class="err" id="err"></div>
+
+  <div id="out-box" hidden>
+    <div class="kpi">
+      <div><span class="mono">Wizyty</span><b id="v">0</b></div>
+      <div><span class="mono">Odsłony</span><b id="p">0</b></div>
+      <div><span class="mono">Odsłon na wizytę</span><b id="pv">0</b></div>
+      <div><span class="mono">Wizyty dziennie</span><b id="vd">0</b></div>
+    </div>
+    <h2>Wizyty dzień po dniu</h2>
+    <div class="chart" id="ch"></div>
+    <div class="grid2">
+      <div><h2>Skąd przychodzą</h2><table id="t-src"></table></div>
+      <div><h2>Urządzenia</h2><table id="t-dev"></table><h2>Kampanie (utm)</h2><table id="t-camp"></table></div>
+    </div>
+    <h2>Najczęściej czytane strony</h2>
+    <table id="t-pages"></table>
+  </div>
+</div>
+<script>
+(function(){
+  var SB={url:'https://plomfudejyisiqucavqg.supabase.co',key:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsb21mdWRlanlpc2lxdWNhdnFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxNjQ4OTUsImV4cCI6MjEwODc0MDg5NX0.2LOaPFSsbYELSTpCtlRyzl2iQlwMSoOsQLkpheShCJw'};
+  var $=function(id){return document.getElementById(id)};
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function fmt(n){return Number(n||0).toLocaleString('pl-PL')}
+  function key(){try{return localStorage.getItem('sb_stat_key')||''}catch(e){return''}}
+  function table(el,head,rows,cols){
+    var h='<tr>'+head.map(function(x,i){return '<th'+(i?' style="text-align:right"':'')+'>'+x+'</th>'}).join('')+'</tr>';
+    if(!rows.length) h+='<tr><td colspan="'+head.length+'" style="color:var(--muted)">Brak danych</td></tr>';
+    rows.forEach(function(r){h+='<tr>'+cols.map(function(c,i){var v=typeof c==='function'?c(r):r[c];return i?'<td class="n">'+fmt(v)+'</td>':'<td>'+v+'</td>'}).join('')+'</tr>'});
+    $(el).innerHTML=h;
+  }
+  function load(){
+    var k=key(); if(!k){$('login').hidden=false;$('ctrl').hidden=true;$('out-box').hidden=true;return;}
+    $('err').textContent='Wczytuję';
+    fetch(SB.url+'/rest/v1/rpc/stats_summary',{method:'POST',headers:{apikey:SB.key,Authorization:'Bearer '+SB.key,'Content-Type':'application/json'},
+      body:JSON.stringify({p_key:k,p_days:+$('d').value})}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(d){
+      $('err').textContent='';$('login').hidden=true;$('ctrl').hidden=false;$('out-box').hidden=false;
+      var days=+$('d').value, v=d.razem.wizyty, p=d.razem.odslony;
+      $('v').textContent=fmt(v);$('p').textContent=fmt(p);$('pv').textContent=v?(p/v).toFixed(1).replace('.',','):'0';$('vd').textContent=fmt(Math.round(v/days));
+      // wykres: wszystkie dni okresu, także puste
+      var m={};d.dni.forEach(function(x){m[x.day]=x});var start=new Date(d.od+'T12:00:00'),arr=[];
+      for(var i=0;i<days;i++){var t=new Date(start.getTime()+i*864e5),s=t.toISOString().slice(0,10);arr.push({day:s,w:(m[s]||{}).wizyty||0,o:(m[s]||{}).odslony||0})}
+      var mx=Math.max.apply(null,arr.map(function(a){return a.w}).concat([1])),step=Math.ceil(arr.length/10);
+      $('ch').innerHTML=arr.map(function(a,i){return '<div class="c" title="'+a.day+': '+a.w+' wizyt, '+a.o+' odsłon" style="height:'+(a.w/mx*100)+'%">'+(i%step===0?'<span>'+a.day.slice(8,10)+'.'+a.day.slice(5,7)+'</span>':'')+'</div>'}).join('');
+      table('t-src',['Źródło','Wizyty'],d.zrodla,[function(r){return esc(r.zrodlo)},'wizyty']);
+      table('t-dev',['Urządzenie','Wizyty'],d.urzadzenia,[function(r){return esc({desktop:'komputer',mobile:'telefon',tablet:'tablet'}[r.urzadzenie]||r.urzadzenie)},'wizyty']);
+      table('t-camp',['Kampania','Wizyty'],d.kampanie,[function(r){return esc([r.zrodlo,r.medium,r.kampania].filter(Boolean).join(' / '))},'wizyty']);
+      table('t-pages',['Strona','Odsłony','Wejścia'],d.strony,[function(r){return '<a href="'+esc(r.path)+'" target="_blank" style="color:inherit">'+esc(r.path)+'</a>'},'odslony','wejscia']);
+    }).catch(function(e){$('err').textContent='Nie udało się wczytać (zły klucz albo brak połączenia).';try{localStorage.removeItem('sb_stat_key')}catch(x){}$('login').hidden=false;});
+  }
+  $('go').onclick=function(){try{localStorage.setItem('sb_stat_key',$('k').value.trim())}catch(e){}load()};
+  $('k').onkeydown=function(e){if(e.key==='Enter')$('go').click()};
+  $('d').onchange=load;
+  $('out').onclick=function(){try{localStorage.removeItem('sb_stat_key')}catch(e){}load()};
+  load();
+})();
+</script>
+</body>
+</html>
