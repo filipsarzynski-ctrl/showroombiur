@@ -89,7 +89,7 @@
     curLabel.textContent = act ? act[1] : 'Spis';
   }
   var tick = false;
-  window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(function () { tick = false; update(); }); } }, { passive: true });
+  window.addEventListener('scroll', function () { if (!tick) { tick = true; setTimeout(function () { tick = false; update(); }, 60); } }, { passive: true });
   window.addEventListener('resize', update);
   update();
 })();
