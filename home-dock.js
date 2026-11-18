@@ -3,7 +3,7 @@
 (function () {
   if (window.__sbDock) return; window.__sbDock = 1;
   var SECTIONS = [
-    ['featured', 'Pokaz biur'],
+    ['featured', 'Film'],
     ['archive', 'Biura'],
     ['index', 'Indeks'],
     ['studios', 'Pracownie'],
