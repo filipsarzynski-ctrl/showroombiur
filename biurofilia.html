@@ -2178,7 +2178,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 <meta name="theme-color" content="#0F0F0E">
 <link rel="canonical" href="https://showroombiur.pl/biurofilia.html" />
 <meta name="author" content="Filip Sarzyński, Showroom Biur" />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="robots" content="noindex, nofollow, noimageindex">
 <meta name="generator" content="Showroom Biur Editorial System" />
 <meta name="keywords" content="polskie biura, workplace design Polska, projekty biurowe, biuro projektowe, fit-out, architektura wnętrz biurowych, polskie pracownie, Warszawa biuro, Trzop Architekci, mode:lina, Massive Design, BIT Creative" />
 <meta name="description" content="Magazyn o polskich biurach. 339 realizacji biurowych, 61 pracowni, 1 092 363 m² zaprojektowanej powierzchni biurowej." />
@@ -2748,42 +2748,60 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
   </div>
 </div>
 
-<!-- CHAPTER 01 -->
-<div class="chapter" data-dark="1">
-  <span class="chapter-num">Nr 01</span>
-  <span class="chapter-rule"></span>
-  <span class="chapter-right">Na początek <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> Rock Capital, Warszawa</span>
-</div>
-
-<!-- FEATURED PROJECT (Rock Capital) -->
-<section class="featured reveal" id="featured" data-section="03" data-label="Projekt miesiąca" data-dark="1">
-  <div class="featured-img" id="featuredImg"></div>
-  <a href="#" class="featured-link" data-cursor="view" data-cursor-label="Zobacz projekt"></a>
-  <div class="featured-overlay">
-    <div class="featured-eyebrow">
-      <span class="badge">Polecamy</span>
-      <span>BIT Creative, 2025</span>
-    </div>
-    <div>
-      <h2 class="featured-title">Rock&nbsp;Capital<br><em>Warszawa.</em></h2>
-      <div class="featured-content">
-        <p class="featured-quote">
-          Schody, łuki, lśniąca stal Oskara Zięty i obrazy Stokowskiego na ścianach. Na 460 metrach w Metropolitanie sztuki jest tyle, że trudno powiedzieć, gdzie kończy się biuro, a zaczyna galeria.
-        </p>
-        <div class="featured-meta">
-          <dl>
-            <dt>Pracownia</dt><dd>BIT Creative</dd>
-            <dt>Rok</dt><dd>2025</dd>
-            <dt>Powierzchnia</dt><dd>460 m²</dd>
-            <dt>Lokalizacja</dt><dd>Metropolitan, plac Piłsudskiego</dd>
-            <dt>Branża</dt><dd>Real estate</dd>
-            <dt>Fotografia</dt><dd>Fotomohito</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- REEL:START (generuje _tools/home_reel.py) -->
+<style id="sb-reel-css">
+.sb-reel{position:relative;height:100vh;min-height:620px;max-height:1100px;overflow:hidden;background:#161211;color:#F3EFE6}
+.sb-reel .sl{position:absolute;inset:0;opacity:0;transition:opacity 1.3s ease;pointer-events:none}
+.sb-reel .sl.on{opacity:1;pointer-events:auto}
+.sb-reel .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.sb-reel .sl.on img{animation:sbReelZoom 9s ease-out forwards}
+.sb-reel .sl:nth-child(even).on img{animation-name:sbReelPan}
+@keyframes sbReelZoom{from{transform:scale(1.02)}to{transform:scale(1.13)}}
+@keyframes sbReelPan{from{transform:scale(1.13) translateX(-1.5%)}to{transform:scale(1.04) translateX(1.2%)}}
+.sb-reel .sl:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,12,11,.38) 0%,rgba(15,12,11,0) 26%,rgba(15,12,11,0) 48%,rgba(15,12,11,.78) 100%)}
+.sb-reel .sl a.go{position:absolute;inset:0;z-index:2}
+.sb-reel .tx{position:absolute;left:clamp(20px,4vw,64px);right:clamp(20px,4vw,64px);bottom:clamp(86px,11vh,130px);z-index:3;pointer-events:none}
+.sb-reel .tx h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(52px,9vw,150px);line-height:.9;letter-spacing:-.02em;margin:0 0 14px;color:#F3EFE6;transform:translateY(26px);opacity:0;transition:transform 1s cubic-bezier(.2,.7,.2,1) .25s,opacity 1s ease .25s}
+.sb-reel .tx p{font-family:'Inter',sans-serif;font-size:clamp(15px,1.25vw,19px);margin:0;color:#F3EFE6;opacity:0;transition:opacity 1s ease .55s}
+.sb-reel .tx p span{opacity:.75;margin-left:12px}
+.sb-reel .sl.on .tx h2{transform:none;opacity:1}
+.sb-reel .sl.on .tx p{opacity:1}
+.sb-reel .top{position:absolute;left:clamp(20px,4vw,64px);right:clamp(20px,4vw,64px);top:96px;z-index:4;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif;font-size:14px;color:#F3EFE6}
+.sb-reel .top a{color:#F3EFE6;border-bottom:1px solid rgba(243,239,230,.6)}
+.sb-reel .bars{position:absolute;left:clamp(20px,4vw,64px);right:clamp(20px,4vw,64px);bottom:clamp(34px,5vh,56px);z-index:4;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.sb-reel .bars button{all:unset;cursor:pointer;padding:10px 0 0;font-family:'Inter',sans-serif;font-size:13px;color:rgba(243,239,230,.7);position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sb-reel .bars button:before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:rgba(243,239,230,.32)}
+.sb-reel .bars button i{position:absolute;left:0;top:0;height:2px;width:0;background:#F3EFE6}
+.sb-reel .bars button.on{color:#F3EFE6}
+.sb-reel .bars button.on i{width:100%;transition:width var(--sbr,6500ms) linear}
+.sb-reel .bars button.done i{width:100%}
+.sb-reel.paused .bars button.on i{transition:none}
+@media(max-width:760px){.sb-reel{height:88vh;min-height:520px}.sb-reel .bars button{font-size:0;padding-top:6px}.sb-reel .top span{display:none}}
+@media(prefers-reduced-motion:reduce){.sb-reel .sl.on img{animation:none}}
+</style>
+<section class="sb-reel" id="featured" data-section="03" data-label="Pokaz biur" data-dark="1">
+<div class="sl on"><img src="foto/dolby-poland-wroclaw-2026/12.jpg" alt="Dolby Poland" decoding="async"><a class="go" href="projekt.html?id=dolby-poland-wroclaw-2026" aria-label="Dolby Poland"></a><div class="tx"><h2>Dolby Poland</h2><p>Wrocław · proj. CUDO Studio <span>fot. Migdał Studio</span></p></div></div>
+<div class="sl"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/copernic-krakow-2024/10.jpg" alt="Copernic" decoding="async"><a class="go" href="projekt.html?id=copernic-krakow-2024" aria-label="Copernic"></a><div class="tx"><h2>Copernic</h2><p>Kraków · proj. Superpozycja Architekci <span>fot. Martyna Jabłońska-Makowska</span></p></div></div>
+<div class="sl"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/zendesk-krakow-2022/05.jpg" alt="Zendesk" decoding="async"><a class="go" href="projekt.html?id=zendesk-krakow-2022" aria-label="Zendesk"></a><div class="tx"><h2>Zendesk</h2><p>Kraków · proj. The Design Group</p></div></div>
+<div class="sl"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/olesinski-i-wspolnicy-wroclaw-2023/08.jpg" alt="Olesiński i Wspólnicy" decoding="async"><a class="go" href="projekt.html?id=olesinski-i-wspolnicy-wroclaw-2023" aria-label="Olesiński i Wspólnicy"></a><div class="tx"><h2>Olesiński i Wspólnicy</h2><p>Wrocław · proj. re:build <span>fot. Natalia Kapsa</span></p></div></div>
+<div class="sl"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/nt-industry-orzesze-2021/01.jpg" alt="NT Industry" decoding="async"><a class="go" href="projekt.html?id=nt-industry-orzesze-2021" aria-label="NT Industry"></a><div class="tx"><h2>NT Industry</h2><p>Orzesze · proj. GIGAARCHITEKCI <span>fot. Tomasz Zakrzewski, Archifolio</span></p></div></div>
+<div class="top"><span>Pięć biur na dobry początek</span><a href="#archive">Wszystkie biura</a></div>
+<div class="bars"><button type="button" aria-label="Dolby Poland"><i></i>Dolby Poland</button><button type="button" aria-label="Copernic"><i></i>Copernic</button><button type="button" aria-label="Zendesk"><i></i>Zendesk</button><button type="button" aria-label="Olesiński i Wspólnicy"><i></i>Olesiński i Wspólnicy</button><button type="button" aria-label="NT Industry"><i></i>NT Industry</button></div>
 </section>
+<script>
+(function(){var r=document.getElementById('featured');if(!r||!r.classList.contains('sb-reel'))return;
+var sl=[].slice.call(r.querySelectorAll('.sl')),bt=[].slice.call(r.querySelectorAll('.bars button')),at=0,T=6500,tm=null,vis=true;
+r.style.setProperty('--sbr',T+'ms');
+function show(i){at=(i+sl.length)%sl.length;sl.forEach(function(s,k){s.classList.toggle('on',k===at)});
+ var im=sl[(at+1)%sl.length].querySelector('img');if(im&&im.dataset.src){im.src=im.dataset.src;delete im.dataset.src}
+ bt.forEach(function(b,k){b.classList.remove('on');b.classList.toggle('done',k<at)});void r.offsetWidth;bt[at].classList.add('on');
+ clearTimeout(tm);if(vis)tm=setTimeout(function(){show(at+1)},T)}
+bt.forEach(function(b,k){b.addEventListener('click',function(){show(k)})});
+document.addEventListener('keydown',function(ev){var y=r.getBoundingClientRect();if(y.bottom<100||y.top>window.innerHeight-100)return;if(ev.key==='ArrowRight')show(at+1);if(ev.key==='ArrowLeft')show(at-1)});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting;clearTimeout(tm);if(vis)tm=setTimeout(function(){show(at+1)},T)},{threshold:.25}).observe(r)}
+show(0);})();
+</script>
+<!-- REEL:END -->
 
 
 <!-- ============ MAGAZINE COVER · Z BIEŻĄCEGO NUMERU ============ -->
@@ -2869,61 +2887,11 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
   </div>
 </section>
 
-<!-- CHAPTER 02 - SPREAD -->
-<div class="chapter" data-dark="1">
-  <span class="chapter-num">Nr 02</span>
-  <span class="chapter-rule"></span>
-  <span class="chapter-right">Z bliska <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> LUX MED, Lakeside</span>
-</div>
 
-<!-- EDITORIAL SPREAD - magazine layout for LUX MED -->
-<section class="spread reveal" data-section="04" data-label="Spread" data-dark="1">
-  <div class="spread-folio">
-    <span>Showroom Biur</span>
-    <span class="mid">Lakeside, Warszawa</span>
-    <span class="right"></span>
-  </div>
-  <div class="spread-grid">
-    <div class="spread-left">
-      <div class="spread-running">
-        <span>Ochrona zdrowia</span>
-        <span>Workplace</span>
-      </div>
-      <div>
-        <div class="spread-eyebrow">Długi tekst <em style="color:var(--paper);font-style:normal">·</em> 8 min</div>
-        <h3 class="spread-title">LUX MED <em>i recepcja</em> jak ogród.</h3>
-        <p class="spread-body">
-          Zanim ktokolwiek narysował pierwszą ścianę, projektanci z&nbsp;FOURTH przeprowadzili pięćdziesiąt rozmów z&nbsp;pracownikami LUX MED. Dopiero potem powstał rzut: 1&nbsp;208 metrów w&nbsp;budynku Lakeside, sto czternaście sal spotkań, wyciszone gabinety i&nbsp;siłownia. Najwięcej uwagi przyciąga jednak recepcja, a&nbsp;w&nbsp;niej tryptyk Tomasza Opalińskiego, wokół którego ułożono całe wejście.
-        </p>
-      </div>
-      <dl class="spread-specsheet">
-        <dt>Pracownia</dt><dd>Workplace</dd>
-        <dt>Rok</dt><dd>2024</dd>
-        <dt>Powierzchnia</dt><dd>1&nbsp;208 m²</dd>
-        <dt>Lokalizacja</dt><dd>Lakeside, Warszawa</dd>
-        <dt>Wywiady</dt><dd>50</dd>
-        <dt>Sale spotkań</dt><dd>114</dd>
-        <dt>Materiały</dt><dd>Dąb, terrazzo, akustyczny filc</dd>
-        <dt>Sztuka</dt><dd>Tryptyk Tomasza Opalińskiego</dd>
-      </dl>
-    </div>
-    <div class="spread-right">
-      <div class="spread-photo" id="spreadPhoto"></div>
-      <span class="spread-photo-tag">Recepcja w&nbsp;Lakeside</span>
-    </div>
-  </div>
-  <div class="spread-pullquote">
-    <span class="qmark">"</span>
-    <p class="spread-pullquote-text">
-      Postacie nie dominują - <em>są częścią ogrodu.</em> Sztuka jako element identyfikujący, nie ozdoba.
-    </p>
-    <span class="spread-pullquote-attr">- Tomasz Opaliński, 2024</span>
-  </div>
-</section>
 
 <!-- CHAPTER 03 -->
 <div class="chapter light">
-  <span class="chapter-num">Nr 03</span>
+  <span class="chapter-num">Nr 01</span>
   <span class="chapter-rule"></span>
   <span class="chapter-right">Biura <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> 339 realizacji</span>
 </div>
@@ -7076,7 +7044,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 
 <!-- CHAPTER 03b - INDEX -->
 <div class="chapter light">
-  <span class="chapter-num">Nr 03b</span>
+  <span class="chapter-num">Nr 01b</span>
   <span class="chapter-rule"></span>
   <span class="chapter-right">Indeks <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> Pełna lista 339 realizacji</span>
 </div>
@@ -8128,7 +8096,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 
 <!-- CHAPTER 04 -->
 <div class="chapter light">
-  <span class="chapter-num">Nr 04</span>
+  <span class="chapter-num">Nr 02</span>
   <span class="chapter-rule"></span>
   <span class="chapter-right">Studios <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> 16 z 61 pracowni</span>
 </div>
@@ -8337,7 +8305,7 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 
 <!-- CHAPTER 05 -->
 <div class="chapter">
-  <span class="chapter-num">Nr 05</span>
+  <span class="chapter-num">Nr 03</span>
   <span class="chapter-rule"></span>
   <span class="chapter-right">Manifest <em style="color:var(--accent-text,#5E1A26);font-style:normal">·</em> Redakcja</span>
 </div>
@@ -9114,6 +9082,6 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 <script src="site-config.js" defer></script>
 <script src="forms.js" defer></script>
 <script src="likes.js?v=3" defer></script>
-<script src="home-dock.js?v=4" defer></script>
+<script src="home-dock.js?v=5" defer></script>
 </body>
 </html>

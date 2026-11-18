@@ -3,7 +3,7 @@
 (function () {
   if (window.__sbDock) return; window.__sbDock = 1;
   var SECTIONS = [
-    ['featured', 'Projekt miesiąca'],
+    ['featured', 'Pokaz biur'],
     ['archive', 'Biura'],
     ['index', 'Indeks'],
     ['studios', 'Pracownie'],
