@@ -2750,99 +2750,114 @@ html.night-edition body::before { mix-blend-mode: overlay; opacity: 0.18; }
 
 <!-- REEL:START (generuje _tools/home_reel.py) -->
 <style id="sb-reel-css">
-.sb-reel{position:relative;height:100vh;min-height:600px;max-height:1100px;overflow:hidden;background:#120E0D;color:#F3EFE6}
-.sb-reel .fr{position:absolute;inset:0;visibility:hidden;overflow:hidden}
-.sb-reel .fr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform}
-.sb-reel .fr.prev{visibility:visible;z-index:1}
-.sb-reel .fr.on{visibility:visible;z-index:2}
-.sb-reel .fr.on.t0 img{animation:sbZin var(--cut) cubic-bezier(.1,.8,.2,1) both}
-.sb-reel .fr.on.t1{animation:sbWipeL .34s cubic-bezier(.7,0,.2,1) both}
-.sb-reel .fr.on.t1 img{animation:sbPanL var(--cut) linear both}
-.sb-reel .fr.on.t2 img{animation:sbZout var(--cut) cubic-bezier(.1,.8,.2,1) both}
-.sb-reel .fr.on.t3{animation:sbWipeU .34s cubic-bezier(.7,0,.2,1) both}
-.sb-reel .fr.on.t3 img{animation:sbPanU var(--cut) linear both}
-@keyframes sbZin{from{transform:scale(1.28)}to{transform:scale(1.05)}}
-@keyframes sbZout{from{transform:scale(1.02)}to{transform:scale(1.16)}}
-@keyframes sbPanL{from{transform:scale(1.14) translateX(2.5%)}to{transform:scale(1.14) translateX(-2%)}}
-@keyframes sbPanU{from{transform:scale(1.14) translateY(2.5%)}to{transform:scale(1.14) translateY(-2%)}}
-@keyframes sbWipeL{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0)}}
-@keyframes sbWipeU{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
-.sb-reel .sh{position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(15,12,11,.55) 0%,rgba(15,12,11,.12) 22%,rgba(15,12,11,.1) 40%,rgba(15,12,11,.86) 100%)}
-.sb-reel .wd{position:absolute;left:clamp(20px,4vw,64px);right:clamp(20px,4vw,64px);bottom:clamp(96px,13vh,150px);z-index:4;pointer-events:none;overflow:hidden;
- font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(64px,13.5vw,230px);line-height:.92;letter-spacing:-.03em;color:#F3EFE6;padding-bottom:.08em;text-shadow:0 2px 40px rgba(15,12,11,.55)}
-.sb-reel .wd span{display:block;transform:translateY(105%)}
-.sb-reel .wd.go span{animation:sbWord .42s cubic-bezier(.15,.85,.2,1) both}
-@keyframes sbWord{from{transform:translateY(105%)}to{transform:none}}
-.sb-reel .cr{position:absolute;right:clamp(20px,4vw,64px);bottom:clamp(96px,13vh,150px);z-index:5;font-family:'Inter',sans-serif;font-size:13px;color:#F3EFE6;text-align:right;line-height:1.45;max-width:38vw}
-.sb-reel .cr a{color:#F3EFE6;border-bottom:1px solid rgba(243,239,230,.55)}
-.sb-reel .cr small{display:block;font-size:12px;opacity:.78}
-.sb-reel .hd{position:absolute;left:clamp(20px,4vw,64px);right:clamp(20px,4vw,64px);top:94px;z-index:5;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif;font-size:14px;color:#F3EFE6}
-.sb-reel .hd,.sb-reel .cr{text-shadow:0 1px 14px rgba(15,12,11,.8)}
-.sb-reel .hd b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:24px}
-.sb-reel .hd b em{font-style:italic;font-weight:400}
-.sb-reel .hd button{all:unset;cursor:pointer;border:1px solid rgba(243,239,230,.6);border-radius:999px;padding:7px 14px;font-size:13px}
-.sb-reel .hd button:hover{background:rgba(243,239,230,.16)}
-.sb-reel .pg{position:absolute;left:0;bottom:0;height:3px;width:100%;z-index:6;background:rgba(243,239,230,.2)}
-.sb-reel .pg i{display:block;height:100%;width:0;background:#F3EFE6}
-.sb-reel .end{position:absolute;inset:0;z-index:7;background:#5E1A26;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 clamp(20px,4vw,64px);visibility:hidden}
-.sb-reel .end.on{visibility:visible;animation:sbWipeU .45s cubic-bezier(.7,0,.2,1) both}
-.sb-reel .end h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(64px,13.5vw,230px);line-height:.88;letter-spacing:-.03em;margin:0;color:#F3EFE6}
-.sb-reel .end h2 em{font-style:italic}
-.sb-reel .end p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,38px);margin:22px 0 30px;color:#F3EFE6}
-.sb-reel .end a{display:inline-block;background:#F3EFE6;color:#4A1420!important;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;padding:15px 28px}
-.sb-reel .end.on h2,.sb-reel .end.on p,.sb-reel .end.on a{animation:sbUp .6s cubic-bezier(.15,.85,.2,1) both}
-.sb-reel .end.on p{animation-delay:.18s}.sb-reel .end.on a{animation-delay:.32s}
-@keyframes sbUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
-@media(max-width:760px){.sb-reel{height:86vh;min-height:500px}.sb-reel .cr{left:20px;right:20px;bottom:28px;max-width:none;text-align:left}.sb-reel .wd{bottom:96px}}
-@media(prefers-reduced-motion:reduce){.sb-reel .fr.on,.sb-reel .fr.on img,.sb-reel .wd.go span{animation:none!important}.sb-reel .wd span{transform:none}}
+.sb-film{position:relative;height:100vh;min-height:620px;max-height:1080px;overflow:hidden;background:#F3EFE6;color:#1B1513;--bo:#5E1A26;--cr:#F3EFE6}
+.sb-film .sc{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 0s linear 1.2s}
+.sb-film .sc.on{opacity:1;visibility:visible;transition:opacity 1.2s ease}
+.sb-film .sc.bo{background:#5E1A26;color:#F3EFE6}
+.sb-film .sc.dk{background:#1E1917;color:#F3EFE6}
+.sb-film .ph{position:absolute;overflow:hidden;background:#E2D9CB;display:block}
+.sb-film .ph img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.14)}
+.sb-film .sc.on .ph img{animation:fZoom 9s linear both}
+@keyframes fZoom{from{transform:scale(1.14)}to{transform:scale(1.02)}}
+.sb-film .rv-up{clip-path:inset(100% 0 0 0)}
+.sb-film .rv-left{clip-path:inset(0 100% 0 0)}
+.sb-film .rv-circ{clip-path:circle(0% at 50% 58%)}
+.sb-film .sc.on .rv-up{animation:fUp 1.5s cubic-bezier(.65,0,.15,1) var(--d,0s) both}
+.sb-film .sc.on .rv-left{animation:fLeft 1.6s cubic-bezier(.65,0,.15,1) var(--d,0s) both}
+.sb-film .sc.on .rv-circ{animation:fCirc 1.9s cubic-bezier(.6,0,.2,1) var(--d,0s) both}
+@keyframes fUp{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
+@keyframes fLeft{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+@keyframes fCirc{from{clip-path:circle(0% at 50% 58%)}to{clip-path:circle(80% at 50% 50%)}}
+.sb-film .sc.on .mv-up{animation:fUp 1.5s cubic-bezier(.65,0,.15,1) var(--d,0s) both,fDrU 8s linear both}
+.sb-film .sc.on .mv-dn{animation:fUp 1.5s cubic-bezier(.65,0,.15,1) var(--d,0s) both,fDrD 8s linear both}
+@keyframes fDrU{from{transform:translateY(2.2vh)}to{transform:translateY(-2.2vh)}}
+@keyframes fDrD{from{transform:translateY(-2.2vh)}to{transform:translateY(2.2vh)}}
+.sb-film .arch{border-radius:50vw 50vw 0 0}
+.sb-film .tx{position:absolute;overflow:hidden;font-family:'Cormorant Garamond',serif;font-weight:500;line-height:.98;letter-spacing:-.02em;padding-bottom:.12em;white-space:nowrap}
+.sb-film .tx span{display:block;transform:translateY(112%)}
+.sb-film .sc.on .tx span{animation:fTxt 1.3s cubic-bezier(.2,.8,.2,1) var(--d,.4s) both}
+@keyframes fTxt{from{transform:translateY(112%)}to{transform:none}}
+.sb-film .tx em{font-style:italic;color:var(--bo)}
+.sb-film .bo .tx em,.sb-film .dk .tx em,.sb-film .ov .tx em{color:inherit}
+.sb-film .sm{position:absolute;font-family:'Inter',sans-serif;font-size:13px;line-height:1.45;color:#6B5F55;opacity:0}
+.sb-film .bo .sm,.sb-film .dk .sm,.sb-film .ov .sm{color:rgba(243,239,230,.82)}
+.sb-film .sc.on .sm{animation:fFade 1.2s ease var(--d,1s) both}
+@keyframes fFade{from{opacity:0}to{opacity:1}}
+.sb-film .ln{position:absolute;height:1px;background:currentColor;opacity:.35;transform:scaleX(0);transform-origin:left}
+.sb-film .sc.on .ln{animation:fLn 1.6s cubic-bezier(.65,0,.15,1) var(--d,.6s) both}
+@keyframes fLn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sb-film .ov:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(20,15,13,.5) 0%,rgba(20,15,13,.05) 26%,rgba(20,15,13,.1) 45%,rgba(20,15,13,.82) 100%)}
+.sb-film .ov .tx,.sb-film .ov .sm{z-index:2;color:#F3EFE6}
+.sb-film .sw{position:absolute;display:flex;gap:.9vw;align-items:flex-end}
+.sb-film .sw div{width:5vw}
+.sb-film .sw b{display:block;height:30vh;transform:scaleY(0);transform-origin:bottom}
+.sb-film .sc.on .sw b{animation:fSw 1.3s cubic-bezier(.3,.9,.2,1) var(--d,1s) both}
+@keyframes fSw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.sb-film .sw i{display:block;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.04em;color:#6B5F55;margin-top:8px;opacity:0}
+.sb-film .sc.on .sw i{animation:fFade 1s ease 2.2s both}
+.sb-film .row{position:absolute;left:-4vw;display:flex;gap:1.2vw;width:max-content}
+.sb-film .row a{display:block;width:21vw;height:28vh;overflow:hidden;background:#2b2421;flex:none}
+.sb-film .row img{width:100%;height:100%;object-fit:cover;display:block}
+.sb-film .sc.on .row.r1{animation:fRowL 9s linear both}
+.sb-film .sc.on .row.r2{animation:fRowR 9s linear both}
+@keyframes fRowL{from{transform:translateX(0)}to{transform:translateX(-22vw)}}
+@keyframes fRowR{from{transform:translateX(-56vw)}to{transform:translateX(-34vw)}}
+.sb-film .ui{position:absolute;left:4vw;right:4vw;top:94px;z-index:20;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif;font-size:13px;color:#1B1513;transition:color .8s}
+.sb-film.lt .ui{color:#F3EFE6}
+.sb-film .ui span{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em}
+.sb-film .ui button{all:unset;cursor:pointer;border:1px solid currentColor;border-radius:999px;padding:6px 14px;margin-left:16px;opacity:.85}
+.sb-film .ui button:hover{opacity:1}
+.sb-film .pg{position:absolute;left:0;bottom:0;height:2px;width:100%;z-index:20;background:rgba(120,100,90,.25)}
+.sb-film .pg i{display:block;height:100%;width:0;background:#5E1A26}
+.sb-film.lt .pg i{background:#F3EFE6}
+.sb-film .end{background:#5E1A26;color:#F3EFE6;display:flex;flex-direction:column;justify-content:center;padding:0 4vw}
+.sb-film .end h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(64px,13vw,220px);line-height:.88;letter-spacing:-.03em;margin:0;color:#F3EFE6;overflow:hidden;padding-bottom:.1em}
+.sb-film .end h2 span{display:block;transform:translateY(110%)}
+.sb-film .end.on h2 span{animation:fTxt 1.4s cubic-bezier(.2,.8,.2,1) .3s both}
+.sb-film .end h2 em{font-style:italic}
+.sb-film .end p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.3vw,36px);margin:22px 0 30px;color:#F3EFE6;opacity:0}
+.sb-film .end a{display:inline-block;align-self:flex-start;background:#F3EFE6;color:#4A1420!important;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;padding:15px 28px;opacity:0}
+.sb-film .end.on p{animation:fFade 1.2s ease 1s both}
+.sb-film .end.on a{animation:fFade 1.2s ease 1.4s both}
+.sb-film.paused *{animation-play-state:paused!important}
+@media(max-width:820px){.sb-film{height:92vh;min-height:560px}
+ .sb-film .s1 .ph{left:18vw!important;width:64vw!important;top:20vh!important;height:52vh!important}.sb-film .s1 .tx{font-size:17vw!important}.sb-film .s1 .t1{left:5vw!important;top:11vh!important}.sb-film .s1 .t2{right:5vw!important;top:auto!important;bottom:10vh}
+ .sb-film .s2 .p1{left:5vw!important;width:56vw!important;top:13vh!important;height:50vh!important}.sb-film .s2 .p2{left:38vw!important;width:57vw!important;top:52vh!important;height:26vh!important}.sb-film .s2 .tx{left:5vw!important;top:auto!important;bottom:5vh;font-size:15vw!important}.sb-film .s2 .sm,.sb-film .s2 .ln{display:none}
+ .sb-film .s4 .ph{width:28vw!important;height:44vh!important}.sb-film .s4 .ph.a{left:4vw!important}.sb-film .s4 .ph.b{left:36vw!important}.sb-film .s4 .ph.c{left:68vw!important}.sb-film .s4 .tx{font-size:6vw!important}.sb-film .s4 .sm{display:none}
+ .sb-film .s5 .ph{left:5vw!important;width:90vw!important;top:13vh!important;height:40vh!important}.sb-film .s5 .tx{left:5vw!important;top:56vh!important;font-size:16vw!important}.sb-film .s5 .sw{left:5vw!important;top:auto!important;bottom:8vh}.sb-film .sw div{width:16vw}.sb-film .sw b{height:12vh}.sb-film .s5 .sm{display:none}
+ .sb-film .row a{width:44vw;height:22vh}.sb-film .s6 .tx{font-size:13vw!important}
+ .sb-film .tx.big{font-size:17vw!important}}
+@media(prefers-reduced-motion:reduce){.sb-film *{animation-duration:.01s!important;animation-delay:0s!important}}
 </style>
-<section class="sb-reel" id="featured" data-section="03" data-label="Film" data-dark="1" aria-label="Showroom Biur w kilkunastu ujęciach">
-<div class="fr t0"><img src="foto/red-bull-warszawa-2022/01.jpg" alt="Red Bull" decoding="async" fetchpriority="high"></div>
-<div class="fr t1"><img src="foto/lipton-teas-and-infusions-katowice-2026/01.jpg" alt="Lipton Teas &amp; Infusions" decoding="async" fetchpriority="high"></div>
-<div class="fr t2"><img src="foto/oracle-warszawa-2020/04.jpg" alt="Oracle" decoding="async"></div>
-<div class="fr t3"><img src="foto/yareal-polska-warszawa-2026/01.jpg" alt="Yareal Polska" decoding="async"></div>
-<div class="fr t0"><img src="foto/codelab-wroclaw-2024/13.jpg" alt="Codelab" decoding="async"></div>
-<div class="fr t1"><img src="foto/dolby-poland-wroclaw-2026/04.jpg" alt="Dolby Poland" decoding="async"></div>
-<div class="fr t2"><img src="foto/kpmg-katowice-2019/04.jpg" alt="KPMG" decoding="async"></div>
-<div class="fr t3"><img src="foto/private-financial-market-co-gdynia-2023/01.jpg" alt="Private Financial Market Co." decoding="async"></div>
-<div class="fr t0"><img src="foto/helio-s-a-wroclaw-2025/01.jpg" alt="Helio S.A." decoding="async"></div>
-<div class="fr t1"><img src="foto/bacardi-martini-warszawa-2022/01.jpg" alt="Bacardi-Martini" decoding="async"></div>
-<div class="fr t2"><img src="foto/zendesk-krakow-2022/05.jpg" alt="Zendesk" decoding="async"></div>
-<div class="fr t3"><img src="foto/four-suits-technology-krakow-2023/02.jpg" alt="Four Suits Technology" decoding="async"></div>
-<div class="fr t0"><img src="foto/olesinski-i-wspolnicy-wroclaw-2023/08.jpg" alt="Olesiński i Wspólnicy" decoding="async"></div>
-<div class="fr t1"><img src="foto/allegro-fabryka-norblina-warszawa-2022/01.jpg" alt="Allegro (Fabryka Norblina)" decoding="async"></div>
-<div class="fr t2"><img src="foto/copernic-krakow-2024/03.jpg" alt="Copernic" decoding="async"></div>
-<div class="fr t3"><img src="foto/citi-handlowy-warszawa-2024/10.jpg" alt="Citi Handlowy" decoding="async"></div>
-<div class="fr t0"><img src="foto/appfire-warszawa-2026/03.jpg" alt="Appfire" decoding="async"></div>
-<div class="fr t1"><img src="foto/bnp-paribas-warszawa-2021/02.jpg" alt="BNP Paribas" decoding="async"></div>
-<div class="fr t2"><img src="foto/olx-poznan-2021/01.jpg" alt="OLX" decoding="async"></div>
-<div class="fr t3"><img src="foto/l-abo-by-l-uni-wroclaw-2025/01.jpg" alt="L&#x27;UNI (LABO co-working)" decoding="async"></div>
-<div class="sh"></div><div class="wd" aria-hidden="true"></div><div class="cr"></div>
-<div class="hd"><b>Showroom <em>Biur</em></b><button type="button">Pauza</button></div>
-<div class="end"><h2>Showroom <em>Biur</em></h2><p>339 polskich biur. Każde z nazwą najemcy, pracowni i fotografa.</p><a href="#archive">Zobacz biura</a></div>
+<section class="sb-film" id="featured" data-section="03" data-label="Film" aria-label="Showroom Biur w siedmiu scenach">
+<div class="sc s1"><a class="ph arch rv-up" style="left:33vw;width:34vw;top:15vh;height:85vh" href="projekt.html?id=copernic-krakow-2024" aria-label="Copernic"><img src="foto/copernic-krakow-2024/10.jpg" alt="Copernic" decoding="async" fetchpriority="high"></a><div class="tx t1 big" style="left:4vw;top:38vh;font-size:9.6vw;--d:.7s"><span>Polskie</span></div><div class="tx t2 big" style="right:4vw;top:38vh;font-size:9.6vw;--d:1s"><span><em>biura</em></span></div><div class="sm" style="left:4vw;bottom:5vh;max-width:26vw;--d:1.6s">Copernic · proj. Superpozycja Architekci · fot. Martyna Jabłońska-Makowska</div></div>
+<div class="sc s2"><a class="ph p1 mv-up" style="left:6vw;width:34vw;top:14vh;height:74vh" href="projekt.html?id=dolby-poland-wroclaw-2026" aria-label="Dolby Poland"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/dolby-poland-wroclaw-2026/12.jpg" alt="Dolby Poland" decoding="async"></a><a class="ph p2 mv-dn" style="left:45vw;width:31vw;top:36vh;height:44vh;--d:.35s" href="projekt.html?id=yareal-polska-warszawa-2026" aria-label="Yareal Polska"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/yareal-polska-warszawa-2026/01.jpg" alt="Yareal Polska" decoding="async"></a><div class="tx big" style="left:45vw;top:11vh;font-size:11vw;color:var(--bo);--d:.8s"><span>339</span></div><div class="tx " style="left:79vw;top:38vh;font-size:3.4vw;--d:1.1s"><span><em>realizacji</em></span></div><div class="ln" style="left:79vw;width:17vw;top:47vh"></div><div class="sm" style="left:79vw;top:49vh;width:17vw;--d:1.5s">z lat 2002-2026, każda z nazwą najemcy, pracowni i fotografa</div><div class="sm" style="left:6vw;top:90vh;--d:1.7s">Dolby Poland · proj. CUDO Studio</div><div class="sm" style="left:45vw;top:82vh;--d:1.9s">Yareal Polska · proj. The Design Group</div></div>
+<div class="sc s3 dk ov"><a class="ph rv-circ" style="inset:0" href="projekt.html?id=oracle-warszawa-2020" aria-label="Oracle"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/oracle-warszawa-2020/04.jpg" alt="Oracle" decoding="async"></a><div class="tx big" style="left:4vw;bottom:15vh;font-size:11vw;--d:1.2s"><span>18 miast</span></div><div class="sm" style="left:4.4vw;bottom:11vh;font-size:16px;--d:1.8s">od Gdyni po Katowice</div><div class="sm" style="right:4vw;bottom:11vh;text-align:right;max-width:40vw;--d:2s">Oracle · proj. Massive Design · fot. Szymon Polański</div></div>
+<div class="sc s4 bo"><a class="ph arch rv-up a" style="left:9vw;width:24vw;top:15vh;height:56vh;--d:0.00s" href="projekt.html?id=helio-s-a-wroclaw-2025" aria-label="Helio S.A."><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/helio-s-a-wroclaw-2025/01.jpg" alt="Helio S.A." decoding="async"></a><div class="tx " style="left:9vw;top:calc(15vh + 58.5vh);font-size:3.6vw;--d:0.90s"><span>Kuchnie</span></div><div class="sm" style="left:9vw;top:calc(15vh + 65.5vh);width:24vw;--d:1.50s">Helio S.A. · proj. SAAN Architekci</div><a class="ph arch rv-up b" style="left:38vw;width:24vw;top:21vh;height:56vh;--d:0.28s" href="projekt.html?id=zendesk-krakow-2022" aria-label="Zendesk"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/zendesk-krakow-2022/05.jpg" alt="Zendesk" decoding="async"></a><div class="tx " style="left:38vw;top:calc(21vh + 58.5vh);font-size:3.6vw;--d:1.18s"><span>Trybuny</span></div><div class="sm" style="left:38vw;top:calc(21vh + 65.5vh);width:24vw;--d:1.78s">Zendesk · proj. The Design Group</div><a class="ph arch rv-up c" style="left:67vw;width:24vw;top:15vh;height:56vh;--d:0.56s" href="projekt.html?id=olesinski-i-wspolnicy-wroclaw-2023" aria-label="Olesiński i Wspólnicy"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/olesinski-i-wspolnicy-wroclaw-2023/10.jpg" alt="Olesiński i Wspólnicy" decoding="async"></a><div class="tx " style="left:67vw;top:calc(15vh + 58.5vh);font-size:3.6vw;--d:1.46s"><span>Zieleń</span></div><div class="sm" style="left:67vw;top:calc(15vh + 65.5vh);width:24vw;--d:2.06s">Olesiński i Wspólnicy · proj. re:build</div></div>
+<div class="sc s5"><a class="ph rv-left" style="left:6vw;width:55vw;top:15vh;height:70vh" href="projekt.html?id=bnp-paribas-warszawa-2021" aria-label="BNP Paribas"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/bnp-paribas-warszawa-2021/02.jpg" alt="BNP Paribas" decoding="async"></a><div class="tx big" style="left:66vw;top:14vh;font-size:9vw;--d:.9s"><span>Kolor<em>.</em></span></div><div class="sw" style="left:66vw;top:43vh"><div><b style="background:#92694F;--d:1.10s"></b><i>#92694F</i></div><div><b style="background:#B2987A;--d:1.22s"></b><i>#B2987A</i></div><div><b style="background:#E5D3AF;--d:1.34s"></b><i>#E5D3AF</i></div><div><b style="background:#1A467D;--d:1.46s"></b><i>#1A467D</i></div><div><b style="background:#0F244A;--d:1.58s"></b><i>#0F244A</i></div></div><div class="sm" style="left:66vw;top:82vh;--d:2.4s">Pięć kolorów wyciągniętych z tego zdjęcia</div><div class="sm" style="left:6vw;top:87vh;--d:1.8s">BNP Paribas · proj. Massive Design · fot. Szymon Polański</div></div>
+<div class="sc s6 dk"><div class="row r1" style="top:14vh"><a href="projekt.html?id=red-bull-warszawa-2022" title="Red Bull · proj. MXCF Architekci"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/01.jpg" alt="Red Bull"></a><a href="projekt.html?id=lipton-teas-and-infusions-katowice-2026" title="Lipton Teas &amp; Infusions · proj. FOURTH"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/02.jpg" alt="Lipton Teas &amp; Infusions"></a><a href="projekt.html?id=codelab-wroclaw-2024" title="Codelab · proj. mode:lina"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/03.jpg" alt="Codelab"></a><a href="projekt.html?id=kpmg-katowice-2019" title="KPMG · proj. Zalewski Architecture Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/04.jpg" alt="KPMG"></a><a href="projekt.html?id=bacardi-martini-warszawa-2022" title="Bacardi-Martini · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/05.jpg" alt="Bacardi-Martini"></a><a href="projekt.html?id=four-suits-technology-krakow-2023" title="Four Suits Technology · proj. Brookfield Partners"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/06.jpg" alt="Four Suits Technology"></a><a href="projekt.html?id=allegro-fabryka-norblina-warszawa-2022" title="Allegro (Fabryka Norblina) · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/07.jpg" alt="Allegro (Fabryka Norblina)"></a><a href="projekt.html?id=citi-handlowy-warszawa-2024" title="Citi Handlowy · proj. SAAN Architekci"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/08.jpg" alt="Citi Handlowy"></a></div><div class="row r2" style="top:44.5vh"><a href="projekt.html?id=appfire-warszawa-2026" title="Appfire · proj. Abundo Space"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/09.jpg" alt="Appfire"></a><a href="projekt.html?id=olx-poznan-2021" title="OLX · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/10.jpg" alt="OLX"></a><a href="projekt.html?id=private-financial-market-co-gdynia-2023" title="Private Financial Market Co. · proj. FOURTH"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/11.jpg" alt="Private Financial Market Co."></a><a href="projekt.html?id=nt-industry-orzesze-2021" title="NT Industry · proj. GIGAARCHITEKCI"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/12.jpg" alt="NT Industry"></a><a href="projekt.html?id=develia-wroclaw-2024" title="Develia · proj. re:build"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/13.jpg" alt="Develia"></a><a href="projekt.html?id=pwc-service-delivery-center-katowice-2022" title="PwC Service Delivery Center · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/14.jpg" alt="PwC Service Delivery Center"></a><a href="projekt.html?id=kemira-gdansk-2026" title="Kemira · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/15.jpg" alt="Kemira"></a><a href="projekt.html?id=asana-warszawa-2026" title="Asana · proj. The Design Group"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/film/16.jpg" alt="Asana"></a></div><div class="tx big" style="left:4vw;top:75vh;font-size:8.4vw;--d:.9s"><span>60+ pracowni</span></div><div class="sm" style="right:4vw;top:84vh;text-align:right;max-width:28vw;--d:1.6s">od dużych biur projektowych po studia z jedną, za to bardzo dobrą realizacją</div></div>
+<div class="sc s7 dk ov"><a class="ph rv-circ" style="inset:0" href="projekt.html?id=l-uni-labo-co-working-wroclaw-2023" aria-label="L&#x27;UNI (LABO co-working)"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="foto/l-abo-by-l-uni-wroclaw-2025/01.jpg" alt="L&#x27;UNI (LABO co-working)" decoding="async"></a><div class="tx big" style="left:4vw;bottom:38vh;font-size:8.6vw;--d:1.1s"><span><em>Wizja,</em></span></div><div class="tx big" style="left:4vw;bottom:25vh;font-size:8.6vw;--d:1.45s"><span><em>materia,</em></span></div><div class="tx big" style="left:4vw;bottom:12vh;font-size:8.6vw;--d:1.8s"><span><em>światło.</em></span></div><div class="sm" style="right:4vw;bottom:11vh;text-align:right;max-width:40vw;--d:2.2s">L&#x27;UNI (LABO co-working) · proj. CUDO: · fot. Migdał Studio</div></div>
+<div class="sc end"><h2><span>Showroom <em>Biur</em></span></h2><p>339 polskich biur. Każde z nazwą najemcy, pracowni i fotografa.</p><a href="#archive">Zobacz biura</a></div>
+<div class="ui"><span></span><button type="button">Pauza</button></div>
 <div class="pg"><i></i></div>
 </section>
 <script>
-(function(){var r=document.getElementById('featured');if(!r||!r.classList.contains('sb-reel'))return;
-var D=[{"s": "red-bull-warszawa-2022", "c": "Red Bull", "m": "Warszawa · proj. MXCF Architekci · fot. Nate Cook Photography, Fotomohito", "w": "Polskie"}, {"s": "lipton-teas-and-infusions-katowice-2026", "c": "Lipton Teas & Infusions", "m": "Katowice · proj. FOURTH · fot. Bianka Gajdzińska", "w": "biura."}, {"s": "oracle-warszawa-2020", "c": "Oracle", "m": "Warszawa · proj. Massive Design · fot. Szymon Polański", "w": "339 realizacji"}, {"s": "yareal-polska-warszawa-2026", "c": "Yareal Polska", "m": "Warszawa · proj. The Design Group", "w": ""}, {"s": "codelab-wroclaw-2024", "c": "Codelab", "m": "Wrocław · proj. mode:lina · fot. Patryk Lewiński", "w": "60+ pracowni"}, {"s": "dolby-poland-wroclaw-2026", "c": "Dolby Poland", "m": "Wrocław · proj. CUDO Studio · fot. Migdał Studio", "w": ""}, {"s": "kpmg-katowice-2019", "c": "KPMG", "m": "Katowice · proj. Zalewski Architecture Group", "w": "18 miast"}, {"s": "private-financial-market-co-gdynia-2023", "c": "Private Financial Market Co.", "m": "Gdynia · proj. FOURTH", "w": ""}, {"s": "helio-s-a-wroclaw-2025", "c": "Helio S.A.", "m": "Brochów · proj. SAAN Architekci · fot. Tom Kurek", "w": "Kuchnie."}, {"s": "bacardi-martini-warszawa-2022", "c": "Bacardi-Martini", "m": "Warszawa · proj. The Design Group", "w": "Bary."}, {"s": "zendesk-krakow-2022", "c": "Zendesk", "m": "Kraków · proj. The Design Group", "w": "Trybuny."}, {"s": "four-suits-technology-krakow-2023", "c": "Four Suits Technology", "m": "Kraków · proj. Brookfield Partners", "w": ""}, {"s": "olesinski-i-wspolnicy-wroclaw-2023", "c": "Olesiński i Wspólnicy", "m": "Wrocław · proj. re:build · fot. Natalia Kapsa", "w": "Zieleń."}, {"s": "allegro-fabryka-norblina-warszawa-2022", "c": "Allegro (Fabryka Norblina)", "m": "Warszawa · proj. The Design Group", "w": ""}, {"s": "copernic-krakow-2024", "c": "Copernic", "m": "Kraków · proj. Superpozycja Architekci · fot. Martyna Jabłońska-Makowska", "w": "Sztuka."}, {"s": "citi-handlowy-warszawa-2024", "c": "Citi Handlowy", "m": "Warszawa · proj. SAAN Architekci · fot. Piotr Krajewski", "w": "Łuki."}, {"s": "appfire-warszawa-2026", "c": "Appfire", "m": "Warszawa · proj. Abundo Space · fot. Patryk Morzonek", "w": "Kolor."}, {"s": "bnp-paribas-warszawa-2021", "c": "BNP Paribas", "m": "Warszawa · proj. Massive Design · fot. Szymon Polański", "w": ""}, {"s": "olx-poznan-2021", "c": "OLX", "m": "Poznań · proj. The Design Group", "w": "Lampy."}, {"s": "l-uni-labo-co-working-wroclaw-2023", "c": "L'UNI (LABO co-working)", "m": "Wrocław · proj. CUDO: · fot. Migdał Studio", "w": ""}],CUT=1050,END=3600,fr=[].slice.call(r.querySelectorAll('.fr')),wd=r.querySelector('.wd'),cr=r.querySelector('.cr'),end=r.querySelector('.end'),
- pg=r.querySelector('.pg i'),bt=r.querySelector('.hd button'),at=-1,tm=null,play=true,vis=true,TOT=D.length*CUT+END;
-r.style.setProperty('--cut',CUT+'ms');
-function word(t){wd.classList.remove('go');wd.innerHTML='';if(!t)return;var s=document.createElement('span');s.textContent=t;wd.appendChild(s);void wd.offsetWidth;wd.classList.add('go')}
-function bar(ms,to){pg.style.transition='none';pg.style.width=(to*100)+'%';}
-function step(){clearTimeout(tm);if(!play||!vis)return;at++;
- if(at>D.length){at=0;end.classList.remove('on')}
- if(at===D.length){end.classList.add('on');word('');cr.innerHTML='';pg.style.transition='width '+END+'ms linear';pg.style.width='100%';tm=setTimeout(step,END);return}
- fr.forEach(function(f,k){f.classList.remove('prev');if(f.classList.contains('on')){f.classList.remove('on');f.classList.add('prev')}});
- var f=fr[at];f.classList.remove('prev');void f.offsetWidth;f.classList.add('on');
- var d=D[at];word(d.w);cr.innerHTML='<a href="projekt.html?id='+d.s+'"></a><small></small>';cr.querySelector('a').textContent=d.c;cr.querySelector('small').textContent=d.m;
- pg.style.transition='none';pg.style.width=(at*CUT/TOT*100)+'%';void pg.offsetWidth;pg.style.transition='width '+CUT+'ms linear';pg.style.width=((at+1)*CUT/TOT*100)+'%';
- tm=setTimeout(step,CUT)}
-bt.addEventListener('click',function(){play=!play;bt.textContent=play?'Pauza':'Odtwórz';if(play)step();else clearTimeout(tm)});
-r.addEventListener('click',function(ev){if(ev.target.closest('a,button'))return;var d=D[at];if(d)location.href='projekt.html?id='+d.s});
-if('IntersectionObserver' in window){new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!vis){vis=true;step()}else if(!v){vis=false;clearTimeout(tm)}},{threshold:.2}).observe(r)}
-var n=0,started=false;function go(){if(started)return;started=true;step()}
-fr.slice(0,3).forEach(function(f){var im=f.querySelector('img');if(im.complete)n++;else im.addEventListener('load',function(){if(++n>=3)go()})});
-if(n>=3)go();setTimeout(go,2500);})();
+(function(){var r=document.getElementById('featured');if(!r||!r.classList.contains('sb-film'))return;
+var T=[5600, 5600, 5400, 6000, 5800, 6400, 5600, 4800],LT=[0, 0, 1, 1, 0, 1, 1, 1],sc=[].slice.call(r.querySelectorAll('.sc')),cn=r.querySelector('.ui span'),bt=r.querySelector('.ui button'),pg=r.querySelector('.pg i'),
+ at=-1,tm=null,play=true,vis=true,left=0,t0=0,TOT=T.reduce(function(a,b){return a+b},0),done=0;
+function load(k){var s=sc[(k+sc.length)%sc.length];[].forEach.call(s.querySelectorAll('img[data-src]'),function(im){im.src=im.dataset.src;im.removeAttribute('data-src')})}
+function bar(ms){pg.style.transition='none';pg.style.width=(done/TOT*100)+'%';void pg.offsetWidth;pg.style.transition='width '+ms+'ms linear';pg.style.width=((done+ms)/TOT*100)+'%'}
+function show(i){at=(i+sc.length)%sc.length;if(at===0)done=0;load(at);load(at+1);
+ sc.forEach(function(s,k){s.classList.toggle('on',k===at)});r.classList.toggle('lt',!!LT[at]);
+ cn.textContent=at<sc.length-1?('0'+(at+1)).slice(-2)+' / 0'+(sc.length-1):'';
+ left=T[at];run()}
+function run(){clearTimeout(tm);if(!play||!vis)return;t0=Date.now();bar(left);tm=setTimeout(function(){done+=left;show(at+1)},left)}
+function hold(){clearTimeout(tm);var el=Date.now()-t0;if(t0){left=Math.max(300,left-el);done+=Math.min(el,T[at])}t0=0;pg.style.transition='none';pg.style.width=(done/TOT*100)+'%'}
+bt.addEventListener('click',function(){play=!play;bt.textContent=play?'Pauza':'Odtwórz';r.classList.toggle('paused',!play);if(play)run();else hold()});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!vis){vis=true;r.classList.toggle('paused',!play);run()}else if(!v&&vis){vis=false;r.classList.add('paused');hold()}},{threshold:.2}).observe(r)}
+var first=sc[0].querySelector('img'),go=false;function start(){if(go)return;go=true;show(0)}
+if(first.complete)start();else{first.addEventListener('load',start);setTimeout(start,2500)}
+})();
 </script>
 <!-- REEL:END -->
 
