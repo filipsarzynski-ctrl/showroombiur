@@ -8380,30 +8380,53 @@ if(first.complete)start();else{first.addEventListener('load',start);setTimeout(s
 
 
 
-<!-- NEWSLETTER -->
-<section class="newsletter" id="newsletter" data-section="08" data-label="Newsletter" data-dark="1">
-  <div class="newsletter-left">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:18px;">Nr 08 · Newsletter</div>
-    <h4>Raz na dwa tygodnie.<br><em>Nowe biura z bazy.</em></h4>
-    <p>
-      Krótki list redakcji: nowe realizacje dodane do bazy, jeden tekst z Czytelni i to, co zauważyliśmy na rynku. Bez reklam.
-    </p>
-    <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:8px;">
-      <li style="font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent-text,#5E1A26);">-</span>Nowy projekt z&nbsp;256-elementowej bazy</li>
-      <li style="font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent-text,#5E1A26);">-</span>1 wniosek metodologiczny od&nbsp;Marioli</li>
-      <li style="font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent-text,#5E1A26);">-</span>1 produkt z&nbsp;katalogu wyposażenia</li>
-      <li style="font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;padding-left:20px;position:relative;"><span style="position:absolute;left:0;color:var(--accent-text,#5E1A26);">-</span>Bez spamu. Wypisz się 1 klikiem.</li>
+<!-- WARSZTATY -->
+<style id="sb-ws-css">
+.sb-ws{padding:100px 4vw;background:#1E1917;color:#F3EFE6;display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.sb-ws .k{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E8B4BD;margin-bottom:18px}
+.sb-ws h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(38px,4.6vw,68px);line-height:1;letter-spacing:-.02em;margin:0;color:#F3EFE6}
+.sb-ws h2 em{font-style:italic;color:#E8B4BD}
+.sb-ws .lead{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.45;color:#EDE6DA;margin:24px 0 0;max-width:520px}
+.sb-ws ul{list-style:none;padding:0;margin:26px 0 0;max-width:520px}
+.sb-ws li{font-family:'Inter',sans-serif;font-size:16px;line-height:1.5;color:#F3EFE6;padding:12px 0;border-top:1px solid rgba(243,239,230,.22)}
+.sb-ws li:last-child{border-bottom:1px solid rgba(243,239,230,.22)}
+.sb-ws .more{display:inline-block;margin-top:26px;font-family:'Inter',sans-serif;font-size:16px;color:#F3EFE6!important;border-bottom:1px solid #E8B4BD;padding-bottom:3px}
+.sb-ws form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;background:#F3EFE6;color:#1B1513;padding:34px}
+.sb-ws label{display:block;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#1B1513}
+.sb-ws label.w{grid-column:1/-1}
+.sb-ws input,.sb-ws select,.sb-ws textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;font-family:'Inter',sans-serif;font-size:16px;color:#1B1513;background:#fff;border:1px solid #BDB2A4;border-radius:0;padding:12px 13px}
+.sb-ws textarea{min-height:110px;resize:vertical}
+.sb-ws input:focus,.sb-ws select:focus,.sb-ws textarea:focus{outline:2px solid #5E1A26;outline-offset:1px;border-color:#5E1A26}
+.sb-ws button{grid-column:1/-1;justify-self:start;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;background:#5E1A26;color:#F3EFE6;border:0;padding:15px 30px;cursor:pointer}
+.sb-ws button:hover{background:#4A1420}
+.sb-ws .note{grid-column:1/-1;font-family:'Inter',sans-serif;font-size:14px;line-height:1.5;color:#3d342f;margin:0}
+.sb-ws .note a{color:var(--accent-text,#5E1A26)!important;text-decoration:underline}
+.sb-ws .sent{grid-column:1/-1;font-family:'Inter',sans-serif;font-size:15px;line-height:1.5;background:#E9DFCF;padding:14px 16px;margin:0;color:#1B1513}
+@media(max-width:900px){.sb-ws{grid-template-columns:1fr;padding:64px 20px;gap:36px}.sb-ws form{grid-template-columns:1fr;padding:22px}}
+</style>
+<section class="sb-ws" id="warsztaty" data-section="08" data-label="Warsztaty">
+  <div>
+    <div class="k">Warsztaty workplace</div>
+    <h2>Warsztat o&nbsp;biurze<br><em>z&nbsp;Mariolą Bitner.</em></h2>
+    <p class="lead">Planujecie nowe biuro, przeprowadzkę albo zmianę sposobu pracy? Mariola Bitner z&nbsp;Brookfield Partners poprowadzi warsztat dla zarządu lub zespołu. Napiszcie, czego potrzebujecie, a&nbsp;Mariola odezwie się, żeby ustalić zakres i&nbsp;termin.</p>
+    <ul>
+      <li>Strategia miejsca pracy: jakiego biura potrzebuje firma</li>
+      <li>Zostać czy się przenieść: jak podjąć decyzję</li>
+      <li>Zmiana: jak przygotować ludzi do nowego biura</li>
     </ul>
+    <a class="more" href="workplace.html">Zobacz, jak pracuje Mariola</a>
   </div>
-
-  <form class="newsletter-form" id="newsletterForm" data-newsletter>
-    <label for="newsletter-email" class="sr-only">Twój adres email</label>
-    <input id="newsletter-email" type="email" name="email" placeholder="twoj@email.pl" required autocomplete="email" aria-label="Adres email do newslettera">
-    <button type="submit" data-magnet data-cursor="hover">Zapisz się →</button>
-    <div class="newsletter-meta" style="margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted-soft, #B6AC99);opacity:0.8;">
-      <span>Pierwszy newsletter wyślemy niedługo</span>
-      <span style="margin-left:18px;">Wypis jednym kliknięciem</span>
-    </div>
+  <form data-warsztaty novalidate>
+    <label>Imię i nazwisko<input name="imie" required autocomplete="name"></label>
+    <label>Firma<input name="firma" required autocomplete="organization"></label>
+    <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+    <label>Telefon (opcjonalnie)<input type="tel" name="telefon" autocomplete="tel"></label>
+    <label>Temat warsztatu<select name="temat"><option>Strategia miejsca pracy</option><option>Zostać czy się przenieść</option><option>Przygotowanie zespołu do zmiany</option><option>Inny, opiszę niżej</option></select></label>
+    <label>Liczba osób w firmie<select name="osoby"><option>do 50</option><option>50-200</option><option>200-500</option><option>ponad 500</option></select></label>
+    <label class="w">Na jakim etapie jesteście i czego potrzebujecie?<textarea name="opis"></textarea></label>
+    <button type="submit">Wyślij zapytanie</button>
+    <p class="sent" hidden>Otworzyliśmy gotową wiadomość w Twoim programie pocztowym. Wyślij ją, żeby zapytanie dotarło do Marioli.</p>
+    <p class="note">Zapytanie trafia do Marioli Bitner (Brookfield Partners) i służy tylko do odpowiedzi na nie. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
   </form>
 </section>
 
@@ -9138,8 +9161,8 @@ if(first.complete)start();else{first.addEventListener('load',start);setTimeout(s
 </script>
 <script src="noty-redakcji.js"></script>
 <script src="site-config.js" defer></script>
-<script src="forms.js" defer></script>
+<script src="forms.js?v=2" defer></script>
 <script src="likes.js?v=3" defer></script>
-<script src="home-dock.js?v=6" defer></script>
+<script src="home-dock.js?v=7" defer></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     ['archive', 'Biura'],
     ['index', 'Indeks'],
     ['studios', 'Pracownie'],
-    ['newsletter', 'Newsletter']
+    ['warsztaty', 'Warsztaty']
   ].filter(function (s) { return document.getElementById(s[0]); });
   var PAGES = [
     ['ranking.html', 'Ranking czytelników'],
