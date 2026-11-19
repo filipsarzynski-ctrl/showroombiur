@@ -97,8 +97,8 @@ document.addEventListener('error', function (e) {
   var FB = 'https://www.facebook.com/profile.php?id=61595666232694', IG = 'https://www.instagram.com/showroombiur.pl/';
   var I_FB = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.700 1.3-3.700 3.800v2.400H8.200v3h2.500V21z"/></svg>', I_IG = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.500" width="17" height="17" rx="4.500"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.800" r="1" fill="currentColor" stroke="none"/></svg>';
   var st = document.createElement('style');
-  st.textContent = '.sb-soc-nav{display:inline-flex;align-items:center;gap:4px;margin-left:6px}' +
-    '.nav .nav-links .sb-soc-nav a{display:inline-flex!important;align-items:center;justify-content:center;width:34px!important;height:34px;padding:0!important;border:0!important;opacity:.9}' +
+  st.textContent = '.sb-soc-nav{display:inline-flex;align-items:center;gap:2px;margin-left:2px;align-self:flex-start}' +
+    '.nav .nav-links .sb-soc-nav a{display:inline-flex!important;align-items:center;justify-content:center;width:30px!important;height:18px;padding:0!important;border:0!important;opacity:.9}' +
     '.nav .nav-links .sb-soc-nav a:hover{opacity:1}' +
     '@media(max-width:1360px){.sb-soc-nav{display:flex;gap:10px;margin:0;padding:14px 18px}.nav .nav-links .sb-soc-nav a{width:44px!important;height:44px}}' +
     '.sb-soc-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px;width:100%;margin-top:22px;padding-top:20px;border-top:1px solid rgba(128,128,128,.35);font-family:Inter,sans-serif;font-size:15px}' +
