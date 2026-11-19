@@ -197,6 +197,20 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
 .wk-cta dt{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d1b9b0;margin-top:14px}
 .wk-cta dd{margin:2px 0 0}
 .wk-cta a{color:inherit}
+.wk-cta{grid-template-columns:1fr 1.15fr;align-items:start}
+.wk-cta dl{margin-top:26px}
+.wk-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;background:#F3EFE6;color:#1B1513;padding:30px}
+.wk-form label{display:block;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#1B1513}
+.wk-form label.w{grid-column:1/-1}
+.wk-form input,.wk-form select,.wk-form textarea{display:block;width:100%;box-sizing:border-box;margin-top:7px;font-family:'Inter',sans-serif;font-size:16px;color:#1B1513;background:#fff;border:1px solid #BDB2A4;border-radius:0;padding:12px 13px}
+.wk-form textarea{min-height:100px;resize:vertical}
+.wk-form input:focus,.wk-form select:focus,.wk-form textarea:focus{outline:2px solid #5E1A26;outline-offset:1px}
+.wk-form button{grid-column:1/-1;justify-self:start;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;background:#5E1A26;color:#F3EFE6;border:0;padding:15px 30px;cursor:pointer}
+.wk-form button:hover{background:#4A1420}
+.wk-form p{grid-column:1/-1;font-family:'Inter',sans-serif;font-size:14px;line-height:1.5;color:#3d342f;margin:0}
+.wk-form p a{color:#4A1420;text-decoration:underline}
+.wk-form .sent{background:#E9DFCF;padding:14px 16px;font-size:15px;color:#1B1513}
+@media(max-width:640px){.wk-form{grid-template-columns:1fr;padding:20px}}
 .wk-en{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);margin:0 0 64px}
 .wk-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:48px 0 0}
 .wk-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
@@ -329,14 +343,27 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
   <section class="wk-cta" id="kontakt">
     <div>
       <h2>Planujecie nowe biuro?</h2>
-      <p>Pierwsza rozmowa trwa pół godziny i jest bezpłatna. Zaczynamy od tego, na jakim etapie jesteście. Każdą część, strategię, prowadzenie projektu albo zmianę, można zamówić osobno.</p>
-      <a class="wk-btn" href="mailto:mariola.bitner@brookfield.pl?subject=Workplace%20-%20rozmowa">Napiszcie do Marioli</a><a class="wk-btn o" href="https://www.linkedin.com/in/mariola-bitner/" target="_blank" rel="noopener">LinkedIn</a>
+      <p>Napiszcie, na jakim etapie jesteście. Pierwsza rozmowa trwa pół godziny i jest bezpłatna. Każdą część, strategię, prowadzenie projektu albo zmianę, można zamówić osobno.</p>
+      <p>Pracujemy z firmami od 50 osób. Przy mniejszych zespołach taki proces się nie opłaca.</p>
+      <a class="wk-btn o" href="https://www.linkedin.com/in/mariola-bitner/" target="_blank" rel="noopener">Mariola na LinkedIn</a>
+      <dl>
+        <dt>Brookfield Partners</dt><dd>ul. Bagatela 11/6, 00-585 Warszawa</dd>
+        <dt>Telefon</dt><dd><a href="tel:+48221001116">+48 22 100 11 16</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:mariola.bitner@brookfield.pl">mariola.bitner@brookfield.pl</a></dd>
+      </dl>
     </div>
-    <dl>
-      <dt>Brookfield Partners</dt><dd>ul. Bagatela 11/6, 00-585 Warszawa</dd>
-      <dt>Telefon</dt><dd><a href="tel:+48221001116">+48 22 100 11 16</a></dd>
-      <dt>E-mail</dt><dd><a href="mailto:mariola.bitner@brookfield.pl">mariola.bitner@brookfield.pl</a></dd>
-    </dl>
+    <form class="wk-form" data-warsztaty data-subject="Workplace" novalidate>
+      <label>Imię i nazwisko<input name="imie" required autocomplete="name"></label>
+      <label>Firma<input name="firma" required autocomplete="organization"></label>
+      <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+      <label>Telefon (opcjonalnie)<input type="tel" name="telefon" autocomplete="tel"></label>
+      <label>Czego potrzebujecie<select name="temat"><option>Strategia miejsca pracy</option><option>Prowadzenie projektu biura</option><option>Przygotowanie zespołu do zmiany</option><option>Warsztat dla zarządu lub zespołu</option><option>Jeszcze nie wiemy</option></select></label>
+      <label>Liczba osób w firmie<select name="osoby"><option>50-200</option><option>200-500</option><option>ponad 500</option></select></label>
+      <label class="w">Na jakim etapie jesteście?<textarea name="opis"></textarea></label>
+      <button type="submit">Wyślij do Marioli</button>
+      <p class="sent" hidden>Otworzyliśmy gotową wiadomość w Twoim programie pocztowym. Wyślij ją, żeby zapytanie dotarło do Marioli.</p>
+      <p>Zapytanie trafia do Marioli Bitner (Brookfield Partners) i służy tylko do odpowiedzi na nie. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
+    </form>
   </section>
   <p class="wk-en"><a href="workplace-en.html" hreflang="en">English version →</a></p>
 </main>
@@ -347,6 +374,8 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%;height:au
     <span><a href="czytelnia.html">← Czytelnia</a></span>
   </div>
 </footer>
+<script src="site-config.js" defer></script>
+<script src="forms.js?v=3" defer></script>
 <script src="mobile-nav.js?v=20261027b" defer></script>
 </body>
 </html>

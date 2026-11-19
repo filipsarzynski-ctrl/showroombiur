@@ -71,16 +71,16 @@
       var f = form.elements;
       var v = function (n) { return f[n] ? f[n].value.trim() : ''; };
       var body = [
-        'ZAPYTANIE O WARSZTAT WORKPLACE (showroombiur.pl)', '',
+        (form.dataset.subject ? 'ZAPYTANIE WORKPLACE' : 'ZAPYTANIE O WARSZTAT WORKPLACE') + ' (showroombiur.pl)', '',
         'Imię i nazwisko: ' + v('imie'),
         'Firma: ' + v('firma'),
         'E-mail: ' + v('email'),
         'Telefon: ' + v('telefon'),
-        'Temat warsztatu: ' + v('temat'),
+        'Temat: ' + v('temat'),
         'Liczba osób w firmie: ' + v('osoby'), '',
         'Etap i potrzeby:', v('opis')
       ].join('\n');
-      location.href = 'mailto:' + WS_MAIL + '?subject=' + encodeURIComponent('Warsztat workplace: ' + (v('firma') || 'zapytanie')) + '&body=' + encodeURIComponent(body);
+      location.href = 'mailto:' + WS_MAIL + '?subject=' + encodeURIComponent((form.dataset.subject || 'Warsztat workplace') + ': ' + (v('firma') || 'zapytanie')) + '&body=' + encodeURIComponent(body);
       var ok = form.querySelector('.sent');
       if (ok) ok.hidden = false;
     });
