@@ -8369,16 +8369,42 @@ if(first.complete)start();else{first.addEventListener('load',start);setTimeout(s
 </div>
 
 <!-- MANIFESTO -->
-<section class="manifesto" id="manifesto" data-section="07" data-label="Manifest">
-  <div class="manifesto-pre">- manifest -</div>
-  <h3 data-words>
-    Nie kolejny zagraniczny katalog z <span class="bold">dwoma polskimi projektami</span>.<br>
-    Showroom Biur to <span class="red">pierwsza redakcja, która patrzy na polskie biura</span><br>
-    z perspektywy <em>Warszawy</em>, a nie Nowego Jorku.
-  </h3>
+<style id="sb-mf-css">
+.sb-mf{background:#F3EFE6;color:#1B1513;padding:110px 4vw;display:grid;grid-template-columns:minmax(260px,30vw) 1fr;gap:7vw;align-items:center}
+.sb-mf figure{margin:0}
+.sb-mf .arch{display:block;aspect-ratio:3/4;border-radius:50vw 50vw 0 0;overflow:hidden;background:#E2D9CB}
+.sb-mf .arch img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s ease}
+.sb-mf .arch:hover img{transform:scale(1.04)}
+.sb-mf figcaption{font-family:'Inter',sans-serif;font-size:14px;color:#4b413b;margin-top:12px}
+.sb-mf .k{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text,#5E1A26);margin-bottom:20px}
+.sb-mf h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,5.6vw,92px);line-height:.98;letter-spacing:-.02em;margin:0;color:#1B1513}
+.sb-mf h2 em{font-style:italic;color:var(--accent-text,#5E1A26)}
+.sb-mf .lead{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,1.9vw,28px);line-height:1.4;color:#2a211d;margin:28px 0 0;max-width:720px}
+.sb-mf ol{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:980px}
+.sb-mf li{border-top:1px solid #1B1513;padding-top:16px}
+.sb-mf li b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:27px;line-height:1.1;color:var(--accent-text,#5E1A26);margin-bottom:8px}
+.sb-mf li span{font-family:'Inter',sans-serif;font-size:16px;line-height:1.55;color:#2a211d}
+.sb-mf .more{display:inline-block;margin-top:36px;font-family:'Inter',sans-serif;font-size:16px;font-weight:500;background:#5E1A26;color:#F3EFE6!important;padding:14px 26px}
+.sb-mf .more:hover{background:#4A1420}
+@media(max-width:900px){.sb-mf{grid-template-columns:1fr;padding:64px 20px;gap:36px}.sb-mf figure{max-width:320px}.sb-mf ol{grid-template-columns:1fr;gap:20px}}
+</style>
+<section class="sb-mf" id="manifesto" data-section="07" data-label="Manifest">
+  <figure>
+    <a class="arch" href="projekt.html?id=allegro-fabryka-norblina-warszawa-2022" aria-label="Allegro, Fabryka Norblina"><img src="foto/allegro-fabryka-norblina-warszawa-2022/01.jpg" alt="Biuro Allegro w Fabryce Norblina w Warszawie" loading="lazy" decoding="async"></a>
+    <figcaption>Allegro, Fabryka Norblina · proj. The Design Group</figcaption>
+  </figure>
+  <div>
+    <div class="k">Manifest redakcji</div>
+    <h2>Polskie biura<br>oglądamy <em>z&nbsp;bliska.</em></h2>
+    <p class="lead">Piszemy z&nbsp;Polski, o&nbsp;biurach, które znamy: z&nbsp;Warszawy, Krakowa, Wrocławia, Gdańska i&nbsp;kilkunastu innych miast. Dobre biuro ma autorów, więc zawsze ich podpisujemy.</p>
+    <ol>
+      <li><b>Zawsze z&nbsp;nazwą najemcy</b><span>„Poufny klient” u&nbsp;nas się nie pojawi. Przy każdym biurze piszemy, czyje jest.</span></li>
+      <li><b>Podpisujemy autorów</b><span>Każda pracownia ma swoją stronę ze wszystkimi realizacjami. Fotograf też jest podpisany.</span></li>
+      <li><b>Nikt nie płaci za profil</b><span>Publikacja biura, strona pracowni i&nbsp;profil marki w&nbsp;Wyposażeniu są bezpłatne.</span></li>
+    </ol>
+    <a class="more" href="o-magazynie.html">Poznaj redakcję</a>
+  </div>
 </section>
-
-
 
 <!-- WARSZTATY -->
 <style id="sb-ws-css">
