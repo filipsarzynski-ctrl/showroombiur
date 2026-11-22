@@ -57,6 +57,7 @@
     nav.appendChild(btn);
 
     btn.addEventListener('click', function(){
+      if (window.innerWidth <= 1360) links.style.top = Math.round(nav.getBoundingClientRect().bottom) + 'px';
       var isOpen = links.classList.toggle('open');
       btn.classList.toggle('open', isOpen);
       btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
