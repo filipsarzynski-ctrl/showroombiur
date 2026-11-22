@@ -10,8 +10,8 @@
 
   var st = document.createElement('style');
   st.textContent = '.project.m-hid,.index-row.m-hid{display:none!important}' +
-    '.sb-more{display:block;width:calc(100% - 40px);margin:8px 20px 56px;padding:17px 20px;background:#5E1A26;color:#F3EFE6;border:0;font-family:Inter,sans-serif;font-size:16px;font-weight:500;text-align:center;cursor:pointer}' +
-    '.sb-more.o{background:transparent;color:#1B1513;border:1px solid #1B1513;margin-top:22px}' +
+    '.sb-more{display:block;width:100%;box-sizing:border-box;margin:40px 0 0;padding:17px 20px;background:#5E1A26;color:#F3EFE6;border:0;font-family:Inter,sans-serif;font-size:16px;font-weight:500;text-align:center;cursor:pointer}' +
+    '.sb-more.o{background:transparent;color:#1B1513;border:1px solid #1B1513;margin:22px 0 0}' +
     '@media(max-width:880px){.index-row .ct,.index-row .ds{font-size:13px}}';
   document.head.appendChild(st);
 

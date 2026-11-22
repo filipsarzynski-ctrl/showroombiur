@@ -117,7 +117,7 @@ document.addEventListener('error', function (e) {
       links.appendChild(s);
     }
     var f = document.querySelector('footer');
-    if (f && !f.querySelector('.sb-soc-foot')) {
+    if (f && !f.querySelector('.sb-soc-foot') && !f.querySelector('a[href*="instagram.com"]')) {
       var d = document.createElement('div'); d.className = 'sb-soc-foot';
       d.innerHTML = '<span>Nowe biura codziennie:</span>' + a(FB, I_FB, 'Facebooku', 1).replace('<span>Facebooku', '<span>Facebook') + a(IG, I_IG, 'Instagramie', 1).replace('<span>Instagramie', '<span>Instagram');
       (f.querySelector('.footer-wrap') || f.querySelector('.footer-bottom') || f).appendChild(d);
