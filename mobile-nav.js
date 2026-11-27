@@ -96,6 +96,7 @@ document.addEventListener('error', function (e) {
 (function () {
   if (window.__sbSoc) return; window.__sbSoc = 1;
   var FB = 'https://www.facebook.com/profile.php?id=61595666232694', IG = 'https://www.instagram.com/showroombiur.pl/';
+  var TT = 'https://www.tiktok.com/@showroombiur', I_TT = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>';
   var LI = 'https://www.linkedin.com/company/showroombiur/', I_LI = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.5 8.8H3.6V20h2.900zM5 4a1.700 1.700 0 100 3.400A1.700 1.700 0 005 4zm15 9.600c0-3.100-1.700-5-4.300-5-1.500 0-2.500.800-2.900 1.500V8.800H10V20h2.900v-6c0-1.500.800-2.500 2.100-2.500 1.200 0 2 .900 2 2.500v6H20z"/></svg>';
   var I_FB = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.700 1.3-3.700 3.800v2.400H8.200v3h2.500V21z"/></svg>', I_IG = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.500" width="17" height="17" rx="4.500"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.800" r="1" fill="currentColor" stroke="none"/></svg>';
   var st = document.createElement('style');
@@ -114,13 +115,13 @@ document.addEventListener('error', function (e) {
     var links = document.querySelector('.nav .nav-links');
     if (links && !links.querySelector('.sb-soc-nav')) {
       var s = document.createElement('span'); s.className = 'sb-soc-nav';
-      s.innerHTML = a(FB, I_FB, 'Facebooku') + a(IG, I_IG, 'Instagramie') + a(LI, I_LI, 'LinkedInie');
+      s.innerHTML = a(FB, I_FB, 'Facebooku') + a(IG, I_IG, 'Instagramie') + a(LI, I_LI, 'LinkedInie') + a(TT, I_TT, 'TikToku');
       links.appendChild(s);
     }
     var f = document.querySelector('footer');
     if (f && !f.querySelector('.sb-soc-foot') && !f.querySelector('a[href*="instagram.com"]')) {
       var d = document.createElement('div'); d.className = 'sb-soc-foot';
-      d.innerHTML = '<span>Nowe biura codziennie:</span>' + a(FB, I_FB, 'Facebooku', 1).replace('<span>Facebooku', '<span>Facebook') + a(IG, I_IG, 'Instagramie', 1).replace('<span>Instagramie', '<span>Instagram') + a(LI, I_LI, 'LinkedInie', 1).replace('<span>LinkedInie', '<span>LinkedIn');
+      d.innerHTML = '<span>Nowe biura codziennie:</span>' + a(FB, I_FB, 'Facebooku', 1).replace('<span>Facebooku', '<span>Facebook') + a(IG, I_IG, 'Instagramie', 1).replace('<span>Instagramie', '<span>Instagram') + a(LI, I_LI, 'LinkedInie', 1).replace('<span>LinkedInie', '<span>LinkedIn') + a(TT, I_TT, 'TikToku', 1).replace('<span>TikToku', '<span>TikTok');
       (f.querySelector('.footer-wrap') || f.querySelector('.footer-bottom') || f).appendChild(d);
     }
   }
