@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0F0F0E">
-<link rel="canonical" id="seoCanonical" href="https://showroombiur.pl/pracownia.html" />
+<link rel="canonical" id="seoCanonical" />
 <meta name="author" content="Filip Sarzyński, Showroom Biur" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="generator" content="Showroom Biur Editorial System" />
@@ -843,7 +843,7 @@ function renderStudio(studio, allProjects) {
 
 
 function buildStudioShare(studio){
-  const u = `https://showroombiur.pl/pracownia.html?slug=${studio.slug}`;
+  const u = `https://showroombiur.pl/pracownia.html?id=${studio.slug}`;
   const title = `${studio.name} - pracownia projektowa biur`;
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(u)}`;
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(u)}`;
@@ -936,7 +936,7 @@ function renderRelatedStudios(studio, allStudios) {
             const hero = s.hero || ((s.projects || []).find(q => q.hero) || {}).hero;
             const img = hero ? `<div class="rs-ph"><img src="${esc(hero)}" alt="${esc(s.name)}" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('rs-noimg');this.remove()"></div>` : `<div class="rs-ph rs-noimg"></div>`;
             return `
-              <a class="rs-card" href="pracownia.html?slug=${esc(s.slug)}">
+              <a class="rs-card" href="pracownia.html?id=${esc(s.slug)}">
                 ${img}
                 <h4>${esc(s.name)}</h4>
                 <div class="rs-meta">${esc(sCity)}${sCity ? ' · ' : ''}${sCount} ${biur(sCount)} w bazie${yrs ? ' · ' + yrs : ''}</div>
@@ -1104,9 +1104,17 @@ function init() {
 function mount(studios, projects) {
   window.__allStudios = studios || [];
   window.__allProjects = projects || [];
-  const studio = studios.find(s => s.slug === slug);
+  // adres może zawierać slug albo nazwę pracowni (linki ze stron projektów), 27.11.2026
+  const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ł/g, 'l').replace(/\(.*?\)/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  const want = norm(slug);
+  const studio = studios.find(s => s.slug === slug) || studios.find(s => norm(s.slug) === want || norm(s.name) === want)
+    || (want.length > 4 && studios.find(s => want.indexOf(norm(s.slug)) === 0 || norm(s.name).indexOf(want) === 0));
   const root = document.getElementById('root');
-  if (!studio) { root.innerHTML = notFound(); return; }
+  if (!studio) {
+    root.innerHTML = notFound();
+    var nx = document.createElement('meta'); nx.name = 'robots'; nx.content = 'noindex, follow'; document.head.appendChild(nx);
+    return;
+  }
   document.title = `${studio.name} - Pracownia - Showroom Biur`;
   // Dynamic OG/meta update
   try {
@@ -1126,13 +1134,13 @@ function mount(studios, projects) {
     setMeta('meta[property="og:title"]', 'content', `${studio.name} - pracownia projektowa`);
     setMeta('meta[property="og:description"]', 'content', desc);
     setMeta('meta[property="og:image"]', 'content', heroImg);
-    setMeta('meta[property="og:url"]', 'content', `https://showroombiur.pl/pracownia.html?slug=${studio.slug}`);
+    setMeta('meta[property="og:url"]', 'content', `https://showroombiur.pl/pracownia.html?id=${studio.slug}`);
     setMeta('meta[property="og:type"]', 'content', 'profile');
     setMeta('meta[name="twitter:title"]', 'content', `${studio.name} - pracownia`);
     setMeta('meta[name="twitter:description"]', 'content', desc);
     setMeta('meta[name="twitter:image"]', 'content', heroImg);
     setMeta('meta[name="description"]', 'content', desc);
-    setMeta('link[rel="canonical"]', 'href', `https://showroombiur.pl/pracownia.html?slug=${studio.slug}`);
+    setMeta('link[rel="canonical"]', 'href', `https://showroombiur.pl/pracownia.html?id=${studio.slug}`);
 
     const oldLd = document.getElementById('studio-jsonld');
     if (oldLd) oldLd.remove();
@@ -1145,7 +1153,7 @@ function mount(studios, projects) {
       "name": studio.name,
       "description": desc,
       "image": heroImg,
-      "url": `https://showroombiur.pl/pracownia.html?slug=${studio.slug}`,
+      "url": `https://showroombiur.pl/pracownia.html?id=${studio.slug}`,
       "address": undefined
     });
     document.head.appendChild(ld);

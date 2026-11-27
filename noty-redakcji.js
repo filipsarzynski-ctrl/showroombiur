@@ -2,7 +2,7 @@
  * Noty redaktora przy projektach - pojawiają się na stronie projektu pod opisem
  * i jako znacznik „Nota redakcji” w archiwum.
  *
- * Klucz = slug projektu (końcówka adresu projekt.html?slug=...).
+ * Klucz = slug projektu (końcówka adresu projekt.html?id=...).
  * tekst: 3-6 zdań, pisane w pierwszej osobie. Zwykły tekst, akapity rozdziel pustą linią (\n\n).
  *
  * Przykład:

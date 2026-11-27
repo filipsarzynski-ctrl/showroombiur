@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0F0F0E">
-<link rel="canonical" id="seoCanonical" href="https://showroombiur.pl/projekt.html" />
+<link rel="canonical" id="seoCanonical" />
 <meta name="author" content="Filip Sarzyński, Showroom Biur" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="generator" content="Showroom Biur Editorial System" />
@@ -945,7 +945,7 @@ function buildTags(p){
 }
 
 function buildShareButtons(p){
-  const projectUrl = `https://showroombiur.pl/projekt.html?slug=${p.slug}`;
+  const projectUrl = `https://showroombiur.pl/projekt.html?id=${p.slug}`;
   const title = `${p.company} - ${p.city} ${p.year || ''}`.trim();
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(projectUrl)}`;
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(projectUrl)}`;
@@ -972,7 +972,7 @@ function buildShareButtons(p){
 
 function buildCreditsExpanded(p){
   const credits = [];
-  if (p.designer) credits.push({label:'Pracownia', value: p.designer, link: `pracownia.html?slug=${p.designer.toLowerCase().replace(/[^a-z0-9]+/g,'-')}`});
+  if (p.designer) credits.push({label:'Pracownia', value: p.designer, link: `pracownia.html?id=${p.designer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ł/g,'l').replace(/\(.*?\)/g,' ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}`});
   if (p.photographer) credits.push({label:'Fotografia', value: p.photographer});
   if (p.developer) credits.push({label:'Inwestor', value: p.developer});
   if (p.building) credits.push({label:'Budynek', value: p.building, href: p.officelist_url || null, hrefTarget:'_blank'});
@@ -1036,7 +1036,7 @@ function renderRelated(p, allProjects) {
         </div>
         <div class="related-grid">
           ${related.map(rp => `
-            <a class="related-card" href="projekt.html?slug=${esc(rp.slug)}">
+            <a class="related-card" href="projekt.html?id=${esc(rp.slug)}">
               <div class="related-photo">
                 ${rp.hero ? `<img src="${esc(rp.hero)}" loading="lazy" alt="${esc(rp.company)} - ${esc(rp.city || '')}">` : ''}
                 <span class="related-tag">${esc(reason(rp))}</span>
@@ -1197,9 +1197,9 @@ function render(p, allProjects, idx) {
       ${renderRelated(p, allProjects)}
 
       <nav class="footer-nav">
-        ${prev ? `<a href="projekt.html?slug=${esc(prev.slug)}">← ${esc(prev.company)}</a>` : '<span></span>'}
+        ${prev ? `<a href="projekt.html?id=${esc(prev.slug)}">← ${esc(prev.company)}</a>` : '<span></span>'}
         <a href="biurofilia.html">Biura</a>
-        ${next ? `<a href="projekt.html?slug=${esc(next.slug)}">${esc(next.company)} →</a>` : '<span></span>'}
+        ${next ? `<a href="projekt.html?id=${esc(next.slug)}">${esc(next.company)} →</a>` : '<span></span>'}
       </nav>
     </article>
   `;
@@ -1276,13 +1276,13 @@ function mount(projects) {
     setMeta('meta[property="og:title"]', 'content', `${p.company} - ${p.city} ${p.year || ''}`);
     setMeta('meta[property="og:description"]', 'content', desc);
     setMeta('meta[property="og:image"]', 'content', heroImg);
-    setMeta('meta[property="og:url"]', 'content', `https://showroombiur.pl/projekt.html?slug=${p.slug}`);
+    setMeta('meta[property="og:url"]', 'content', `https://showroombiur.pl/projekt.html?id=${p.slug}`);
     setMeta('meta[property="og:type"]', 'content', 'article');
     setMeta('meta[name="twitter:title"]', 'content', `${p.company} - ${p.city}`);
     setMeta('meta[name="twitter:description"]', 'content', desc);
     setMeta('meta[name="twitter:image"]', 'content', heroImg);
     setMeta('meta[name="description"]', 'content', desc);
-    setMeta('link[rel="canonical"]', 'href', `https://showroombiur.pl/projekt.html?slug=${p.slug}`);
+    setMeta('link[rel="canonical"]', 'href', `https://showroombiur.pl/projekt.html?id=${p.slug}`);
 
     // Dynamic JSON-LD Article schema
     const oldLd = document.getElementById('proj-jsonld');
@@ -1303,7 +1303,7 @@ function mount(projects) {
         "name": "Showroom Biur",
         "logo": {"@type":"ImageObject","url":"https://showroombiur.pl/og-default.jpg"}
       },
-      "mainEntityOfPage": `https://showroombiur.pl/projekt.html?slug=${p.slug}`,
+      "mainEntityOfPage": `https://showroombiur.pl/projekt.html?id=${p.slug}`,
       "about": p.industry || p._industry_norm,
       "contentLocation": {"@type":"Place","name":p.city,"addressCountry":"PL"}
     });
